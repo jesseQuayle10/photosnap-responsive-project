@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script defer src="./scripts/script.js"></script>
+
+    <link rel="stylesheet" href="./styles/styles.css" />
+
+    <title>Frontend Mentor | Photosnap Website Challenge</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="page-header">
+        <div class="logo-mobile-nav">
+          <div class="company-logo">
+            <h1>PHOTOSNAP</h1>
+            <a href="#">
+              <img src="./assets/icons/logo-black.png" alt="company logo" />
+            </a>
+          </div>
+
+          <!-- burger menu & close btn -->
+          <button class="btn-mobile-nav btn-mobile-open">
+            <a class="mobile-icon" href="#">
+              <!-- <svg> via CSS -->
+            </a>
+          </button>
+        </div>
+
+        <nav class="main-nav">
+          <div class="main-nav__links inner-container">
+            <ul>
+              <li>
+                <a class="link-black" href="stories.html">Stories</a>
+              </li>
+              <li>
+                <a class="link-black" href="features.html">Features</a>
+              </li>
+              <li>
+                <a class="link-black" href="pricing.html">Pricing</a>
+              </li>
+            </ul>
+          </div>
+          <div class="btn-mobile-nav-large">
+            <button>
+              <a href="index.html" class="link-white">Get an invite</a>
+            </button>
+          </div>
+        </nav>
+      </header>
+      <!-- end header -->
+
+      <div class="hero-section">
+        <div class="overlay-container"></div>
+
+        <div class="hero-section__image">
+          <picture>
+            <source
+              media="(min-width: 767px) and (max-width: 1438px)"
+              srcset="./assets/home/tablet/create-and-share.jpg"
+              width="57%"
+            />
+            <source
+              media="(min-width: 1439px)"
+              srcset="./assets/home/desktop/create-and-share.jpg"
+              width="57%"
+            />
+            <img
+              src="./assets/home/mobile/create-and-share.jpg"
+              alt="Hero"
+              width="100%"
+            />
+          </picture>
+        </div>
+
+        <div class="hero-section__text">
+          <img
+            src="./assets/icons/color-bar.png"
+            alt="a coloured shape"
+            class="color-bar"
+          />
+          <div class="hero-section__text--heading">
+            <h2 class="heading-largest">
+              Create and share your photo Stories.
+            </h2>
+            <p>
+              Photosnap is a platform for photographers and visual storytellers.
+              We make it easy to share photos, tell stories and connect with
+              others.
+            </p>
+            <div>
+              <a class="link-normal link-white" href="#">Get an invite</a>
+              <span class="link-arrow">
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="43"
+                    height="14"
+                  >
+                    <g fill="none" fill-rule="evenodd" stroke="#fff">
+                      <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                    </g>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end hero-section -->
+
+      <div class="stories">
+        <div class="stories__first">
+          <div class="stories__first-image">
+            <picture>
+              <source
+                media="(min-width: 767px) and (max-width: 1438px)"
+                srcset="./assets/home/tablet/beautiful-stories.jpg"
+                width="57%"
+              />
+
+              <source
+                media="(min-width: 1439px)"
+                srcset="./assets/home/desktop/beautiful-stories.jpg"
+                width="57%"
+              />
+
+              <img
+                src="./assets/home/mobile/beautiful-stories.jpg"
+                alt="Hero"
+                width="100%"
+              />
+            </picture>
+          </div>
+          <div class="stories__first-text">
+            <h2 class="heading-largest">Beautiful stories every time</h2>
+            <p>
+              We provide design templates to ensure your stories look terrific.
+              Easily add photos, text, embed maps and media from other networks.
+              Then share your story with everyone.
+            </p>
+
+            <div>
+              <a class="link-normal link-black" href="#">View the stories</a>
+              <!-- create arrow with css later -->
+              <span class="link-arrow">
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="43"
+                    height="14"
+                  >
+                    <g fill="none" fill-rule="evenodd" stroke="#000">
+                      <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                    </g>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+          <div class="stories__first-image"></div>
+        </div>
+
+        <div class="stories__second">
+          <div class="stories__second-image">
+            <picture>
+              <source
+                media="(min-width: 767px) and (max-width: 1438px)"
+                srcset="./assets/home/tablet/designed-for-everyone.jpg"
+                width="57%"
+              />
+
+              <source
+                media="(min-width: 1439px)"
+                srcset="./assets/home/desktop/designed-for-everyone.jpg"
+                width="57%"
+              />
+
+              <img
+                src="./assets/home/mobile/designed-for-everyone.jpg"
+                alt="Hero"
+                width="100%"
+              />
+            </picture>
+          </div>
+          <div class="stories__second-text">
+            <h2 class="heading-largest">Designed for everyone</h2>
+            <p>
+              Photosnap can help you create stories that resonate with your
+              audience. Our tool is designed for photographers of all levels,
+              brands, businesses you name it.
+            </p>
+            <div>
+              <a class="link-normal link-black" href="#">View the stories</a>
+              <!-- create arrow with css later -->
+              <span class="link-arrow">
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="43"
+                    height="14"
+                  >
+                    <g fill="none" fill-rule="evenodd" stroke="#000">
+                      <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                    </g>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end stories -->
+
+      <div class="photo-categories">
+        <div class="photo-categories__mountains">
+          <div class="photo-categories-image">
+            <picture>
+              <source
+                media="(min-width: 767px) and (max-width: 1438px)"
+                srcset="./assets/stories/desktop/mountains.jpg"
+                width="50%"
+              />
+
+              <source
+                media="(min-width: 1439px)"
+                srcset="./assets/stories/desktop/mountains.jpg"
+                width="25%"
+              />
+
+              <img
+                src="./assets/stories/mobile/mountains.jpg"
+                alt="an image of mountains"
+                width="100%"
+              />
+            </picture>
+          </div>
+          <div class="photo-categories-text">
+            <h3 class="heading-medium">The Mountains</h3>
+            <p>by John Appleseed</p>
+            <div class="white-line"></div>
+
+            <div class="category-links">
+              <div>
+                <a class="link-normal link-white" href="#">Read Story</a>
+                <span class="link-arrow">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="14"
+                    >
+                      <g fill="none" fill-rule="evenodd" stroke="#fff">
+                        <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                      </g>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-categories__cities">
+          <div class="photo-categories-image">
+            <picture>
+              <source
+                media="(min-width: 767px) and (max-width: 1438px)"
+                srcset="./assets/stories/desktop/cityscapes.jpg"
+                width="50%"
+              />
+
+              <source
+                media="(min-width: 1439px)"
+                srcset="./assets/stories/desktop/cityscapes.jpg"
+                width="25%"
+              />
+
+              <img
+                src="./assets/stories/mobile/cityscapes.jpg"
+                alt="an image of a cityscape"
+                width="100%"
+              />
+            </picture>
+          </div>
+          <div class="photo-categories-text">
+            <h3 class="heading-medium">Sunset Cityscapes</h3>
+            <p>by Benjamin Cruz</p>
+            <div class="white-line"></div>
+
+            <div class="category-links">
+              <div>
+                <a class="link-normal link-white" href="#">Read Story</a>
+                <span class="link-arrow">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="14"
+                    >
+                      <g fill="none" fill-rule="evenodd" stroke="#fff">
+                        <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                      </g>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-categories__voyage">
+          <div class="photo-categories-image">
+            <picture>
+              <source
+                media="(min-width: 767px) and (max-width: 1438px)"
+                srcset="./assets/stories/desktop/18-days-voyage.jpg"
+                width="50%"
+              />
+
+              <source
+                media="(min-width: 1439px)"
+                srcset="./assets/stories/desktop/18-days-voyage.jpg"
+                width="25%"
+              />
+
+              <img
+                src="./assets/stories/mobile/18-days-voyage.jpg"
+                alt="an image of a person on a trek"
+                width="100%"
+              />
+            </picture>
+          </div>
+          <div class="photo-categories-text">
+            <h3 class="heading-medium">18 Days Voyage</h3>
+            <p>by Alexei Borodin</p>
+            <div class="white-line"></div>
+
+            <div class="category-links">
+              <div>
+                <a class="link-normal link-white" href="#">Read Story</a>
+                <span class="link-arrow">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="14"
+                    >
+                      <g fill="none" fill-rule="evenodd" stroke="#fff">
+                        <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                      </g>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-categories__architecturals">
+          <div class="photo-categories-image">
+            <picture>
+              <source
+                media="(min-width: 767px) and (max-width: 1438px)"
+                srcset="./assets/stories/desktop/architecturals.jpg"
+                width="50%"
+              />
+
+              <source
+                media="(min-width: 1439px)"
+                srcset="./assets/stories/desktop/architecturals.jpg"
+                width="25%"
+              />
+
+              <img
+                src="./assets/stories/mobile/architecturals.jpg"
+                alt="an image of architecture"
+                width="100%"
+              />
+            </picture>
+          </div>
+          <div class="photo-categories-text">
+            <h3 class="heading-medium">Architecturals</h3>
+            <p>by Samantha Brooke</p>
+            <div class="white-line"></div>
+
+            <div class="category-links">
+              <div>
+                <a class="link-normal link-white" href="#">Read Story</a>
+                <span class="link-arrow">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="14"
+                    >
+                      <g fill="none" fill-rule="evenodd" stroke="#fff">
+                        <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                      </g>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end photo-categories -->
+
+      <div class="benefits">
+        <!-- <div class="inner-container"> -->
+        <div>
+          <div class="benefits-image benefits-image-responsive"></div>
+          <div class="benefits-text">
+            <h3 class="heading-medium">100% Responsive</h3>
+            <p>
+              No matter which the device you’re on, our site is fully responsive
+              and stories look beautiful on any screen.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div class="benefits-image benefits-image-limit"></div>
+          <div class="benefits-text">
+            <h3 class="heading-medium">No Photo Upload Limit</h3>
+            <p>
+              Our tool has no limits on uploads or bandwidth. Freely upload in
+              bulk and share all of your stories in one go.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div class="benefits-image benefits-image-embed"></div>
+          <div class="benefits-text">
+            <h3 class="heading-medium">Available to Embed</h3>
+            <p>
+              Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube
+              videos, Google Maps, and more.
+            </p>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+
+      <!-- end benefits -->
+
+      <footer>
+        <div class="socials-and-logo-and-nav">
+          <div class="company-logo company-logo-btm">
+            <a href="#">
+              <img src="./assets/icons/logo-white.png" alt="company logo" />
+            </a>
+          </div>
+
+          <!-- <div class="socials">
+            <div>
+              <img src="./assets/icons/fb.png" alt="facebook icon" />
+            </div>
+            <div>
+              <img src="./assets/icons/play-icon.png" alt="play icon" />
+            </div>
+            <div>
+              <img src="./assets/icons/twitter.png" alt="twitter icon" />
+            </div>
+            <div>
+              <img src="./assets/icons/pintrest.png" alt="pintrest icon" />
+            </div>
+            <div>
+              <img src="./assets/icons/insta.png" alt="instagram icon" />
+            </div>
+          </div> -->
+
+          <div class="socials">
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="./assets/icons/fb.png" alt="facebook icon" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./assets/icons/play-icon.png" alt="facebook icon" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./assets/icons/twitter.png" alt="facebook icon" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./assets/icons/pintrest.png" alt="facebook icon" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./assets/icons/insta.png" alt="facebook icon" />
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-nav">
+            <ul>
+              <li>
+                <a class="link-normal link-white" href="./index.html">Home</a>
+              </li>
+              <li>
+                <a class="link-normal link-white" href="stories.html"
+                  >Stories</a
+                >
+              </li>
+              <li>
+                <a class="link-normal link-white" href="features.html"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a class="link-normal link-white" href="pricing.html"
+                  >Pricing</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- end socials-and-logo-and-nav -->
+
+        <div class="bottom-link-and-copyright">
+          <div class="arrow-link">
+            <a class="link-normal link-white" href="#">Get an invite</a>
+            <span class="link-arrow">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
+                  <g fill="none" fill-rule="evenodd" stroke="#fff">
+                    <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                  </g>
+                </svg>
+              </a>
+            </span>
+          </div>
+
+          <div class="copyright">
+            <span>Copyright 2023. All Rights Reserved</span>
+          </div>
+        </div>
+        <!-- end bottom-link-and-copyright -->
+      </footer>
+    </div>
+    <!-- end container -->
+  </body>
+</html>

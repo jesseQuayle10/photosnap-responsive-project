@@ -1,0 +1,4 @@
+
+*add an animation on main-nav O/Lay - (I tried transition options - been thru the wringer w/ it - SO ONLY TRY ANIMATION CSS)
+
+*Change nav icon to = X

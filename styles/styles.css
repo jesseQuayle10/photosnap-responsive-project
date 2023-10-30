@@ -1,0 +1,731 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--- WHITESPACE
+
+- Spacing System (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+:root {
+  /********* CLRs **********/
+  --pure-black: #000;
+  --dark-grey: #979797;
+
+  --light-grey: #dfdfdf;
+
+  --pure-white: #fff;
+
+  /********** FONT SIZE **********/
+  --font-largest: 4rem;
+  --font-larger: 2.4rem;
+  --font-large: 1.8rem;
+  --font-regular: 1.5rem;
+  --font-medium: 1.2rem;
+
+  --font-mobile-nav: 1.5rem;
+
+  --font-largest-mobile: 3.2rem;
+  /* --font-larger-mobile: 2.4rem; ???*/
+
+  /********** LAYOUT **********/
+  --gid: grid;
+
+  /********** LINE HEIGHT **********/
+  /* x 62.5% */
+  /* 48px */
+  --line-height-largest: 4.8rem;
+  /* 25px */
+  --line-height-large: 2.5rem;
+  /* 16px */
+  --line-height-medium: 1.6rem;
+
+  /* x 50% */
+  --line-height-largest-mobile: 4rem;
+
+  /********** LTR SPACING **********/
+  --letter-spc-largest: 4.17px;
+  --letter-spc-large: 3.33px;
+
+  --letter-spc-smallest: 2px;
+
+  --letter-spc-largest-mobile: 3.3px;
+
+  --letter-spc-mobile-nav: 2.5px;
+
+  /********** WHT/SPC **************/
+  --centre-hor: 0 auto;
+
+  --padding-ver-mobile-largest: 7.2rem;
+
+  --padding-hor-mobile-large: 3.3rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+
+  /* = 10px so any REMs = x10px */
+  font-size: 62.5%;
+
+  /* to stop B' A/M Scaling Up text at screen width = 100 */
+  /* -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none; */
+}
+/* @media only screen and (max-width: 68.75em) {
+  html {
+    font-size: 50%;
+  }
+} */
+
+body {
+  font: 1.5rem/2.5rem 'DM Sans', sans-serif;
+  /* font-family: 'DM Sans', sans-serif; */
+}
+
+.container {
+  max-width: 144rem;
+  /* margin: 0 auto; */
+  margin: var(--centre-hor);
+
+  /* *needed this so page header would go 100% (W)  */
+  overflow: hidden;
+}
+
+/* .inner-container { */
+/* max-width: 111rem; */
+/* max-width: 86.5%; */
+/* width: 86.5%; */
+/* margin: var(--centre-hor); */
+
+/* background-color: red; */
+/* } */
+
+h1 {
+  /* display: none; */
+  margin-left: 10000px;
+  display: none;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: var(--font-largest-mobile);
+  /* weight D/L from G/Fonts */
+  /* font-weight: 700; */
+  line-height: var(--line-height-largest-mobile);
+  letter-spacing: var(--letter-spc-largest-mobile);
+}
+
+.heading-medium {
+  font-size: var(--font-large);
+  line-height: var(--line-height-large);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+span {
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+/************* MOBILE STYLES ***********/
+
+/************ buttons ************/
+/* add this class to HTML  */
+.btn-mobile-open {
+  /* width: 2rem;
+  height: 0.6rem; */
+  background-image: url(../assets/icons/open-icon.svg);
+  background-repeat: no-repeat;
+}
+
+.btn-mobile-close {
+  /* width: 1.6rem; */
+  /* height: 1.5rem; */
+  background-image: url(../assets/icons/close-icon.svg);
+  background-repeat: no-repeat;
+  /* transform: translateY(-10px); */
+}
+
+.btn-mobile-nav-large button {
+  border: none;
+  outline: none;
+  background-color: var(--pure-black);
+  width: 100%;
+}
+
+.btn-mobile-nav-large button a {
+  color: var(--pure-white);
+  text-transform: uppercase;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-size: var(--font-mobile-nav);
+  letter-spacing: var(--letter-spc-mobile-nav);
+}
+/************ links/nav ************/
+
+.link-normal {
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: var(--letter-spc-smallest);
+  text-transform: uppercase;
+}
+
+.link-white {
+  color: var(--pure-white);
+}
+
+.link-black {
+  color: var(--pure-black);
+}
+
+.link-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 14px;
+  width: 43px;
+}
+
+.main-nav ul a:link,
+.main-nav ul a:visited {
+  color: var(--pure-black);
+}
+
+.main-nav ul a:hover,
+.main-nav ul a:active {
+  color: var(--light-grey);
+}
+
+.company-logo {
+  height: 16px;
+}
+
+.main-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 25.3rem;
+  /* display: none; */
+  background-color: var(--pure-white);
+  border: 1px solid red;
+
+  transform: translateX(100%);
+  transition: all 0.5s ease-in;
+
+  /* Hide navigation */
+  /* Allows NO transitions at all */
+  /* display: none; */
+
+  /* 1) Hide it visually */
+  opacity: 0;
+
+  /* 2) Make it unaccessible to mouse and keyboard */
+  pointer-events: none;
+
+  /* 3) Hide it from screen readers */
+  visibility: hidden;
+
+  z-index: 9999;
+}
+
+/* ".main-nav-open" is Toggled via JS - has to be on the Parent of the Nav BTN - so can use "~" Sel' */
+.main-nav-open ~ .main-nav {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.main-nav-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* right: 0; */
+  /* bottom: 0; */
+  width: 100%;
+  height: 100vh;
+  /* for B/wards Compt. */
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 5000;
+}
+
+.main-nav__links {
+  padding-top: 3.2rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--pure-black);
+  text-transform: uppercase;
+  font-size: var(--font-mobile-nav);
+  font-weight: 700;
+  letter-spacing: var(--letter-spc-mobile-nav);
+}
+
+.main-nav__links ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo-mobile-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
+}
+
+.btn-mobile-nav {
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  /* height: 6px; */
+  height: 1.5rem;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.btn-mobile-nav a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/************ sections ************/
+
+/****** HEADER ******/
+.page-header {
+  position: relative;
+  width: 100%;
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+
+/****** HERO ******/
+.hero-section {
+  position: relative;
+}
+
+.hero-section__text--heading,
+.stories__first-text,
+.stories__second-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: var(--padding-ver-mobile-largest);
+  padding-bottom: var(--padding-ver-mobile-largest);
+}
+
+.hero-section__text--heading div {
+  display: flex;
+  /* align-items: center; */
+  gap: 2rem;
+}
+
+.hero-section__text--heading > div {
+  line-height: normal;
+}
+
+.hero-section__text--heading > div .link-arrow {
+  transform: translateY(2px);
+}
+
+.hero-section__text {
+  position: relative;
+  background-color: var(--pure-black);
+  padding-left: var(--padding-hor-mobile-large);
+  padding-right: var(--padding-hor-mobile-large);
+}
+
+.hero-section h2 {
+  color: var(--pure-white);
+}
+.hero-section p {
+  /* color: var(--light-grey); */
+  color: var(--pure-white);
+  opacity: 0.5;
+}
+
+.color-bar {
+  position: absolute;
+  top: 0;
+  left: 33px;
+}
+
+/****** STORIES ******/
+.stories__first-text > div,
+.stories__second-text > div {
+  display: flex;
+  /* align-items: center; */
+  gap: 2rem;
+}
+
+.stories h2 {
+  color: var(--pure-black);
+}
+
+.stories a {
+  line-height: normal;
+}
+
+.stories .link-arrow {
+  transform: translateY(3px);
+}
+
+.stories__first-text,
+.stories__second-text {
+  padding-left: var(--padding-hor-mobile-large);
+  padding-right: var(--padding-hor-mobile-large);
+}
+
+.stories p {
+  /* color: var(--light-grey); */
+  color: var(--pure-black);
+  opacity: 0.9;
+}
+
+/****** PHOTO CATEGORIES ******/
+.photo-categories-image {
+  position: relative;
+}
+.photo-categories-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, black 100%);
+  opacity: 75%;
+}
+
+.photo-categories-text {
+  padding-left: var(--padding-hor-mobile-large);
+  padding-right: var(--padding-hor-mobile-large);
+  color: var(--pure-white);
+}
+
+.photo-categories-text p {
+  padding-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.photo-categories-text a {
+  opacity: 0.9;
+}
+
+.photo-categories__mountains,
+.photo-categories__cities,
+.photo-categories__voyage,
+.photo-categories__architecturals {
+  position: relative;
+}
+
+.photo-categories-text {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 3.3rem;
+}
+
+.category-links > div {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+.category-links a {
+  line-height: normal;
+}
+
+.category-links .link-arrow {
+  transform: translateY(3px);
+}
+
+.white-line {
+  height: 1px;
+  background-color: var(--pure-white);
+  opacity: 0.3;
+  margin-bottom: 1.3rem;
+}
+
+/****** BENEFITS ******/
+.benefits {
+  padding-top: var(--padding-ver-mobile-largest);
+  padding-bottom: var(--padding-ver-mobile-largest);
+  padding-left: var(--padding-hor-mobile-large);
+  padding-right: var(--padding-hor-mobile-large);
+  text-align: center;
+}
+
+.benefits p {
+  opacity: 0.8;
+}
+
+.benefits-image {
+  height: 7.2rem;
+  width: 7.2rem;
+  margin: 0 auto 4.8rem;
+}
+
+.benefits-image-responsive {
+  background: url(../assets/icons/001-responsive.png) no-repeat;
+}
+
+.benefits-image-limit {
+  height: 3.6rem;
+  background: url(../assets/icons/002-forever.png) no-repeat;
+}
+
+.benefits-image-embed {
+  background: url(../assets/icons/003-bullhorn.png) no-repeat;
+}
+
+.benefits-text h3 {
+  padding-bottom: 1.5rem;
+}
+
+.benefits-text p {
+  padding-bottom: 5rem;
+}
+
+/****** FOOTER ******/
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 54rem;
+  background-color: var(--pure-black);
+  padding-left: var(--padding-hor-mobile-large);
+  padding-right: var(--padding-hor-mobile-large);
+  padding-top: 5.6rem;
+  padding-bottom: 5.6rem;
+
+  /* text-align: center; */
+}
+
+.company-logo-btm {
+  margin-bottom: 4rem;
+}
+
+.socials {
+  margin-bottom: 4rem;
+}
+
+.socials ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.copyright {
+  color: var(--pure-white);
+  opacity: 0.3;
+}
+
+.arrow-link {
+  display: flex;
+}
+
+.footer-nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  /* opacity: .9; */
+  font-weight: 400;
+  font-weight: normal;
+}
+
+.footer-nav a {
+  opacity: 0.8;
+}
+
+.bottom-link-and-copyright .arrow-link {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  line-height: normal;
+  margin-bottom: 3.2rem;
+}
+
+.bottom-link-and-copyright .arrow-link .link-arrow {
+  transform: translateY(3px);
+}
+
+/*********************** UPTO HERE ********************/
+/************* TABLET STYLES - 768px+ ***********/
+@media screen and (min-width: 48em) {
+  .main-nav {
+    /* position: relative; */
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    /* display: none; */
+    /* background-color: var(--pure-white); */
+
+    transform: translateX(0);
+    /* transition: all 0.5s ease-in; */
+
+    /* Hide navigation */
+    /* Allows NO transitions at all */
+    /* display: none; */
+
+    /* 1) Hide it visually */
+    opacity: 1;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: auto;
+
+    /* 3) Hide it from screen readers */
+    visibility: visible;
+
+    z-index: 9999;
+  }
+
+  .main-nav__links ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+/************* DESKTOP STYLES ***********/
+/* .btn-full {
+  display: inline-bl--padding-hor-mobile-large
+  width: 15.8rem;
+  height: 4rem;
+  font-size: var(--font-medium);
+  
+
+  text-transform: uppercase;
+}
+
+.btn-black {
+  background-color: var(--pure-black);
+  color: var(--pure-white);
+}
+
+.btn-white {
+  background-color: var(--pure-white);
+  color: var(--pure-black);
+}
+
+.btn-grey {
+  background-color: var(--light-grey);
+  color: var(--pure-black);
+}
+
+.btn-arrow {
+} */
+
+/************ headings ************/
+
+/*************Tablet+ ***********/
+/* .heading-largest {
+  font-size: var(--font-largest);
+  line-height: var(--line-height-largest);
+  letter-spacing: var(--letter-spc-largest);
+}
+
+.heading-large {
+  font-size: var(--font-larger);
+  line-height: var(--line-height-large);
+}
+
+.heading-medium {
+  /* font-size: 1.8rem; */
+
+/* font-size: var(--font-large);
+
+  line-height: var(--line-height-large);
+} */
+
+/* .heading-small { */
+/* font-size: 1.2rem; */
+/* font-size: var(--font-medium);
+  line-height: var(--line-height-medium);
+  letter-spacing: var(--letter-spc-smallest);
+} */
+
+/************ PG SECTIONS ************/
+
+/*************Tablet+ ***********/
+/* .page-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 7.2rem;
+  border: 1px solid red;
+} */
+
+/* .main-nav {
+  display: flex;
+  flex-basis: 111rem;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+/* .main-nav__links ul {
+  display: flex;
+  gap: 3.6rem;
+} */
+
+/* .hero-section { */
+/* display: grid; */
+/* 610px 830px @1440px */
+/* grid-template-columns: 42.36% 57.64%; */
+/* height: 65rem; */
+/* max-height: 65rem; */
+/* background-color: var(--pure-black); */
+/* } */
+
+/* .hero-section__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */

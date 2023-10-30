@@ -1,0 +1,71 @@
+*Flex - justify-items - doesnt like max-width (use flex-basis)
+*needed   overflow: hidden - on Container so page header would go 100% (W) 
+
+*Couldnt get Link txt & Link Arrow SVG to align (V) - w/ F/Bx - so just use F/Bx for space between & translateY on Arrow (also removed Line/H from <a>)
+
+*Responsive Img switching wasn't working w/ (& Dev/T's > Properties > currentSrc - wasnt Changing) :
+ <!-- <img
+            srcset="
+              ./assets/home/mobile/create-and-share.jpg  375w,
+              ./assets/home/tablet/create-and-share.jpg  273w,
+              ./assets/home/desktop/create-and-share.jpg 830w
+            "
+            sizes="(min-width: 10px) 100vw, (min-width: 767px) 57vw, (min-width: 1439px) 33vw, 375w"
+            src="./assets//home/mobile/create-and-share.jpg"
+          /> -->
+
+- also = tips from msg boards = ensure device px ratio = 1 in Chr/Dev T's  
+- 1 of the probs was the extra wht/spc vscode was adding between the filename & the 375w
+- I got it to work w/ Jonas' Imgs & Code        
+
+***** I used instead - <picture> ...<source> & it was Changing from the mobile to tablet BUT NOT to the D/Top Img = I had to change the M/Q - so that the Tablet Img had BOTH min-w & max-w M/Qs - else this img would still render instead of the D/Top Img kicking in at min-w 1439:
+
+ <source
+              media="(min-width: 767px) and (max-width: 1438px)"
+
+- <img srcset - Browser Decides due to what you Stipulate
+- <picture ...<source> = YOU FORCE Browser to choose your desired img        
+
+- can also Add Width as a % in HTML width attr 
+
+- Full <picture> Code - fro Resp. Img switching
+
+          <picture>
+            <source
+              media="(min-width: 767px) and (max-width: 1438px)"
+              srcset="./assets/home/tablet/create-and-share.jpg"
+              width="57%"
+            />
+
+            <source
+              media="(min-width: 1439px)"
+              srcset="./assets/home/desktop/create-and-share.jpg"
+              width="57%"
+            />
+
+            <img
+              src="./assets/home/mobile/create-and-share.jpg"
+              alt="Hero"
+              width="100%"
+            />
+          </picture>
+        </div>
+
+*When set html font-size - to eg. 62.5% (= 10) - ANY REM you set on an El = Mult. by that (they dont compound)
+
+*Gap between imgs and next div > img {display: block}
+*"grey" Txt = eg. opac 0.8
+
+*MOBILE NAV 
+*.main-nav = initially = Hidden
+- on CLK Need to add "main-nav-open" - TO PARENT of Nav BTN - so can Target .main-nav - when "main-nav-open" has been added to its Parent - eg:
+.main-nav-open ~ .main-nav {...css}
+//...NEED "~"  - else Selector wont work
+
+*Switching Mobile Icon:
+- these Classes contain SVGs "=" & "X" (Burger Icons)
+   In these classes the SVGs are BG-IMGs
+  mobileNavBtn.classList.toggle('btn-mobile-open');
+  mobileNavBtn.classList.toggle('btn-mobile-close');
+
+- bc the "=" & "X" SVG Icons where Diff H & W to ea. Other - I set their Parent BTN to the W of the Widest of them & same w/ the H - & used BG-Pos: center center
