@@ -109,14 +109,14 @@ body {
   overflow: hidden;
 }
 
-/* .inner-container { */
-/* max-width: 111rem; */
-/* max-width: 86.5%; */
-/* width: 86.5%; */
-/* margin: var(--centre-hor); */
+.inner-container {
+  /* max-width: 111rem; */
+  /* max-width: 86.5%; */
+  /* width: 86.5%; */
+  /* margin: var(--centre-hor); */
 
-/* background-color: red; */
-/* } */
+  /* background-color: red; */
+}
 
 h1 {
   /* display: none; */
@@ -185,8 +185,8 @@ img {
 .btn-mobile-nav-large button a {
   color: var(--pure-white);
   text-transform: uppercase;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
   font-size: var(--font-mobile-nav);
   letter-spacing: var(--letter-spc-mobile-nav);
 }
@@ -237,7 +237,6 @@ img {
   height: 25.3rem;
   /* display: none; */
   background-color: var(--pure-white);
-  border: 1px solid red;
 
   transform: translateX(100%);
   transition: all 0.5s ease-in;
@@ -307,8 +306,10 @@ img {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-left: 2.4rem;
-  margin-right: 2.4rem;
+  /* margin-left: 2.4rem; */
+  /* padding-left: 2.4rem; */
+  /* margin-right: 2.4rem; */
+  /* padding-right: 2.4rem; */
 }
 
 .btn-mobile-nav {
@@ -330,9 +331,17 @@ img {
 /************ sections ************/
 
 /****** HEADER ******/
+/* adjust the Padding for Tablet & D/Top */
 .page-header {
   position: relative;
   width: 100%;
+  /* width: calc(100% - 48px); */
+  /* padding-left: calc(100% - 24px); */
+  /* padding-right: calc(100% - 24px); */
+
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+
   height: 72px;
   display: flex;
   align-items: center;
@@ -595,41 +604,85 @@ footer {
 /*********************** UPTO HERE ********************/
 /************* TABLET STYLES - 768px+ ***********/
 @media screen and (min-width: 48em) {
-  .main-nav {
+  .page-header {
     /* position: relative; */
+    /* width: 100%; */
+    /* height: 72px; */
     /* display: flex; */
-    /* flex-direction: row; */
-    /* position: absolute; */
-    top: 0;
-    left: 0;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+
+    padding-left: 3.9rem;
+    padding-right: 3.9rem;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    /* gap: 5.1rem; */
+    justify-content: space-between;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 250px;
+    right: 3.9rem;
     width: auto;
+    /* width: 800px; */
+    /* min-width: 600px; */
+    /* width: calc(100% - 250px); */
+    /* flex-basis: 500px; */
     height: auto;
-    /* display: none; */
-    /* background-color: var(--pure-white); */
 
-    transform: translateX(0);
-    /* transition: all 0.5s ease-in; */
+    /* transform: translateX(0); */
 
-    /* Hide navigation */
-    /* Allows NO transitions at all */
-    /* display: none; */
-
-    /* 1) Hide it visually */
     opacity: 1;
-
-    /* 2) Make it unaccessible to mouse and keyboard */
     pointer-events: auto;
-
-    /* 3) Hide it from screen readers */
     visibility: visible;
 
     z-index: 9999;
   }
 
+  .logo-mobile-nav {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* width: 100%; */
+    width: 170px;
+
+    /* margin-left: 3.9rem; */
+    /* padding-left: 3.9rem; */
+    /* margin-right: 0; */
+    /* padding-right: 3.9rem; */
+  }
+
+  .main-nav__links {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    margin-bottom: 0;
+    font-size: var(--font-medium);
+    letter-spacing: var(--letter-spc-smallest);
+    line-height: 1;
+    border-bottom: none;
+  }
+
   .main-nav__links ul {
     flex-direction: row;
-    align-items: center;
-    gap: 1.5rem;
+    gap: 3.7rem;
+  }
+
+  .btn-mobile-nav-large button a {
+    font-size: var(--font-medium);
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    letter-spacing: var(--letter-spc-smallest);
+  }
+
+  .btn-mobile-nav {
+    display: none;
   }
 }
 

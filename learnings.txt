@@ -1,5 +1,8 @@
+*Really think about HTML Structure - espec. for <pgHeader> - I had to put "display: flex" on pgHeader & also on <mainNav> (= "main-nav__links" & "btn-mobile-nav-large")
+
 *Flex - justify-items - doesnt like max-width (use flex-basis)
 *needed   overflow: hidden - on Container so page header would go 100% (W) 
+
 
 *Couldnt get Link txt & Link Arrow SVG to align (V) - w/ F/Bx - so just use F/Bx for space between & translateY on Arrow (also removed Line/H from <a>)
 
