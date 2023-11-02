@@ -1,16 +1,3 @@
-/*
---- 01 TYPOGRAPHY SYSTEM
-
-- FONT SIZE SYSTEM (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-
---- WHITESPACE
-
-- Spacing System (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-
-*/
-
 :root {
   /********* CLRs **********/
   --pure-black: #000;
@@ -26,45 +13,32 @@
   --font-large: 1.8rem;
   --font-regular: 1.5rem;
   --font-medium: 1.2rem;
-
   --font-mobile-nav: 1.5rem;
-
   --font-largest-mobile: 3.2rem;
-  /* --font-larger-mobile: 2.4rem; ???*/
 
   /********** LAYOUT **********/
   --gid: grid;
 
   /********** LINE HEIGHT **********/
-  /* x 62.5% */
-  /* 48px */
   --line-height-largest: 4.8rem;
-  /* 25px */
   --line-height-large: 2.5rem;
-  /* 16px */
   --line-height-medium: 1.6rem;
-
-  /* x 50% */
   --line-height-largest-mobile: 4rem;
 
   /********** LTR SPACING **********/
   --letter-spc-largest: 4.17px;
   --letter-spc-large: 3.33px;
-
   --letter-spc-smallest: 2px;
-
   --letter-spc-largest-mobile: 3.3px;
-
   --letter-spc-mobile-nav: 2.5px;
 
   /********** WHT/SPC **************/
   --centre-hor: 0 auto;
-
   --padding-ver-mobile-largest: 7.2rem;
-
   --padding-hor-mobile-large: 3.3rem;
 }
 
+/********** CSS RESET **************/
 * {
   margin: 0;
   padding: 0;
@@ -83,11 +57,6 @@ html {
 
   /* = 10px so any REMs = x10px */
   font-size: 62.5%;
-
-  /* to stop B' A/M Scaling Up text at screen width = 100 */
-  /* -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none; */
 }
 /* @media only screen and (max-width: 68.75em) {
   html {
@@ -96,30 +65,19 @@ html {
 } */
 
 body {
+  /* remove L/H on Body ?? */
   font: 1.5rem/2.5rem 'DM Sans', sans-serif;
   /* font-family: 'DM Sans', sans-serif; */
 }
 
 .container {
   max-width: 144rem;
-  /* margin: 0 auto; */
+  position: relative;
   margin: var(--centre-hor);
-
-  /* *needed this so page header would go 100% (W)  */
   overflow: hidden;
 }
 
-.inner-container {
-  /* max-width: 111rem; */
-  /* max-width: 86.5%; */
-  /* width: 86.5%; */
-  /* margin: var(--centre-hor); */
-
-  /* background-color: red; */
-}
-
 h1 {
-  /* display: none; */
   margin-left: 10000px;
   display: none;
 }
@@ -127,8 +85,6 @@ h1 {
 h2 {
   text-transform: uppercase;
   font-size: var(--font-largest-mobile);
-  /* weight D/L from G/Fonts */
-  /* font-weight: 700; */
   line-height: var(--line-height-largest-mobile);
   letter-spacing: var(--letter-spc-largest-mobile);
 }
@@ -159,27 +115,30 @@ img {
 /************* MOBILE STYLES ***********/
 
 /************ buttons ************/
-/* add this class to HTML  */
 .btn-mobile-open {
-  /* width: 2rem;
-  height: 0.6rem; */
   background-image: url(../assets/icons/open-icon.svg);
   background-repeat: no-repeat;
 }
 
 .btn-mobile-close {
-  /* width: 1.6rem; */
-  /* height: 1.5rem; */
   background-image: url(../assets/icons/close-icon.svg);
   background-repeat: no-repeat;
-  /* transform: translateY(-10px); */
+}
+
+.btn-mobile-nav-large {
+  background-color: var(--pure-white);
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-mobile-nav-large button {
   border: none;
   outline: none;
   background-color: var(--pure-black);
-  width: 100%;
+  width: 83%;
 }
 
 .btn-mobile-nav-large button a {
@@ -226,24 +185,21 @@ img {
 }
 
 .company-logo {
+  width: 170px;
   height: 16px;
+  line-height: normal;
 }
 
 .main-nav {
-  position: absolute;
-  top: 100%;
-  left: 0;
   width: 100%;
-  height: 25.3rem;
-  /* display: none; */
+  border-bottom: 1px solid #000;
   background-color: var(--pure-white);
-
-  transform: translateX(100%);
-  transition: all 0.5s ease-in;
 
   /* Hide navigation */
   /* Allows NO transitions at all */
   /* display: none; */
+
+  transform: translateX(100%);
 
   /* 1) Hide it visually */
   opacity: 0;
@@ -254,25 +210,43 @@ img {
   /* 3) Hide it from screen readers */
   visibility: hidden;
 
+  transition: all 0.3s ease-in;
+
   z-index: 9999;
 }
 
-/* ".main-nav-open" is Toggled via JS - has to be on the Parent of the Nav BTN - so can use "~" Sel' */
-.main-nav-open ~ .main-nav {
+/* ".main-nav-open" is Toggled via JS - has to be on the Parent of the Nav BTN - so can use "~" or DESC. Sel' */
+.main-nav-open .main-nav {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
   transform: translateX(0);
+  z-index: 9999;
 }
 
-.main-nav-overlay {
+.btn-mobile-nav-large {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: all 0.3s ease-in;
+  z-index: 9999;
+}
+
+.main-nav-open .btn-mobile-nav-large {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateX(0);
+  z-index: 9999;
+}
+
+.main-nav-open .overlay-container {
   position: absolute;
   top: 0;
   left: 0;
-  /* right: 0; */
-  /* bottom: 0; */
-  width: 100%;
-  height: 100vh;
+  right: 0;
+  bottom: 0;
   /* for B/wards Compt. */
   background: rgb(0, 0, 0);
   background: linear-gradient(
@@ -284,14 +258,16 @@ img {
 }
 
 .main-nav__links {
-  padding-top: 3.2rem;
+  width: 83%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2.5rem;
   padding-bottom: 1.5rem;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid var(--pure-black);
   text-transform: uppercase;
   font-size: var(--font-mobile-nav);
   font-weight: 700;
   letter-spacing: var(--letter-spc-mobile-nav);
+  line-height: 25px;
 }
 
 .main-nav__links ul {
@@ -301,22 +277,14 @@ img {
   gap: 1.5rem;
 }
 
-.logo-mobile-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  /* margin-left: 2.4rem; */
-  /* padding-left: 2.4rem; */
-  /* margin-right: 2.4rem; */
-  /* padding-right: 2.4rem; */
-}
-
 .btn-mobile-nav {
+  display: inline-block;
+  position: absolute;
+  right: 24px;
+  top: 28px;
   background-color: transparent;
   border: none;
   width: 20px;
-  /* height: 6px; */
   height: 1.5rem;
   background-position: center center;
   cursor: pointer;
@@ -331,20 +299,29 @@ img {
 /************ sections ************/
 
 /****** HEADER ******/
-/* adjust the Padding for Tablet & D/Top */
 .page-header {
+  background-color: var(--pure-white);
   position: relative;
   width: 100%;
-  /* width: calc(100% - 48px); */
-  /* padding-left: calc(100% - 24px); */
-  /* padding-right: calc(100% - 24px); */
-
-  padding-left: 2.4rem;
-  padding-right: 2.4rem;
-
   height: 72px;
+  z-index: 9999;
+  overflow: visible;
+}
+
+.page-header-container {
+  height: 325px;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  width: 100%;
+  padding-top: 28px;
+  z-index: 9999;
+}
+
+.logo {
+  align-self: start;
+  margin-bottom: 28px;
+  padding-left: 2.4rem;
 }
 
 /****** HERO ******/
@@ -364,7 +341,6 @@ img {
 
 .hero-section__text--heading div {
   display: flex;
-  /* align-items: center; */
   gap: 2rem;
 }
 
@@ -387,7 +363,6 @@ img {
   color: var(--pure-white);
 }
 .hero-section p {
-  /* color: var(--light-grey); */
   color: var(--pure-white);
   opacity: 0.5;
 }
@@ -402,7 +377,6 @@ img {
 .stories__first-text > div,
 .stories__second-text > div {
   display: flex;
-  /* align-items: center; */
   gap: 2rem;
 }
 
@@ -425,7 +399,6 @@ img {
 }
 
 .stories p {
-  /* color: var(--light-grey); */
   color: var(--pure-black);
   opacity: 0.9;
 }
@@ -476,7 +449,6 @@ img {
 
 .category-links > div {
   display: flex;
-  /* align-items: center; */
   justify-content: space-between;
 }
 
@@ -547,8 +519,6 @@ footer {
   padding-right: var(--padding-hor-mobile-large);
   padding-top: 5.6rem;
   padding-bottom: 5.6rem;
-
-  /* text-align: center; */
 }
 
 .company-logo-btm {
@@ -580,7 +550,6 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  /* opacity: .9; */
   font-weight: 400;
   font-weight: normal;
 }
@@ -604,72 +573,75 @@ footer {
 /*********************** UPTO HERE ********************/
 /************* TABLET STYLES - 768px+ ***********/
 @media screen and (min-width: 48em) {
-  .page-header {
-    /* position: relative; */
-    /* width: 100%; */
-    /* height: 72px; */
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: space-between; */
+  .btn-mobile-nav {
+    display: none;
+  }
 
+  .page-header {
+    display: flex;
+    align-items: center;
+  }
+
+  .page-header-container {
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .logo {
+    align-self: center;
     padding-left: 3.9rem;
-    padding-right: 3.9rem;
+    margin-bottom: 0;
   }
 
   .main-nav {
-    display: flex;
-    flex-direction: row;
-    /* align-items: center; */
-    /* gap: 5.1rem; */
-    justify-content: space-between;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 250px;
-    right: 3.9rem;
     width: auto;
-    /* width: 800px; */
-    /* min-width: 600px; */
-    /* width: calc(100% - 250px); */
-    /* flex-basis: 500px; */
-    height: auto;
+    border-bottom: none;
+    margin-bottom: 0;
 
-    /* transform: translateX(0); */
-
+    /* only at Tablet+ */
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
-
+    transform: translateX(0);
     z-index: 9999;
-  }
-
-  .logo-mobile-nav {
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
-    /* width: 100%; */
-    width: 170px;
-
-    /* margin-left: 3.9rem; */
-    /* padding-left: 3.9rem; */
-    /* margin-right: 0; */
-    /* padding-right: 3.9rem; */
+    transition: none;
   }
 
   .main-nav__links {
-    padding-top: 1.2rem;
-    padding-bottom: 1.2rem;
-    padding-left: 2.4rem;
-    padding-right: 2.4rem;
-    margin-bottom: 0;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     font-size: var(--font-medium);
+    font-weight: 700;
     letter-spacing: var(--letter-spc-smallest);
-    line-height: 1;
-    border-bottom: none;
+    line-height: normal;
   }
 
   .main-nav__links ul {
     flex-direction: row;
     gap: 3.7rem;
+  }
+
+  .btn-mobile-nav-large {
+    display: block;
+    width: auto;
+    height: auto;
+    padding-right: 3.9rem;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+    z-index: 9999;
+    transition: none;
+  }
+
+  .btn-mobile-nav-large button {
+    width: auto;
   }
 
   .btn-mobile-nav-large button a {
@@ -681,7 +653,7 @@ footer {
     letter-spacing: var(--letter-spc-smallest);
   }
 
-  .btn-mobile-nav {
+  .overlay-container {
     display: none;
   }
 }

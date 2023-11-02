@@ -1,7 +1,59 @@
-*Really think about HTML Structure - espec. for <pgHeader> - I had to put "display: flex" on pgHeader & also on <mainNav> (= "main-nav__links" & "btn-mobile-nav-large")
+*Really think about HTML Structure - 
+- I Put Flex (mobile = Col / Tablet+ = Row) on the Parent (page-header-container) of the  1. Logo  2. mainNav  3. Lg Btn 
+- In Mobile M/Q - Pos'd Burger Icon Relative to <pageHeader> & In Tablet+ - I hid it (Disp: none)
+
+      <header class="page-header">
+
+        <div class="page-header-container">
+
+          <div class="logo">
+            <div class="company-logo">
+              <h1>PHOTOSNAP</h1>
+              <a href="#">
+                <img src="./logo-black.png" alt="company logo" />
+              </a>
+            </div>
+          </div>
+
+          <nav class="main-nav">
+            <div class="main-nav__links inner-container">
+              <ul>
+                <li>
+                  <a class="link-black" href="#">Stories</a>
+                </li>
+                <li>
+                  <a class="link-black" href="#">Features</a>
+                </li>
+                <li>
+                  <a class="link-black" href="#">Pricing</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="btn-mobile-nav-large">
+            <button>
+              <a href="index.html" class="link-white">Get an invite</a>
+            </button>
+          </div>
+
+        </div>  
+      <!-- end page-header-container -->
+
+           <!-- burger menu & close btn -->
+            <button class="btn-mobile-nav btn-mobile-open">
+              <a class="mobile-icon" href="#">
+                <!-- <svg> via CSS -->
+              </a>
+            </button>
+      </header>
+
+*bc <main-nav> & <lg-btn> were in <PGHeader-container> - which was Inside <PGHeader> - I needed <PGHeader> to be 72px (H) (w/ Overflow: Visible) & <PGHeader-container> to be 325 (H) - ELSE the rest of the PG Content would get pushed Down the PG
 
 *Flex - justify-items - doesnt like max-width (use flex-basis)
 *needed   overflow: hidden - on Container so page header would go 100% (W) 
+
+*Need Z-Index on BOTH States eg. '.main-nav' AND '.mobile-nav-open main-nav'
 
 
 *Couldnt get Link txt & Link Arrow SVG to align (V) - w/ F/Bx - so just use F/Bx for space between & translateY on Arrow (also removed Line/H from <a>)
@@ -64,6 +116,7 @@
 - on CLK Need to add "main-nav-open" - TO PARENT of Nav BTN - so can Target .main-nav - when "main-nav-open" has been added to its Parent - eg:
 .main-nav-open ~ .main-nav {...css}
 //...NEED "~"  - else Selector wont work
+// BUT WHEN REFACTORED I DIDNT NEED THE "~" - ".main-nav-open .main-nav" was sufficient
 
 *Switching Mobile Icon:
 - these Classes contain SVGs "=" & "X" (Burger Icons)

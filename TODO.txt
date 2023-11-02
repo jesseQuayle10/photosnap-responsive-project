@@ -1,10 +1,10 @@
 
-/////////////////////////////////////////////*make .main-nav Width a % (so the Nav Links move to the R (to match what Large BTN is doing)) ??
-////////////////////////////////////////////
+/////////////////////////////////////////////
 
+////////////////////////////////////////////
 
 *add an animation on main-nav O/Lay - (I tried transition options - been thru the wringer w/ it - SO ONLY TRY ANIMATION CSS)
 
-*Change mainNav (W) back to eg. 80% for Mobile
+*What to do about the BG CLR of the DIVs on Dvc's that are wider than 1440
 
-*What to do about the CLR of the DIVs on Dvc's that are wider than 1440
+*Do i need to remove .main-nav-open Class via JS RESIZE Evt (bc Overlay stays when rsize to Tablet+)??

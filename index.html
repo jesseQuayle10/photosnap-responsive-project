@@ -16,15 +16,6 @@
       rel="stylesheet"
     />
 
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule=""
-      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
-    ></script>
-
     <script defer src="./scripts/script.js"></script>
 
     <link rel="stylesheet" href="./styles/styles.css" />
@@ -33,50 +24,51 @@
   </head>
   <body>
     <div class="container">
-      <!-- <div class="inner-container"> -->
       <header class="page-header">
-        <div class="logo-mobile-nav">
-          <div class="company-logo">
-            <h1>PHOTOSNAP</h1>
-            <a href="#">
-              <img src="./assets/icons/logo-black.png" alt="company logo" />
-            </a>
+        <div class="page-header-container">
+          <div class="logo">
+            <div class="company-logo">
+              <h1>PHOTOSNAP</h1>
+              <a href="#">
+                <img src="./assets/icons/logo-black.png" alt="company logo" />
+              </a>
+            </div>
           </div>
 
-          <!-- burger menu & close btn -->
-          <button class="btn-mobile-nav btn-mobile-open">
-            <a class="mobile-icon" href="#">
-              <!-- <svg> via CSS -->
-            </a>
-          </button>
-        </div>
+          <nav class="main-nav">
+            <div class="main-nav__links inner-container">
+              <ul>
+                <li>
+                  <a class="link-black" href="stories.html">Stories</a>
+                </li>
+                <li>
+                  <a class="link-black" href="features.html">Features</a>
+                </li>
+                <li>
+                  <a class="link-black" href="pricing.html">Pricing</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
 
-        <nav class="main-nav">
-          <div class="main-nav__links inner-container">
-            <ul>
-              <li>
-                <a class="link-black" href="stories.html">Stories</a>
-              </li>
-              <li>
-                <a class="link-black" href="features.html">Features</a>
-              </li>
-              <li>
-                <a class="link-black" href="pricing.html">Pricing</a>
-              </li>
-            </ul>
-          </div>
           <div class="btn-mobile-nav-large">
             <button>
               <a href="index.html" class="link-white">Get an invite</a>
             </button>
           </div>
-        </nav>
+        </div>
+        <!-- end page-header-container -->
+
+        <!-- burger menu & close btn -->
+        <button class="btn-mobile-nav btn-mobile-open">
+          <a class="mobile-icon" href="#">
+            <!-- <svg> via CSS -->
+          </a>
+        </button>
       </header>
       <!-- end header -->
 
       <div class="hero-section">
-        <div class="overlay-container"></div>
-
         <div class="hero-section__image">
           <picture>
             <source
@@ -166,7 +158,6 @@
 
             <div>
               <a class="link-normal link-black" href="#">View the stories</a>
-              <!-- create arrow with css later -->
               <span class="link-arrow">
                 <a href="#">
                   <svg
@@ -216,7 +207,6 @@
             </p>
             <div>
               <a class="link-normal link-black" href="#">View the stories</a>
-              <!-- create arrow with css later -->
               <span class="link-arrow">
                 <a href="#">
                   <svg
@@ -432,7 +422,6 @@
       <!-- end photo-categories -->
 
       <div class="benefits">
-        <!-- <div class="inner-container"> -->
         <div>
           <div class="benefits-image benefits-image-responsive"></div>
           <div class="benefits-text">
@@ -465,7 +454,6 @@
             </p>
           </div>
         </div>
-        <!-- </div> -->
       </div>
 
       <!-- end benefits -->
@@ -477,24 +465,6 @@
               <img src="./assets/icons/logo-white.png" alt="company logo" />
             </a>
           </div>
-
-          <!-- <div class="socials">
-            <div>
-              <img src="./assets/icons/fb.png" alt="facebook icon" />
-            </div>
-            <div>
-              <img src="./assets/icons/play-icon.png" alt="play icon" />
-            </div>
-            <div>
-              <img src="./assets/icons/twitter.png" alt="twitter icon" />
-            </div>
-            <div>
-              <img src="./assets/icons/pintrest.png" alt="pintrest icon" />
-            </div>
-            <div>
-              <img src="./assets/icons/insta.png" alt="instagram icon" />
-            </div>
-          </div> -->
 
           <div class="socials">
             <ul>
@@ -571,8 +541,8 @@
         </div>
         <!-- end bottom-link-and-copyright -->
       </footer>
-      <!-- </div> -->
-      <!-- end inner container -->
+
+      <div class="overlay-container"></div>
     </div>
     <!-- end container -->
   </body>

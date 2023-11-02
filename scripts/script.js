@@ -6,35 +6,27 @@
 //...NEED "~"  - else Selector wont work
 
 //// grab el's
-// Mobile Nv BTN
+// Mobile Nv BTN - for CLK EVT & to Change this btn's Icon
 const mobileNavBtn = document.querySelector('.btn-mobile-nav');
 
-// const mobileNavCloseBtn = document.querySelector('.btn-mobile-nav');
+// for Overlay when Mobile Nav is Active
+const pageContainer = document.querySelector('.container');
 
-// Mobile Nav Parent (for "~" Sel')
-const navBtnParent = document.querySelector('.logo-mobile-nav');
-
-// O/Lay Container - so can add the Class w/ the O/Lay Styles
-const overlayContainer = document.querySelector('.overlay-container');
-
-const heroSection = document.querySelector('.hero-section');
-
-const mainNav = document.querySelector('.main-nav');
+// Mobile Nav & Lg btn Parent (so can use "~" OR Desc Sel')
+const navAndBtnParent = document.querySelector('.page-header-container');
 
 //// CLK EVT on Mobile Nav BTN
-// On CLK "".main-nav-open" = Added to Parent of BTN - so can select the .main-nav =>
-//...   .main-nav-open ~ .main-nav {...css}
+// On CLK "".main-nav-open" = Added to Parent of BTN - so can select the .main-nav via...
+//...   .main-nav-open ~ .main-nav OR DESC SEL' {...css}
 mobileNavBtn.addEventListener('click', (e) => {
-  // so can use "~" - to Open Mobile Nav
-  navBtnParent.classList.toggle('main-nav-open');
+  // so can use Desc. Sel' OR "~" - to Open Mobile Nav & Display Lg Btn
+  navAndBtnParent.classList.toggle('main-nav-open');
 
-  // toggle O/Lay Styles Class
-  overlayContainer.classList.toggle('main-nav-overlay');
+  // for Nav O/Lay
+  pageContainer.classList.toggle('main-nav-open');
 
   // toggle the "=" & "X" Burger Icons
   //...these Classes just have a BG-Img (= SVG of "=" OR "X")
   mobileNavBtn.classList.toggle('btn-mobile-open');
   mobileNavBtn.classList.toggle('btn-mobile-close');
-
-  // console.log(e.className);
 });
