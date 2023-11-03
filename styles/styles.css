@@ -36,7 +36,11 @@
   --centre-hor: 0 auto;
   --padding-ver-mobile-largest: 7.2rem;
   --padding-hor-mobile-large: 3.3rem;
+  --padding-hor-tablet-largest: 5.4rem;
+
+  
 }
+
 
 /********** CSS RESET **************/
 * {
@@ -327,6 +331,7 @@ img {
 /****** HERO ******/
 .hero-section {
   position: relative;
+  background-color: var(--pure-black);
 }
 
 .hero-section__text--heading,
@@ -367,11 +372,17 @@ img {
   opacity: 0.5;
 }
 
-.color-bar {
+.color-bar-h {
   position: absolute;
   top: 0;
   left: 33px;
 }
+
+.color-bar-v {
+  display: none;
+}
+
+
 
 /****** STORIES ******/
 .stories__first-text > div,
@@ -573,6 +584,7 @@ footer {
 /*********************** UPTO HERE ********************/
 /************* TABLET STYLES - 768px+ ***********/
 @media screen and (min-width: 48em) {
+  /********* PG HEADER ************/
   .btn-mobile-nav {
     display: none;
   }
@@ -653,10 +665,81 @@ footer {
     letter-spacing: var(--letter-spc-smallest);
   }
 
+  /********* PG OVERLAY ************/
   .overlay-container {
     display: none;
   }
+
+  /********* HERO SECTION ************/
+  .hero-section {
+  display: grid;
+  grid-template-columns: 64.5% 35.5%;
+  align-items: center;
+  /* height: 65rem; */
+  /* max-height: 65rem; */
+  }
+
+  .color-bar-h {
+   display: none;
+  }
+
+  .color-bar-v {
+    display: inline;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+
+  
+  .hero-section__image {
+    /**** COULDNT USE GRID-COL - BC YOU CANT CHANGE THE SOURCE ORDER W/ IT - USED "ORDER" INSTEAD
+    /* grid-column: 2 / span 1; */
+    order: 2;
+  }
+  
+  .hero-section__text {
+    padding-left: var(--padding-hor-tablet-largest);
+    padding-right: var(--padding-hor-tablet-largest);    
+    order: 1;
+    /* align-self: center; */
+  }  
+
+  .hero-section__text--heading {
+    padding-top: 0;
+    padding-bottom: 0;
+    /* justify-content: center; */
+    /* align-items: center; */
+
+
+  }
+  .heading-largest {
+    font-size: var(--font-largest);
+    line-height: var(--line-height-largest);
+    letter-spacing: var(--letter-spc-largest);
 }
+
+/*
+.heading-large {
+  font-size: var(--font-larger);
+  line-height: var(--line-height-large);
+}
+
+.heading-medium {
+  /* font-size: 1.8rem; */
+
+/* font-size: var(--font-large);
+
+  line-height: var(--line-height-large);
+} */
+
+/* .heading-small { */
+/* font-size: 1.2rem; */
+/* font-size: var(--font-medium);
+  line-height: var(--line-height-medium);
+  letter-spacing: var(--letter-spc-smallest);
+} */
 
 /************* DESKTOP STYLES ***********/
 /* .btn-full {
@@ -690,67 +773,8 @@ footer {
 /************ headings ************/
 
 /*************Tablet+ ***********/
-/* .heading-largest {
-  font-size: var(--font-largest);
-  line-height: var(--line-height-largest);
-  letter-spacing: var(--letter-spc-largest);
-}
 
-.heading-large {
-  font-size: var(--font-larger);
-  line-height: var(--line-height-large);
-}
-
-.heading-medium {
-  /* font-size: 1.8rem; */
-
-/* font-size: var(--font-large);
-
-  line-height: var(--line-height-large);
-} */
-
-/* .heading-small { */
-/* font-size: 1.2rem; */
-/* font-size: var(--font-medium);
-  line-height: var(--line-height-medium);
-  letter-spacing: var(--letter-spc-smallest);
-} */
 
 /************ PG SECTIONS ************/
 
 /*************Tablet+ ***********/
-/* .page-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 7.2rem;
-  border: 1px solid red;
-} */
-
-/* .main-nav {
-  display: flex;
-  flex-basis: 111rem;
-  justify-content: space-between;
-  align-items: center;
-} */
-
-/* .main-nav__links ul {
-  display: flex;
-  gap: 3.6rem;
-} */
-
-/* .hero-section { */
-/* display: grid; */
-/* 610px 830px @1440px */
-/* grid-template-columns: 42.36% 57.64%; */
-/* height: 65rem; */
-/* max-height: 65rem; */
-/* background-color: var(--pure-black); */
-/* } */
-
-/* .hero-section__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-} */

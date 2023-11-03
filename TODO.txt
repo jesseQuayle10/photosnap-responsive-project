@@ -3,6 +3,8 @@
 
 ////////////////////////////////////////////
 
+*Remove "height" Props from El's (so fully responsive) - EXCEPT From PGHeader bc need it for main-nav to render properly??
+
 *add an animation on main-nav O/Lay - (I tried transition options - been thru the wringer w/ it - SO ONLY TRY ANIMATION CSS)
 
 *What to do about the BG CLR of the DIVs on Dvc's that are wider than 1440
