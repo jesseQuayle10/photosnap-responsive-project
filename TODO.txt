@@ -1,6 +1,8 @@
 
 /////////////////////////////////////////////
+*add p-btm to Hero > invite Link
 
+*maybe write M/Q to change Hero Img (to D/Top Img) from when Mobile Img starts to look bad until Tablet M/Q
 ////////////////////////////////////////////
 
 *Remove "height" Props from El's (so fully responsive) - EXCEPT From PGHeader bc need it for main-nav to render properly??

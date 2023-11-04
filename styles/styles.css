@@ -674,8 +674,11 @@ footer {
   .hero-section {
   display: grid;
   grid-template-columns: 64.5% 35.5%;
+    /* grid-template-columns: 650px 450px; */
+    grid-template-columns: 1fr 273px;
+
   align-items: center;
-  /* height: 65rem; */
+  height: 65rem;
   /* max-height: 65rem; */
   }
 
@@ -697,12 +700,17 @@ footer {
     /**** COULDNT USE GRID-COL - BC YOU CANT CHANGE THE SOURCE ORDER W/ IT - USED "ORDER" INSTEAD
     /* grid-column: 2 / span 1; */
     order: 2;
+    height: 100%;
   }
   
   .hero-section__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-left: var(--padding-hor-tablet-largest);
     padding-right: var(--padding-hor-tablet-largest);    
     order: 1;
+    height: 100%;
     /* align-self: center; */
   }  
 

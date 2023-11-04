@@ -50,6 +50,9 @@
 
 *bc <main-nav> & <lg-btn> were in <PGHeader-container> - which was Inside <PGHeader> - I needed <PGHeader> to be 72px (H) (w/ Overflow: Visible) & <PGHeader-container> to be 325 (H) - ELSE the rest of the PG Content would get pushed Down the PG
 
+*I thought the Hero Img DIV was supposed to Scale Width-wise as PG gets Wider (& that some sort of Object-fit trick to make the Img stay the Same height But the Img just reveal more of its (W) as PG gets Wider) - BUT the IMG ISNT SUPPOSED TO SCALE (it is supposed to stay fixed Size & Only the Hero Text DIV Scales Width-wise (Hero section is always 650px in Tablet+)) - so I made GTCs: 1fr 273px & Hero-section: H = 650px (*I init. had .hero-section GTCs = 65% 35% ) - also removed the <source> (W = 100%) attri (so no W OR H attri)
+
+
 *Flex - justify-items - doesnt like max-width (use flex-basis)
 *needed   overflow: hidden - on Container so page header would go 100% (W) 
 
