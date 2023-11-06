@@ -37,10 +37,7 @@
   --padding-ver-mobile-largest: 7.2rem;
   --padding-hor-mobile-large: 3.3rem;
   --padding-hor-tablet-largest: 5.4rem;
-
-  
 }
-
 
 /********** CSS RESET **************/
 * {
@@ -339,7 +336,9 @@ img {
 .stories__second-text {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  /* gap: 2rem; */
+  gap: 2.6rem;
+
   padding-top: var(--padding-ver-mobile-largest);
   padding-bottom: var(--padding-ver-mobile-largest);
 }
@@ -347,6 +346,7 @@ img {
 .hero-section__text--heading div {
   display: flex;
   gap: 2rem;
+  margin-top: 1.3rem;
 }
 
 .hero-section__text--heading > div {
@@ -382,13 +382,12 @@ img {
   display: none;
 }
 
-
-
 /****** STORIES ******/
 .stories__first-text > div,
 .stories__second-text > div {
   display: flex;
   gap: 2rem;
+  margin-top: 1.3rem;
 }
 
 .stories h2 {
@@ -671,19 +670,8 @@ footer {
   }
 
   /********* HERO SECTION ************/
-  .hero-section {
-  display: grid;
-  grid-template-columns: 64.5% 35.5%;
-    /* grid-template-columns: 650px 450px; */
-    grid-template-columns: 1fr 273px;
-
-  align-items: center;
-  height: 65rem;
-  /* max-height: 65rem; */
-  }
-
   .color-bar-h {
-   display: none;
+    display: none;
   }
 
   .color-bar-v {
@@ -694,38 +682,76 @@ footer {
     transform: translateY(-50%);
   }
 
+  .hero-section {
+    display: grid;
+    grid-template-columns: 1fr 273px;
+    align-items: center;
+    min-height: 65rem;
+  }
 
-  
   .hero-section__image {
     /**** COULDNT USE GRID-COL - BC YOU CANT CHANGE THE SOURCE ORDER W/ IT - USED "ORDER" INSTEAD
     /* grid-column: 2 / span 1; */
     order: 2;
     height: 100%;
   }
-  
+
   .hero-section__text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: var(--padding-hor-tablet-largest);
-    padding-right: var(--padding-hor-tablet-largest);    
+    padding-right: var(--padding-hor-tablet-largest);
     order: 1;
     height: 100%;
     /* align-self: center; */
-  }  
+  }
 
   .hero-section__text--heading {
     padding-top: 0;
     padding-bottom: 0;
     /* justify-content: center; */
     /* align-items: center; */
-
-
   }
   .heading-largest {
     font-size: var(--font-largest);
     line-height: var(--line-height-largest);
     letter-spacing: var(--letter-spc-largest);
+  }
+
+  .stories__first,
+  .stories__second {
+    display: grid;
+    grid-template-columns: 273px 1fr;
+    min-height: 60rem;
+  }
+
+  .stories__second {
+    grid-template-columns: 1fr 273px;
+  }
+
+  .stories__second-image {
+    order: 2;
+  }
+
+  .stories__second-text {
+    order: 1;
+  }
+
+  .stories__first-text,
+  .stories__second-text {
+    /* width: 100%; */
+    /* height: 100%; */
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: var(--padding-hor-tablet-largest);
+    padding-right: var(--padding-hor-tablet-largest);
+  }
+
+  .stories__first-text > div {
+    margin-bottom: 0.5rem;
+  }
 }
 
 /*
@@ -781,7 +807,6 @@ footer {
 /************ headings ************/
 
 /*************Tablet+ ***********/
-
 
 /************ PG SECTIONS ************/
 
