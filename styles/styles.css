@@ -36,7 +36,9 @@
   --centre-hor: 0 auto;
   --padding-ver-mobile-largest: 7.2rem;
   --padding-hor-mobile-large: 3.3rem;
-  --padding-hor-tablet-largest: 5.4rem;
+  --padding-ver-tablet-largest: 12rem;
+  --padding-hor-tablet-large: 5.4rem;
+  --padding-hor-tablet-largest: 15.5rem;
 }
 
 /********** CSS RESET **************/
@@ -414,8 +416,17 @@ img {
 }
 
 /****** PHOTO CATEGORIES ******/
+.photo-categories {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+}
 .photo-categories-image {
   position: relative;
+  /* width: 100%; */
+}
+
+.photo-categories-image picture img {
+  width: 100%;
 }
 .photo-categories-image::after {
   content: '';
@@ -477,7 +488,7 @@ img {
   margin-bottom: 1.3rem;
 }
 
-/****** BENEFITS ******/
+/****** BENEFITS SECTION ******/
 .benefits {
   padding-top: var(--padding-ver-mobile-largest);
   padding-bottom: var(--padding-ver-mobile-largest);
@@ -515,6 +526,10 @@ img {
 
 .benefits-text p {
   padding-bottom: 5rem;
+}
+
+.benefits-text p:last-of-type {
+  padding-bottom: 0;
 }
 
 /****** FOOTER ******/
@@ -580,7 +595,43 @@ footer {
   transform: translateY(3px);
 }
 
-/*********************** UPTO HERE ********************/
+/* for .photo-categories section img l/out
+  - switch to 2 Cols @550px */
+/* https://stackoverflow.com/questions/47888165/make-image-in-picture-element-fit-its-container */
+@media screen and (min-width: 35em) {
+  /********* PHOTO CAT'S SECTION ************/
+
+  .photo-categories {
+    /* grid-template-rows: 500px; */
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .photo-categories__mountains,
+  .photo-categories__cities,
+  .photo-categories__voyage,
+  .photo-categories__architecturals {
+    height: 500px;
+  }
+
+  /* needed following 3 Class Styles to make <picture> to Fill its Container - via Object-fit */
+  .photo-categories-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .photo-categories-image picture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  .photo-categories-image img {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+  }
+}
+
 /************* TABLET STYLES - 768px+ ***********/
 @media screen and (min-width: 48em) {
   /********* PG HEADER ************/
@@ -700,8 +751,8 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: var(--padding-hor-tablet-largest);
-    padding-right: var(--padding-hor-tablet-largest);
+    padding-left: var(--padding-hor-tablet-large);
+    padding-right: var(--padding-hor-tablet-large);
     order: 1;
     height: 100%;
     /* align-self: center; */
@@ -719,6 +770,7 @@ footer {
     letter-spacing: var(--letter-spc-largest);
   }
 
+  /********* STORIES SECTION ************/
   .stories__first,
   .stories__second {
     display: grid;
@@ -745,12 +797,31 @@ footer {
     justify-content: center;
     padding-top: 0;
     padding-bottom: 0;
+    padding-left: var(--padding-hor-tablet-large);
+    padding-right: var(--padding-hor-tablet-large);
+  }
+  .stories__first-text > div {
+    margin-bottom: 0.5rem;
+  }
+
+  /****** BENEFITS SECTION ******/
+  .benefits {
+    padding-top: var(--padding-ver-tablet-largest);
+    padding-bottom: var(--padding-ver-tablet-largest);
     padding-left: var(--padding-hor-tablet-largest);
     padding-right: var(--padding-hor-tablet-largest);
   }
 
-  .stories__first-text > div {
-    margin-bottom: 0.5rem;
+  /****** FOOTER ******/
+  footer {
+  }
+
+/* for .photo-categories section img l/out
+  - switch to 4 Cols @1000px */
+@media screen and (min-width: 63em) {
+  .photo-categories {
+    /* grid-template-rows: 500px; */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 

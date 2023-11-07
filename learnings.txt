@@ -91,25 +91,22 @@
 
 - can also Add Width as a % in HTML width attr 
 
-- Full <picture> Code - fro Resp. Img switching
+- Full <picture> Code - fro Resp. Img switching (i was trying to match the same code as "srcset" TNQ - BUT you dont need to specify the (W))
 
           <picture>
             <source
               media="(min-width: 767px) and (max-width: 1438px)"
               srcset="./assets/home/tablet/create-and-share.jpg"
-              width="57%"
             />
 
             <source
               media="(min-width: 1439px)"
               srcset="./assets/home/desktop/create-and-share.jpg"
-              width="57%"
             />
 
             <img
               src="./assets/home/mobile/create-and-share.jpg"
               alt="Hero"
-              width="100%"
             />
           </picture>
         </div>
@@ -133,3 +130,6 @@
   mobileNavBtn.classList.toggle('btn-mobile-close');
 
 - bc the "=" & "X" SVG Icons where Diff H & W to ea. Other - I set their Parent BTN to the W of the Widest of them & same w/ the H - & used BG-Pos: center center
+
+*to get the <picture> to Object-fit - needed the styles in (from https://stackoverflow.com/questions/47888165/make-image-in-picture-element-fit-its-container):
+ @media screen and (min-width: 35em) 
