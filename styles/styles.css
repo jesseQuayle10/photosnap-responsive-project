@@ -529,7 +529,7 @@ img {
   padding-bottom: 5rem;
 }
 
-.benefits-text p:last-of-type {
+.benefits > div:last-of-type p {
   padding-bottom: 0;
 }
 
