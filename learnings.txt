@@ -61,6 +61,8 @@
 *Flex - justify-items - doesnt like max-width (use flex-basis)
 *needed   overflow: hidden - on Container so page header would go 100% (W) 
 
+*needed to get the Footer C/right DIV to be the same Height (so could use justify-content: spac between) as the NAV DIV in Footer (Nav DIVs Height wasnt set Explicitly) - so I used Ch. Dv/T's to see Nav DIV (H) & used that VAL to set a min-height on C/Right DIV 
+
 *Need Z-Index on BOTH States eg. '.main-nav' AND '.mobile-nav-open main-nav'
 
 
@@ -91,7 +93,7 @@
 
 - can also Add Width as a % in HTML width attr 
 
-- Full <picture> Code - fro Resp. Img switching (i was trying to match the same code as "srcset" TNQ - BUT you dont need to specify the (W))
+- Full <picture> Code - fro Resp. Img switching (i was trying to match the same code as "srcset" TNQ - BUT you dont need to specify the (W)) - also for some imgs there were only Mobile & D/Top vers - so only needed a "min-width" from 767 for D/Top img
 
           <picture>
             <source
