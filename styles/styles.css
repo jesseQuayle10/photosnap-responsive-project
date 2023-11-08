@@ -37,9 +37,11 @@
   --padding-ver-mobile-largest: 7.2rem;
   --padding-hor-mobile-large: 3.3rem;
   --padding-ver-tablet-largest: 12rem;
-  --padding-hor-tablet-medium: 3.9rem;
+  --padding-hor-tablet-small: 3.9rem;
+  --padding-hor-tablet-medium: 4.3rem;
   --padding-hor-tablet-large: 5.4rem;
   --padding-hor-tablet-largest: 15.5rem;
+  --padding-hor-desktop-small: 4rem;
 }
 
 /********** CSS RESET **************/
@@ -385,6 +387,10 @@ img {
   display: none;
 }
 
+.hero-section__image img {
+  width: 100%;
+}
+
 /****** STORIES ******/
 .stories__first-text > div,
 .stories__second-text > div {
@@ -414,6 +420,11 @@ img {
 .stories p {
   color: var(--pure-black);
   opacity: 0.9;
+}
+
+.stories__first-image img,
+.stories__second-image img {
+  width: 100%;
 }
 
 /****** PHOTO CATEGORIES ******/
@@ -804,6 +815,12 @@ footer {
     margin-bottom: 0.5rem;
   }
 
+  /********* PHOTO CAT's SECTION ***********/
+  .photo-categories-text {
+    padding-left: var(--padding-hor-tablet-medium);
+    padding-right: var(--padding-hor-tablet-medium);
+  }
+
   /****** BENEFITS SECTION ******/
   .benefits {
     padding-top: var(--padding-ver-tablet-largest);
@@ -818,12 +835,11 @@ footer {
     flex-direction: row;
     align-items: start;
     justify-content: space-between;
-    /* height: 54rem; */
     background-color: var(--pure-black);
-    padding-left: var(--padding-hor-tablet-medium);
-    padding-right: var(--padding-hor-tablet-medium);
-    padding-top: 5.6rem;
-    padding-bottom: 5.6rem;
+    padding-left: var(--padding-hor-tablet-small);
+    padding-right: var(--padding-hor-tablet-small);
+    padding-top: 6.3rem;
+    padding-bottom: 6.3rem;
   }
 
   .socials-and-logo-and-nav {
@@ -871,6 +887,93 @@ footer {
   .photo-categories {
     /* grid-template-rows: 500px; */
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* @1370px - so Hero Img DIV = 57.75% of PG (W) */
+@media screen and (min-width: 85.6em) {
+  .hero-section {
+    grid-template-columns: 1fr 57.75%;
+  }
+
+  .hero-section__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-section__image picture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  .stories__first {
+    grid-template-columns: 57.75% 1fr;
+  }
+
+  .stories__second {
+    grid-template-columns: 1fr 57.75%;
+  }
+
+  .stories__first-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .stories__first-image picture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  .stories__second-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .stories__second-image picture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  .stories__first-text,
+  .stories__second-text {
+    padding-left: 11.2rem;
+    padding-right: 11.2rem;
+  }
+
+  .benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    padding-left: 18rem;
+    padding-right: 18rem;
+  }
+
+  .benefits-text p {
+    padding-bottom: 0;
+  }
+
+  .benefits-image-limit {
+    height: 72px;
+    background-position: 50% 2rem;
+  }
+}
+
+/* 1440px (= the MAX-W of the Site) */
+@media screen and (min-width: 90em) {
+  .logo {
+    margin-left: 16.5rem;
+  }
+
+  .btn-mobile-nav-large {
+    margin-right: 16.5rem;
+  }
+
+  .hero-section__text {
+    padding-left: 11.2rem;
+    padding-right: 11.2rem;
   }
 }
 
