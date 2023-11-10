@@ -147,7 +147,8 @@ img {
   width: 83%;
 }
 
-.btn-mobile-nav-large button a {
+.btn-mobile-nav-large button a:link,
+.btn-mobile-nav-large button a:visited {
   color: var(--pure-white);
   text-transform: uppercase;
   padding-top: 1.4rem;
@@ -156,6 +157,12 @@ img {
   letter-spacing: var(--letter-spc-mobile-nav);
 }
 /************ links/nav ************/
+.btn-mobile-nav-large button a:active,
+.btn-mobile-nav-large button a:hover {
+  color: var(--pure-black);
+  background-color: #dfdfdf;
+  border: 1px solid #979797;
+}
 
 .link-normal {
   font-weight: bold;
@@ -187,7 +194,7 @@ img {
 
 .main-nav ul a:hover,
 .main-nav ul a:active {
-  color: var(--light-grey);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .company-logo {
@@ -572,6 +579,66 @@ footer {
   gap: 1.5rem;
 }
 
+.socials li a {
+  height: 20px;
+  width: 20px;
+}
+
+.socials a.facebook {
+  background-image: url(../assets/icons/fb.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: all 0.3s;
+}
+
+.socials a.facebook:hover {
+  background-image: url(../assets/icons/fb-colored.svg);
+}
+
+.socials a.play-icon {
+  background-image: url(../assets/icons/play-icon.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: all 0.3s;
+}
+
+.socials a.play-icon:hover {
+  background-image: url(../assets/icons/play-icon-colored.svg);
+}
+
+.socials a.twitter {
+  background-image: url(../assets/icons/twitter.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: all 0.3s;
+}
+
+.socials a.twitter:hover {
+  background-image: url(../assets/icons/twitter-colored.svg);
+}
+
+.socials a.pintrest {
+  background-image: url(../assets/icons/pintrest.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: all 0.3s;
+}
+
+.socials a.pintrest:hover {
+  background-image: url(../assets/icons/pintrest-colored.svg);
+}
+
+.socials a.instagram {
+  background-image: url(../assets/icons/instagram.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: all 0.3s;
+}
+
+.socials a.instagram:hover {
+  background-image: url(../assets/icons/instagram-colored.svg);
+}
+
 .copyright {
   color: var(--pure-white);
   opacity: 0.3;
@@ -771,6 +838,10 @@ footer {
     /* justify-content: center; */
     /* align-items: center; */
   }
+
+  .hero-section__text--heading > div:hover a {
+    text-decoration: underline;
+  }
   .heading-largest {
     font-size: var(--font-largest);
     line-height: var(--line-height-largest);
@@ -811,10 +882,32 @@ footer {
     margin-bottom: 0.5rem;
   }
 
+  .stories__first-text > div:hover a {
+    text-decoration: underline;
+  }
+
+  .stories__second-text > div:hover a {
+    text-decoration: underline;
+  }
+
   /********* PHOTO CAT's SECTION ***********/
   .photo-categories-text {
     padding-left: var(--padding-hor-tablet-medium);
     padding-right: var(--padding-hor-tablet-medium);
+  }
+
+  .photo-categories__mountains,
+  .photo-categories__cities,
+  .photo-categories__voyage,
+  .photo-categories__architecturals {
+    transition: all 0.2s;
+  }
+
+  .photo-categories__mountains:hover,
+  .photo-categories__cities:hover,
+  .photo-categories__voyage:hover,
+  .photo-categories__architecturals:hover {
+    transform: translateY(-30px);
   }
 
   /****** BENEFITS SECTION ******/
@@ -867,6 +960,11 @@ footer {
     margin-bottom: 6.2rem;
   }
 
+  .footer-nav ul li a:hover,
+  .footer-nav ul li a:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   .bottom-link-and-copyright {
     height: 15.8rem;
     display: flex;
@@ -875,6 +973,10 @@ footer {
     justify-content: space-between;
     /* gap: 2rem; */
     margin-bottom: 0;
+  }
+
+  .bottom-link-and-copyright div.arrow-link:hover a {
+    text-decoration: underline;
   }
 }
 
@@ -987,6 +1089,7 @@ footer {
 
   .socials {
     height: 20px;
+    width: 160px;
     transform: translateY(-42px);
   }
 
