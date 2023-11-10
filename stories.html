@@ -1,126 +1,855 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Photosnap Website Challenge</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  Stories
-  Features
-  Pricing
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap"
+      rel="stylesheet"
+    />
 
-  Get an invite
+    <script defer src="./scripts/script.js"></script>
 
-  Last month's featured story
+    <link rel="stylesheet" href="./styles/styles.css" />
 
-  Hazy full moon of Appalachia
-  March 2nd 2020
-  by John Appleseed
+    <title>Frontend Mentor | Photosnap Website Challenge</title>
+  </head>
+  <body class="stories-page">
+    <div class="container">
+      <header class="page-header">
+        <div class="page-header-container">
+          <div class="logo">
+            <div class="company-logo">
+              <h1>PHOTOSNAP</h1>
+              <a href="#">
+                <img src="./assets/icons/logo-black.png" alt="company logo" />
+              </a>
+            </div>
+          </div>
 
-  The dissected plateau area, while not actually made up of geological mountains, 
-  is popularly called "mountains," especially in eastern Kentucky and West Virginia, 
-  and while the ridges are not high, the terrain is extremely rugged.
+          <nav class="main-nav">
+            <div class="main-nav__links inner-container">
+              <ul>
+                <li>
+                  <a class="link-black" href="index.html">Home</a>
+                </li>
+                <li>
+                  <a class="link-black" href="features.html">Features</a>
+                </li>
+                <li>
+                  <a class="link-black" href="pricing.html">Pricing</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
 
-  Read the story
+          <div class="btn-mobile-nav-large">
+            <button>
+              <a href="index.html" class="link-white">Get an invite</a>
+            </button>
+          </div>
+        </div>
+        <!-- end page-header-container -->
 
-  April 16th 2020
-  The Mountains
-  by John Appleseed
-  Read Story
+        <!-- burger menu & close btn -->
+        <button class="btn-mobile-nav btn-mobile-open">
+          <a class="mobile-icon" href="#">
+            <!-- <svg> via CSS -->
+          </a>
+        </button>
+      </header>
+      <!-- end header -->
 
-  April 14th 2020
-  Sunset Cityscapes
-  by Benjamin Cruz
-  Read Story
+      <div class="hero-section">
+        <div class="hero-section__image">
+          <picture>
+            <source
+              media="(min-width: 767px) and (max-width: 1369px)"
+              srcset="./assets/stories/tablet/moon-of-appalacia.jpg"
+            />
+            <source
+              media="(min-width: 1370px)"
+              srcset="./assets/stories/desktop/moon-of-appalacia.jpg"
+            />
+            <img
+              src="./assets/stories/mobile/moon-of-appalacia.jpg"
+              alt="Hero"
+            />
+          </picture>
+        </div>
 
-  April 11th 2020
-  18 Days Voyage
-  by Alexei Borodin
-  Read Story
+        <div class="hero-section__text">
+          <img
+            src="./assets/icons/color-bar-h.png"
+            alt="a coloured shape"
+            class="color-bar-h"
+          />
+          <img
+            src="./assets/icons/color-bar-v.png"
+            alt="a coloured shape"
+            class="color-bar-v"
+          />
+          <div class="hero-section__text--heading">
+            <p>Last month's featured story</p>
+            <h2 class="heading-largest">Hazy full moon of Appalachia</h2>
+            <p>March 2nd 2020 <span>John Appleseed</span></p>
+            <p>
+              The dissected plateau area, while not actually made up of
+              geological mountains, is popularly called "mountains," especially
+              in eastern Kentucky and West Virginia, and while the ridges are
+              not high, the terrain is extremely rugged.
+            </p>
+            <div>
+              <a class="link-normal link-white" href="#">Read the story</a>
+              <span class="link-arrow">
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="43"
+                    height="14"
+                  >
+                    <g fill="none" fill-rule="evenodd" stroke="#fff">
+                      <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                    </g>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end hero-section -->
 
-  April 9th 2020
-  Architecturals
-  by Samantha Brooke
-  Read Story
+      <div class="photo-categories">
+        <div class="photo-categories__mountains">
+          <div class="photo-categories-image">
+            <picture>
+              <source
+                media="(min-width: 767px)"
+                srcset="./assets/stories/desktop/mountains.jpg"
+              />
 
-  April 7th 2020
-  World Tour 2019
-  by Timothy Wagner
-  Read Story
+              <img
+                src="./assets/stories/mobile/mountains.jpg"
+                alt="an image of mountains"
+              />
+            </picture>
+          </div>
+          <div class="photo-categories-text">
+            <h3 class="heading-medium">The Mountains</h3>
+            <p>by John Appleseed</p>
+            <div class="white-line"></div>
 
-  April 7th 2020
-  World Tour 2019
-  by Timothy Wagner
-  Read Story
+            <div class="category-links">
+              <div>
+                <a class="link-normal link-white" href="#">Read Story</a>
+                <span class="link-arrow">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="14"
+                    >
+                      <g fill="none" fill-rule="evenodd" stroke="#fff">
+                        <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                      </g>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  April 3rd 2020
-  Unforeseen Corners
-  by William Malcolm
-  Read Story
+        <div class="photo-categories__cities">
+          <div class="photo-categories-image">
+            <picture>
+              <source
+                media="(min-width: 767px)"
+                srcset="./assets/stories/desktop/cityscapes.jpg"
+              />
+              <img
+                src="./assets/stories/mobile/cityscapes.jpg"
+                alt="an image of a cityscape"
+              />
+            </picture>
+          </div>
+          <div class="photo-categories-text">
+            <h3 class="heading-medium">Sunset Cityscapes</h3>
+            <p>by Benjamin Cruz</p>
+            <div class="white-line"></div>
 
-  March 29th 2020
-  King on Africa: Part II
-  by Tim Hillenburg
-  Read Story
+            <div class="category-links">
+              <div>
+                <a class="link-normal link-white" href="#">Read Story</a>
+                <span class="link-arrow">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="14"
+                    >
+                      <g fill="none" fill-rule="evenodd" stroke="#fff">
+                        <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                      </g>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  March 21st 2020
-  The Trip to Nowhere
-  by Felicia Rourke
-  Read Story
+        <div class="photo-categories__voyage">
+          <div class="photo-categories-image">
+            <picture>
+              <source
+                media="(min-width: 767px)"
+                srcset="./assets/stories/desktop/18-days-voyage.jpg"
+              />
+              <img
+                src="./assets/stories/mobile/18-days-voyage.jpg"
+                alt="an image of a person on a trek"
+              />
+            </picture>
+          </div>
+          <div class="photo-categories-text">
+            <h3 class="heading-medium">18 Days Voyage</h3>
+            <p>by Alexei Borodin</p>
+            <div class="white-line"></div>
 
-  March 19th 2020
-  Rage of The Sea
-  by Mohammed Abdul
-  Read Story
+            <div class="category-links">
+              <div>
+                <a class="link-normal link-white" href="#">Read Story</a>
+                <span class="link-arrow">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="14"
+                    >
+                      <g fill="none" fill-rule="evenodd" stroke="#fff">
+                        <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                      </g>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  March 16th 2020
-  Running Free
-  by Michelle
-  Read Story
+        <div class="photo-categories__architecturals">
+          <div class="photo-categories-image">
+            <picture>
+              <source
+                media="(min-width: 767px)"
+                srcset="./assets/stories/desktop/architecturals.jpg"
+              />
+              <img
+                src="./assets/stories/mobile/architecturals.jpg"
+                alt="an image of architecture"
+              />
+            </picture>
+          </div>
+          <div class="photo-categories-text">
+            <h3 class="heading-medium">Architecturals</h3>
+            <p>by Samantha Brooke</p>
+            <div class="white-line"></div>
 
-  March 11th 2020
-  Behind the Waves
-  by Lamarr Wilson
-  Read Story
+            <div class="category-links">
+              <div>
+                <a class="link-normal link-white" href="#">Read Story</a>
+                <span class="link-arrow">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="14"
+                    >
+                      <g fill="none" fill-rule="evenodd" stroke="#fff">
+                        <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                      </g>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  March 9th 2020
-  Calm Waters
-  by Samantha Brooke
-  Read Story
+        <!-------------------------->
+        <div class="photo-categories__world-tour">
+          <div class="photo-categories-image">
+            <picture>
+              <source
+                media="(min-width: 767px)"
+                srcset="./assets/stories/desktop/world-tour.jpg"
+              />
+              <img
+                src="./assets/stories/mobile/world-tour.jpg"
+                alt="an image of a lake"
+              />
+            </picture>
+          </div>
+          <div class="photo-categories-text">
+            <p>April 7th 2020</p>
+            <h3 class="heading-medium">World Tour 2019</h3>
+            <p>by Timothy Wagner</p>
+            <div class="white-line"></div>
 
-  March 5th 2020
-  The Milky Way
-  by Benjamin Cruz
-  Read Story
+            <div class="category-links">
+              <div>
+                <a class="link-normal link-white" href="#">Read Story</a>
+                <span class="link-arrow">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="14"
+                    >
+                      <g fill="none" fill-rule="evenodd" stroke="#fff">
+                        <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                      </g>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  March 4th 2020
-  Night at The Dark Forest
-  by  Mohammed Abdul
-  Read Story
+        <div class="photo-categories__unforeseen">
+          <div class="photo-categories-image">
+            <picture>
+              <source
+                media="(min-width: 767px)"
+                srcset="./assets/stories/desktop/unforeseen-corners.jpg"
+              />
+              <img
+                src="./assets/stories/mobile/unforeseen-corners.jpg"
+                alt="an image of a cityscape"
+              />
+            </picture>
+          </div>
+          <div class="photo-categories-text">
+            <p>April 3rd 2020</p>
+            <h3 class="heading-medium">Unforeseen Corners</h3>
+            <p>by William Malcolm</p>
+            <div class="white-line"></div>
 
-  March 1st 2020
-  Somwarpet’s Beauty
-  by Michelle
-  Read Story
+            <div class="category-links">
+              <div>
+                <a class="link-normal link-white" href="#">Read Story</a>
+                <span class="link-arrow">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="14"
+                    >
+                      <g fill="none" fill-rule="evenodd" stroke="#fff">
+                        <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                      </g>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  February 25th 2020
-  Land of Dreams
-  by William Malcolm
-  Read Story
+        <div class="photo-categories__king">
+          <div class="photo-categories-image">
+            <picture>
+              <source
+                media="(min-width: 767px)"
+                srcset="./assets/stories/desktop/king-on-africa.jpg"
+              />
+              <img
+                src="./assets/stories/mobile/king-on-africa.jpg"
+                alt="an image of a cityscape"
+              />
+            </picture>
+          </div>
+          <div class="photo-categories-text">
+            <p>March 29th 2020</p>
+            <h3 class="heading-medium">King on Africa: Part II</h3>
+            <p>by Tim Hillenburg</p>
+            <div class="white-line"></div>
 
-  Home
-  Stories
-  Features
-  Pricing
+            <div class="category-links">
+              <div>
+                <a class="link-normal link-white" href="#">Read Story</a>
+                <span class="link-arrow">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="14"
+                    >
+                      <g fill="none" fill-rule="evenodd" stroke="#fff">
+                        <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                      </g>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  Get an invite
+        <div class="photo-categories__nowhere">
+          <div class="photo-categories-image">
+            <picture>
+              <source
+                media="(min-width: 767px)"
+                srcset="./assets/stories/desktop/trip-to-nowhere.jpg"
+              />
+              <img
+                src="./assets/stories/mobile/trip-to-nowhere.jpg"
+                alt="an image of a cityscape"
+              />
+            </picture>
+          </div>
+          <div class="photo-categories-text">
+            <p>March 21st 2020</p>
+            <h3 class="heading-medium">The Trip to Nowhere</h3>
+            <p>by Felicia Rourke</p>
+            <div class="white-line"></div>
 
-  Copyright 2019. All Rights Reserved
+            <div class="category-links">
+              <div>
+                <a class="link-normal link-white" href="#">Read Story</a>
+                <span class="link-arrow">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="14"
+                    >
+                      <g fill="none" fill-rule="evenodd" stroke="#fff">
+                        <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                      </g>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-</body>
+        <div class="photo-categories__sea">
+          <div class="photo-categories-image">
+            <picture>
+              <source
+                media="(min-width: 767px)"
+                srcset="./assets/stories/desktop/rage-of-the-sea.jpg"
+              />
+              <img
+                src="./assets/stories/mobile/rage-of-the-sea.jpg"
+                alt="an image of a cityscape"
+              />
+            </picture>
+          </div>
+          <div class="photo-categories-text">
+            <p>March 19th 2020</p>
+            <h3 class="heading-medium">Rage of The Sea</h3>
+            <p>by Mohammed Abdul</p>
+            <div class="white-line"></div>
+
+            <div class="category-links">
+              <div>
+                <a class="link-normal link-white" href="#">Read Story</a>
+                <span class="link-arrow">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="14"
+                    >
+                      <g fill="none" fill-rule="evenodd" stroke="#fff">
+                        <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                      </g>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-categories__running-free">
+          <div class="photo-categories-image">
+            <picture>
+              <source
+                media="(min-width: 767px)"
+                srcset="./assets/stories/desktop/running-free.jpg"
+              />
+              <img
+                src="./assets/stories/mobile/running-free.jpg"
+                alt="an image of a cityscape"
+              />
+            </picture>
+          </div>
+          <div class="photo-categories-text">
+            <p>March 16th 2020</p>
+            <h3 class="heading-medium">Running Free</h3>
+            <p>by Michelle</p>
+            <div class="white-line"></div>
+
+            <div class="category-links">
+              <div>
+                <a class="link-normal link-white" href="#">Read Story</a>
+                <span class="link-arrow">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="14"
+                    >
+                      <g fill="none" fill-rule="evenodd" stroke="#fff">
+                        <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                      </g>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-categories__waves">
+          <div class="photo-categories-image">
+            <picture>
+              <source
+                media="(min-width: 767px)"
+                srcset="./assets/stories/desktop/behind-the-waves.jpg"
+              />
+              <img
+                src="./assets/stories/mobile/behind-the-waves.jpg"
+                alt="an image of a cityscape"
+              />
+            </picture>
+          </div>
+          <div class="photo-categories-text">
+            <p>March 11th 2020</p>
+            <h3 class="heading-medium">Behind the Waves</h3>
+            <p>by Lamarr Wilson</p>
+            <div class="white-line"></div>
+
+            <div class="category-links">
+              <div>
+                <a class="link-normal link-white" href="#">Read Story</a>
+                <span class="link-arrow">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="14"
+                    >
+                      <g fill="none" fill-rule="evenodd" stroke="#fff">
+                        <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                      </g>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-categories__waters">
+          <div class="photo-categories-image">
+            <picture>
+              <source
+                media="(min-width: 767px)"
+                srcset="./assets/stories/desktop/calm-waters.jpg"
+              />
+              <img
+                src="./assets/stories/mobile/calm-waters.jpg"
+                alt="an image of a cityscape"
+              />
+            </picture>
+          </div>
+          <div class="photo-categories-text">
+            <p>March 9th 2020</p>
+            <h3 class="heading-medium">Calm Waters</h3>
+            <p>by Samantha Brooke</p>
+            <div class="white-line"></div>
+
+            <div class="category-links">
+              <div>
+                <a class="link-normal link-white" href="#">Read Story</a>
+                <span class="link-arrow">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="14"
+                    >
+                      <g fill="none" fill-rule="evenodd" stroke="#fff">
+                        <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                      </g>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-categories__milky-way">
+          <div class="photo-categories-image">
+            <picture>
+              <source
+                media="(min-width: 767px)"
+                srcset="./assets/stories/desktop/milky-way.jpg"
+              />
+              <img
+                src="./assets/stories/mobile/milky-way.jpg"
+                alt="an image of a cityscape"
+              />
+            </picture>
+          </div>
+          <div class="photo-categories-text">
+            <p>March 5th 2020</p>
+            <h3 class="heading-medium">The Milky Way</h3>
+            <p>by Benjamin Cruz</p>
+            <div class="white-line"></div>
+
+            <div class="category-links">
+              <div>
+                <a class="link-normal link-white" href="#">Read Story</a>
+                <span class="link-arrow">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="14"
+                    >
+                      <g fill="none" fill-rule="evenodd" stroke="#fff">
+                        <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                      </g>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-categories__dark-forest">
+          <div class="photo-categories-image">
+            <picture>
+              <source
+                media="(min-width: 767px)"
+                srcset="./assets/stories/desktop/dark-forest.jpg"
+              />
+              <img
+                src="./assets/stories/mobile/dark-forest.jpg"
+                alt="an image of a cityscape"
+              />
+            </picture>
+          </div>
+          <div class="photo-categories-text">
+            <p>March 4th 2020</p>
+            <h3 class="heading-medium">SNight at The Dark Forest</h3>
+            <p>by Mohammed Abdul</p>
+            <div class="white-line"></div>
+
+            <div class="category-links">
+              <div>
+                <a class="link-normal link-white" href="#">Read Story</a>
+                <span class="link-arrow">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="14"
+                    >
+                      <g fill="none" fill-rule="evenodd" stroke="#fff">
+                        <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                      </g>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-categories__somwarpet">
+          <div class="photo-categories-image">
+            <picture>
+              <source
+                media="(min-width: 767px)"
+                srcset="./assets/stories/desktop/somwarpet.jpg"
+              />
+              <img
+                src="./assets/stories/mobile/somwarpet.jpg"
+                alt="an image of a cityscape"
+              />
+            </picture>
+          </div>
+          <div class="photo-categories-text">
+            <p>March 1st 2020</p>
+            <h3 class="heading-medium">Somwarpet’s Beauty</h3>
+            <p>by Michelle</p>
+            <div class="white-line"></div>
+
+            <div class="category-links">
+              <div>
+                <a class="link-normal link-white" href="#">Read Story</a>
+                <span class="link-arrow">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="14"
+                    >
+                      <g fill="none" fill-rule="evenodd" stroke="#fff">
+                        <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                      </g>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-categories__dreams">
+          <div class="photo-categories-image">
+            <picture>
+              <source
+                media="(min-width: 767px)"
+                srcset="./assets/stories/desktop/land-of-dreams.jpg"
+              />
+              <img
+                src="./assets/stories/mobile/land-of-dreams.jpg"
+                alt="an image of a cityscape"
+              />
+            </picture>
+          </div>
+          <div class="photo-categories-text">
+            <p>February 25th 2020</p>
+            <h3 class="heading-medium">Land of Dreams</h3>
+            <p>by William Malcolm</p>
+            <div class="white-line"></div>
+
+            <div class="category-links">
+              <div>
+                <a class="link-normal link-white" href="#">Read Story</a>
+                <span class="link-arrow">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="14"
+                    >
+                      <g fill="none" fill-rule="evenodd" stroke="#fff">
+                        <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                      </g>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end photo-categories -->
+
+      <footer>
+        <div class="socials-and-logo-and-nav">
+          <div class="company-logo company-logo-btm">
+            <a href="#">
+              <img src="./assets/icons/logo-white.png" alt="company logo" />
+            </a>
+          </div>
+
+          <div class="socials">
+            <ul>
+              <li>
+                <a href="#" class="facebook"> </a>
+              </li>
+              <li>
+                <a href="#" class="play-icon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="twitter">
+                </a>
+              </li>
+              <li>
+                <a href="#" class="pintrest">
+                </a>
+              </li>
+              <li>
+                <a href="#" class="instagram">
+                  <!-- <img src="./assets/icons/insta.png" alt="facebook icon" /> -->
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-nav">
+            <ul>
+              <li>
+                <a class="link-normal link-white" href="./index.html">Home</a>
+              </li>
+              <li>
+                <a class="link-normal link-white" href="stories.html"
+                  >Stories</a
+                >
+              </li>
+              <li>
+                <a class="link-normal link-white" href="features.html"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a class="link-normal link-white" href="pricing.html"
+                  >Pricing</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- end socials-and-logo-and-nav -->
+
+        <div class="bottom-link-and-copyright">
+          <div class="arrow-link">
+            <a class="link-normal link-white" href="#">Get an invite</a>
+            <span class="link-arrow">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
+                  <g fill="none" fill-rule="evenodd" stroke="#fff">
+                    <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                  </g>
+                </svg>
+              </a>
+            </span>
+          </div>
+
+          <div class="copyright">
+            <span>Copyright 2023. All Rights Reserved</span>
+          </div>
+        </div>
+        <!-- end bottom-link-and-copyright -->
+      </footer>      
+
+      <div class="overlay-container"></div>
+    </div>
+    <!-- end container -->
+  </body>
 </html>

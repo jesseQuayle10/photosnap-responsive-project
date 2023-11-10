@@ -471,12 +471,27 @@ img {
   opacity: 0.9;
 }
 
-.photo-categories__mountains,
-.photo-categories__cities,
-.photo-categories__voyage,
-.photo-categories__architecturals {
+.photo-categories > div {
   position: relative;
 }
+/* .photo-categories__mountains,
+.photo-categories__cities,
+.photo-categories__voyage,
+.photo-categories__architecturals,
+.photo-categories__world-tour,
+.photo-categories__unforseen,
+.photo-categories__king,
+.photo-categories__nowhere,
+.photo-categories__sea,
+.photo-categories__running-free,
+.photo-categories__waves,
+.photo-categories__waters,
+.photo-categories__milky-way,
+.photo-categories__night,
+.photo-categories__beauty,
+.photo-categories__dreams {
+  position: relative;
+} */
 
 .photo-categories-text {
   width: 100%;
