@@ -596,6 +596,18 @@ img {
   background: url(../assets/icons/003-bullhorn.png) no-repeat;
 }
 
+.benefits-image-custom-domain {
+  background: url(../assets/icons/custom-domain.png) no-repeat;
+}
+
+.benefits-image-boost {
+  background: url(../assets/icons/boost.png) no-repeat;
+}
+
+.benefits-image-drag {
+  background: url(../assets/icons/drag.png) no-repeat;
+}
+
 .benefits-text h3 {
   padding-bottom: 1.5rem;
 }
