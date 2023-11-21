@@ -12,6 +12,7 @@
   --font-larger: 2.4rem;
   --font-large: 1.8rem;
   --font-regular: 1.5rem;
+  --font-medium-2: 1.3rem;
   --font-medium: 1.2rem;
   --font-mobile-nav: 1.5rem;
   --font-largest-mobile: 3.2rem;
@@ -35,6 +36,8 @@
   /********** WHT/SPC **************/
   --centre-hor: 0 auto;
   --padding-ver-mobile-largest: 7.2rem;
+  --padding-ver-mobile-large: 4.8rem;
+
   --padding-hor-mobile-large: 3.3rem;
   --padding-ver-tablet-largest: 12rem;
   --padding-hor-tablet-small: 3.9rem;
@@ -337,7 +340,7 @@ img {
   margin-left: 2.4rem;
 }
 
-/****** HERO ******/
+/****** HERO SECTION ******/
 .hero-section {
   position: relative;
   background-color: var(--pure-black);
@@ -355,17 +358,17 @@ img {
   padding-bottom: var(--padding-ver-mobile-largest);
 }
 
-.hero-section__text--heading div {
+.hero-section__text--heading div.hero-arrow-link {
   display: flex;
   gap: 2rem;
   margin-top: 1.3rem;
 }
 
-.hero-section__text--heading > div {
+.hero-section__text--heading > div.hero-arrow-link {
   line-height: normal;
 }
 
-.hero-section__text--heading > div .link-arrow {
+.hero-section__text--heading > div.hero-arrow-link .link-arrow {
   transform: translateY(2px);
 }
 
@@ -381,7 +384,7 @@ img {
 }
 .hero-section p {
   color: var(--pure-white);
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .color-bar-h {
@@ -398,7 +401,48 @@ img {
   width: 100%;
 }
 
-/****** STORIES ******/
+#stories-page .hero-section__text--heading {
+  padding-top: var(--padding-ver-mobile-large);
+  padding-bottom: var(--padding-ver-mobile-large);
+  gap: 0;
+}
+
+.hero-section__text--heading h4 {
+  font-size: var(--font-medium);
+  font-weight: 700;
+  letter-spacing: var(--letter-spc-smallest);
+  text-transform: uppercase;
+  color: var(--pure-white);
+  margin-bottom: 1.4rem;
+}
+
+.hero-section__text--heading h2 {
+  margin-bottom: 1.4rem;
+}
+
+.hero-date-author {
+  display: flex;
+  align-items: baseline;
+  gap: 1.8rem;
+  color: var(--pure-white);
+  margin-bottom: 2.2rem;
+}
+
+.hero-date-author + p {
+  margin-bottom: 1.4rem;
+}
+
+.hero-date-author span.hero-date {
+  font-size: var(--font-medium-2);
+  opacity: 0.75;
+}
+
+.hero-date-author span.hero-author {
+  margin-left: -1rem;
+  opacity: 1;
+}
+
+/****** STORIES SECTION ******/
 .stories__first-text > div,
 .stories__second-text > div {
   display: flex;
@@ -462,7 +506,7 @@ img {
   color: var(--pure-white);
 }
 
-.photo-categories-text p {
+.photo-categories-text .author {
   padding-bottom: 1rem;
   opacity: 0.8;
 }
