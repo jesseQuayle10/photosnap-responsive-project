@@ -628,6 +628,12 @@ img {
   padding-right: var(--padding-hor-mobile-large);
 }
 
+.features-category {
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
 .basic-plan,
 .pro-plan,
 .business-plan {
@@ -635,7 +641,7 @@ img {
 }
 
 .features-headings {
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
   border-bottom: 1px solid var(--pure-black);
 }
 
@@ -644,6 +650,28 @@ img {
 .features-category-business {
   display: inline-block;
   margin-right: 6rem;
+}
+
+.features-category span {
+  width: 16px;
+  height: 16px;
+  background-image: url(../assets/icons/tick-black.png);
+}
+
+.features-category-embedding .features-category-basic span,
+.features-category-metadata .features-category-basic span,
+.features-category-advanced .features-category-basic span,
+.features-category-photo-downloads .features-category-basic span,
+.features-category-indexing .features-category-basic span,
+.features-category-analytics .features-category-basic span {
+  visibility: hidden;
+}
+
+.features-category-advanced .features-category-pro span,
+.features-category-photo-downloads .features-category-pro span,
+.features-category-indexing .features-category-pro span,
+.features-category-analytics .features-category-pro span {
+  visibility: hidden;
 }
 
 /****** INVITE-TODAY SECTION ******/
