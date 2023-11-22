@@ -1,8 +1,9 @@
 
 /////////////////////////////////////////////
-*add p-btm to Hero > invite Link
 
 *maybe write M/Q to change Hero Img (to D/Top Img) from when Mobile Img starts to look bad until Tablet M/Q
+
+*Write JS Funct. for Monthly / Yearly Toggle btn (need to calc & render the Yearly Prices = monthly * 10 - for all plans)
 
 *Toggle (H) of page-header-container so that it is as Tall when Mob Nav is Closed??
 ////////////////////////////////////////////

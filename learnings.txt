@@ -48,6 +48,9 @@
             </button>
       </header>
 
+*"The Features" on "pricing PG" - has a diff L/out from Mob to Tabl. 
+- on Tabl. I could just put GTCs * 4 on Parent DIV - BUT in Mob. View the 1st Child of the 4 Cols (= the Heading) - had to sit ABOVE the rest of the Childs (which sit in a Row of 3 under it) - I couldnt use F/Bx in Mob & switch to Grid in Tabl. - bc I needed to have the SAME MarkUP - so in Mob. I let the Heading sit ABove the 3 Childs (just w/ Normal Flow) & used Dsiplay: Inline-block on the 3 Childs (so they sat in a Row Under the Heading)
+
 *bc <main-nav> & <lg-btn> were in <PGHeader-container> - which was Inside <PGHeader> - I needed <PGHeader> to be 72px (H) (w/ Overflow: Visible) & <PGHeader-container> to be 325 (H) - ELSE the rest of the PG Content would get pushed Down the PG
 
 *When a DIV with x-amount of Child El's wont Align-center pefectly bc of Line-height on the Top EL' = Added margin-bottom (that matches the VAL of the L/H at top of Top El') to BtM El

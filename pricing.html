@@ -1,46 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="./scripts/script.js"></script>
+
+    <link rel="stylesheet" href="./styles/styles.css" />
+
+    <title>Pricing | Photosnap Website Challenge</title>
+  </head>
+  <body id="pricing-page">
+    <div class="container">
+      <header class="page-header">
+        <div class="page-header-container">
+          <div class="logo">
+            <div class="company-logo">
+              <h1>PHOTOSNAP</h1>
+              <a href="index.html">
+                <img src="./assets/icons/logo-black.png" alt="company logo" />
+              </a>
+            </div>
+          </div>
+
+          <nav class="main-nav">
+            <div class="main-nav__links inner-container">
+              <ul>
+                <li>
+                  <a class="link-black" href="index.html">Home</a>
+                </li>
+                <li>
+                  <a class="link-black" href="stories.html">Stories</a>
+                </li>
+                <li>
+                  <a class="link-black" href="features.html">Features</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="btn-mobile-nav-large">
+            <button>
+              <a href="index.html" class="link-white">Get an invite</a>
+            </button>
+          </div>
+        </div>
+        <!-- end page-header-container -->
+
+        <!-- burger menu & close btn -->
+        <button class="btn-mobile-nav btn-mobile-open">
+          <a class="mobile-icon" href="#">
+            <!-- <svg> via CSS -->
+          </a>
+        </button>
+      </header>
+      <!-- end header -->
+
+      <div class="hero-section">
+        <div class="hero-section__image">
+          <picture>
+            <source
+              media="(min-width: 767px) and (max-width: 1369px)"
+              srcset="./assets/pricing/tablet/hero.jpg"
+            />
+            <source
+              media="(min-width: 1370px)"
+              srcset="./assets/pricing/desktop/hero.jpg"
+            />
+            <img src="./assets/pricing/mobile/hero.jpg" alt="Hero" />
+          </picture>
+        </div>
+
+        <div class="hero-section__text">
+          <img
+            src="./assets/icons/color-bar-h.png"
+            alt="a coloured shape"
+            class="color-bar-h"
+          />
+          <img
+            src="./assets/icons/color-bar-v.png"
+            alt="a coloured shape"
+            class="color-bar-v"
+          />
+          <div class="hero-section__text--heading">
+            <h2 class="heading-largest">Pricing
+            </h2>
+            <p>
+              Create your stories, Photosnap is a platform for photographers and visual storytellers. It’s the simple way to create and share your photos.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- end hero-section -->
+
+      <div class="membership-plans-section">
+        <div class="membership-plans-select-plan">
+          <span>Monthly</span>
+          <button>Demo</button>
+          <span>Yearly</span>
+        </div>
+        <div class="membership-plans-basic">
+          <h3>Basic</h3>
+          <p>Includes basic usage of our platform. Recommended for new and aspiring photographers.</p>
+          <span>$19.00</span>
+          <span>per month</span>
+          <button>
+            <a href="pricing-page">Pick Plan</a>
+          </button>
+        </div>
+        <div class="membership-plans-pro">
+          <h3>Pro</h3>
+          <p>More advanced features available. Recommended for photography veterans and professionals.</p>
+          <span>$39.00</span>
+          <span>per month</span>
+          <button>
+            <a href="pricing-page">Pick Plan</a>
+          </button>
+        </div>
+        <div class="membership-plans-business">
+          <h3>Business</h3>
+          <p>Additional features available such as more detailed metrics. Recommended for business owners.</p>
+          <span>$99.00</span>
+          <span>per month</span>
+          <button>
+            <a href="pricing-page">Pick Plan</a>
+          </button>
+        </div>                
+      </div>
+      <!-- end membership-plans-section -->
+
+      <div class="the-features-section">
+        <h2>Compare</h2>
+
+        <div class="features-headings">
+
+          <div>
+            <span>The Features</span>
+          </div>
+
+            <div class="basic-plan">
+              <span>Basic</span>
+            </div> 
+ 
+            <div class="pro-plan">
+              <span>Pro</span>
+            </div>
+            
+            <div class="business-plan">
+              <span>Business</span>
+            </div>            
+            
+        </div>
+
+        <div class="features-categories">
+
+          <div class="features-category">
+
+            <div class="features-category-heading">
+              <p>Unlimited story posting</p>
+            </div>
+
+            <div class="features-category-basic">
+              <p>Basic</p>
+              <span>Tick</span>
+            </div>
+            
+            <div class="features-category-pro">
+              <p>Pro</p>
+              <span>Tick</span>
+
+            </div> 
+            
+            <div class="features-category-business">
+              <p>Business</p>
+              <span>Tick</span>
+              
+            </div>             
+
+          </div>
+
+        </div>
+
+      </div>
+      <!-- end the-features-section -->
+
+
+
+
+      <div class="invite-today-section">
+        <img
+            src="./assets/icons/color-bar-h.png"
+            alt="a coloured shape"
+            class="color-bar-h"
+        />
+        <img
+            src="./assets/icons/color-bar-v.png"
+            alt="a coloured shape"
+            class="color-bar-v"
+        />
+        <h2>We're in Beta. Get your invite today!</h2>
+          <div class="arrow-link">
+            <a class="link-normal link-white" href="#">Get an invite</a>
+            <span class="link-arrow">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
+                  <g fill="none" fill-rule="evenodd" stroke="#fff">
+                    <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                  </g>
+                </svg>
+              </a>
+            </span>
+          </div>        
+      </div>
+
+      <footer>
+        <div class="socials-and-logo-and-nav">
+          <div class="company-logo company-logo-btm">
+            <a href="index.html">
+              <img src="./assets/icons/logo-white.png" alt="company logo" />
+            </a>
+          </div>
+
+          <div class="socials">
+            <ul>
+              <li>
+                <a href="#" class="facebook"> </a>
+              </li>
+              <li>
+                <a href="#" class="play-icon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="twitter">
+                </a>
+              </li>
+              <li>
+                <a href="#" class="pintrest">
+                </a>
+              </li>
+              <li>
+                <a href="#" class="instagram">
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-nav">
+            <ul>
+              <li>
+                <a class="link-normal link-white" href="./index.html">Home</a>
+              </li>
+              <li>
+                <a class="link-normal link-white" href="stories.html"
+                  >Stories</a
+                >
+              </li>
+              <li>
+                <a class="link-normal link-white" href="features.html"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a class="link-normal link-white" href="pricing.html"
+                  >Pricing</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- end socials-and-logo-and-nav -->
+
+        <div class="bottom-link-and-copyright">
+          <div class="arrow-link">
+            <a class="link-normal link-white" href="#">Get an invite</a>
+            <span class="link-arrow">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
+                  <g fill="none" fill-rule="evenodd" stroke="#fff">
+                    <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                  </g>
+                </svg>
+              </a>
+            </span>
+          </div>
+
+          <div class="copyright">
+            <span>Copyright 2023. All Rights Reserved</span>
+          </div>
+        </div>
+        <!-- end bottom-link-and-copyright -->
+      </footer>
+
+      <div class="overlay-container"></div>
+    </div>
+    <!-- end container -->
+  </body></html>
+
+<!-- Stories
   
-  <title>Frontend Mentor | Photosnap Website Challenge</title>
-</head>
-<body>
 
-  Stories
-  Features
-  Pricing
+  
+  
 
-  Get an invite
+  
+  
+  
+  
 
-  Pricing
-
-  Create a your stories, Photosnap is a platform for photographers and visual storytellers. 
-  It’s the simple way to create and share your photos.
-
-  Monthly
-  Yearly
-
-  Basic
-  Includes basic usage of our platform. Recommended for new and aspiring photographers.
-  $19.00 per month
-  $190.00 per year
-  Pick Plan
-
-  Pro
-  More advanced features available. Recommended for photography veterans and professionals.
-  $39.00 per month
-  $390.00 per year
-  Pick Plan
-
-  Business
-  Additional features available such as more detailed metrics. Recommended for business owners.
-  $99.00 per month
-  $990.00 per year
-  Pick Plan
+  
+  
+  
+  
+  
 
   Compare
 
@@ -70,7 +353,4 @@
 
   Get an invite
 
-  Copyright 2019. All Rights Reserved
-
-</body>
-</html>
+  Copyright 2019. All Rights Reserved -->

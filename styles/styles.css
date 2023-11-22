@@ -616,6 +616,37 @@ img {
   padding-bottom: 0;
 }
 
+/****** MEMBERSHIP-PLANS SECTION ******/
+.membership-plans-section {
+  padding-left: var(--padding-hor-mobile-large);
+  padding-right: var(--padding-hor-mobile-large);
+}
+
+/****** THE-FEATURES SECTION ******/
+.the-features-section {
+  padding-left: var(--padding-hor-mobile-large);
+  padding-right: var(--padding-hor-mobile-large);
+}
+
+.basic-plan,
+.pro-plan,
+.business-plan {
+  display: none;
+}
+
+.features-headings {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--pure-black);
+}
+
+.features-category-basic,
+.features-category-pro,
+.features-category-business {
+  display: inline-block;
+  margin-right: 6rem;
+}
+
+/****** INVITE-TODAY SECTION ******/
 .invite-today-section {
   position: relative;
   display: flex;
@@ -1002,6 +1033,41 @@ footer {
     padding-left: var(--padding-hor-tablet-largest);
     padding-right: var(--padding-hor-tablet-largest);
   }
+
+  /****** THE-FEATURES SECTION ******/
+  .features-headings,
+  .features-category {
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+  }
+
+  .basic-plan,
+  .pro-plan,
+  .business-plan,
+  .features-category-basic,
+  .features-category-pro,
+  .features-category-business {
+    display: block;
+    justify-self: center;
+  }
+
+  .features-category-basic,
+  .features-category-pro,
+  .features-category-business {
+    margin-right: 0;
+  }
+
+  .features-category-basic p,
+  .features-category-pro p,
+  .features-category-business p {
+    display: none;
+  }
+
+  /* .features-headings-plans { */
+  /* display: flex;
+    gap: 10rem; */
+  /* display: block; */
+  /* } */
 
   /****** FOOTER ******/
   footer {
