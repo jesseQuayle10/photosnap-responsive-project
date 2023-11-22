@@ -36,14 +36,17 @@
   /********** WHT/SPC **************/
   --centre-hor: 0 auto;
   --padding-ver-mobile-largest: 7.2rem;
-  --padding-ver-mobile-large: 4.8rem;
+  --padding-ver-mobile-large: 6.4rem;
+  --padding-ver-mobile-medium: 4.8rem;
 
   --padding-hor-mobile-large: 3.3rem;
+
   --padding-ver-tablet-largest: 12rem;
   --padding-hor-tablet-small: 3.9rem;
   --padding-hor-tablet-medium: 4.3rem;
   --padding-hor-tablet-large: 5.4rem;
   --padding-hor-tablet-largest: 15.5rem;
+
   --padding-hor-desktop-small: 4rem;
 }
 
@@ -358,17 +361,26 @@ img {
   padding-bottom: var(--padding-ver-mobile-largest);
 }
 
-.hero-section__text--heading div.hero-arrow-link {
+.hero-arrow-link,
+.arrow-link {
   display: flex;
   gap: 2rem;
   margin-top: 1.3rem;
-}
-
-.hero-section__text--heading > div.hero-arrow-link {
   line-height: normal;
+  align-items: center;
 }
 
-.hero-section__text--heading > div.hero-arrow-link .link-arrow {
+.arrow-link {
+  margin-top: 0;
+}
+
+/* .hero-section__text--heading > div.hero-arrow-link {
+  line-height: normal;
+} */
+
+/* .hero-section__text--heading > div.hero-arrow-link .link-arrow { */
+.hero-arrow-link .link-arrow,
+.arrow-link .link-arrow {
   transform: translateY(2px);
 }
 
@@ -402,8 +414,8 @@ img {
 }
 
 #stories-page .hero-section__text--heading {
-  padding-top: var(--padding-ver-mobile-large);
-  padding-bottom: var(--padding-ver-mobile-large);
+  padding-top: var(--padding-ver-mobile-medium);
+  padding-bottom: var(--padding-ver-mobile-medium);
   gap: 0;
 }
 
@@ -518,24 +530,6 @@ img {
 .photo-categories > div {
   position: relative;
 }
-/* .photo-categories__mountains,
-.photo-categories__cities,
-.photo-categories__voyage,
-.photo-categories__architecturals,
-.photo-categories__world-tour,
-.photo-categories__unforseen,
-.photo-categories__king,
-.photo-categories__nowhere,
-.photo-categories__sea,
-.photo-categories__running-free,
-.photo-categories__waves,
-.photo-categories__waters,
-.photo-categories__milky-way,
-.photo-categories__night,
-.photo-categories__beauty,
-.photo-categories__dreams {
-  position: relative;
-} */
 
 .photo-categories-text {
   width: 100%;
@@ -597,6 +591,7 @@ img {
 }
 
 .benefits-image-custom-domain {
+  width: 8.1rem;
   background: url(../assets/icons/custom-domain.png) no-repeat;
 }
 
@@ -605,6 +600,7 @@ img {
 }
 
 .benefits-image-drag {
+  width: 9.1rem;
   background: url(../assets/icons/drag.png) no-repeat;
 }
 
@@ -618,6 +614,24 @@ img {
 
 .benefits > div:last-of-type p {
   padding-bottom: 0;
+}
+
+.invite-today-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
+  padding-top: var(--padding-ver-mobile-large);
+  padding-bottom: var(--padding-ver-mobile-large);
+  padding-left: var(--padding-hor-mobile-large);
+  padding-right: var(--padding-hor-mobile-large);
+  background: #000;
+  background: url(../assets/features/mobile/beta-invite-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--pure-white);
+  /* Hack - bc Chrome had a 1px margin between divs */
+  margin-bottom: -1px;
 }
 
 /****** FOOTER ******/
