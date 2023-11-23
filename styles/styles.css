@@ -14,6 +14,7 @@
   --font-regular: 1.5rem;
   --font-medium-2: 1.3rem;
   --font-medium: 1.2rem;
+  --font-small: 1rem;
   --font-mobile-nav: 1.5rem;
   --font-largest-mobile: 3.2rem;
 
@@ -29,7 +30,11 @@
   /********** LTR SPACING **********/
   --letter-spc-largest: 4.17px;
   --letter-spc-large: 3.33px;
-  --letter-spc-smallest: 2px;
+  /* --letter-spc-smallest: 2px; */
+  --letter-spc-small: 2px;
+
+  --letter-spc-smallest: 1.67px;
+
   --letter-spc-largest-mobile: 3.3px;
   --letter-spc-mobile-nav: 2.5px;
 
@@ -39,6 +44,7 @@
   --padding-ver-mobile-large: 6.4rem;
   --padding-ver-mobile-medium: 4.8rem;
 
+  --padding-hor-mobile-largest: 3.6rem;
   --padding-hor-mobile-large: 3.3rem;
 
   --padding-ver-tablet-largest: 12rem;
@@ -173,7 +179,9 @@ img {
 .link-normal {
   font-weight: bold;
   font-size: 1.2rem;
-  letter-spacing: var(--letter-spc-smallest);
+  /* letter-spacing: var(--letter-spc-smallest); */
+  letter-spacing: var(--letter-spc-small);
+
   text-transform: uppercase;
 }
 
@@ -354,9 +362,7 @@ img {
 .stories__second-text {
   display: flex;
   flex-direction: column;
-  /* gap: 2rem; */
   gap: 2.6rem;
-
   padding-top: var(--padding-ver-mobile-largest);
   padding-bottom: var(--padding-ver-mobile-largest);
 }
@@ -374,11 +380,6 @@ img {
   margin-top: 0;
 }
 
-/* .hero-section__text--heading > div.hero-arrow-link {
-  line-height: normal;
-} */
-
-/* .hero-section__text--heading > div.hero-arrow-link .link-arrow { */
 .hero-arrow-link .link-arrow,
 .arrow-link .link-arrow {
   transform: translateY(2px);
@@ -422,7 +423,9 @@ img {
 .hero-section__text--heading h4 {
   font-size: var(--font-medium);
   font-weight: 700;
-  letter-spacing: var(--letter-spc-smallest);
+  /* letter-spacing: var(--letter-spc-smallest); */
+  letter-spacing: var(--letter-spc-small);
+
   text-transform: uppercase;
   color: var(--pure-white);
   margin-bottom: 1.4rem;
@@ -620,6 +623,168 @@ img {
 .membership-plans-section {
   padding-left: var(--padding-hor-mobile-large);
   padding-right: var(--padding-hor-mobile-large);
+  padding-top: var(--padding-ver-mobile-large);
+  padding-bottom: var(--padding-ver-mobile-large);
+  text-align: center;
+}
+
+.membership-plans-select-plan {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+/* .toggle-switch {
+  display: flex;
+} */
+
+/* The <label> = oval Shaped "switch" */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  border: 1px solid red;
+}
+
+/* css checkbox - hidden */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* <span> - so Takes up 100% of <label> */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+/* the "Toggle BTN" - to be Slid */
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.membership-plans-section h3 {
+  font-size: 2.4rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.membership-plans-section a {
+  font-size: var(--font-medium);
+  font-weight: 700;
+  /* letter-spacing: var(--letter-spc-smallest); */
+  letter-spacing: var(--letter-spc-small);
+
+  text-transform: uppercase;
+}
+
+.membership-plans-basic a,
+.membership-plans-business a {
+  color: var(--pure-white);
+}
+
+.membership-plans-section span:last-of-type {
+  margin-bottom: 4rem;
+}
+
+.membership-plans-basic,
+.membership-plans-pro,
+.membership-plans-business {
+  padding-top: 5.6rem;
+  padding-bottom: 5.6rem;
+  padding-left: var(--padding-hor-mobile-largest);
+  padding-right: var(--padding-hor-mobile-largest);
+}
+
+.membership-plans-basic p,
+.membership-plans-pro p,
+.membership-plans-business p {
+  margin-bottom: 4rem;
+}
+
+.membership-plans-basic button,
+.membership-plans-pro button,
+.membership-plans-business button {
+  border: none;
+  outline: none;
+  background-color: var(--pure-black);
+  width: 100%;
+  padding: 1.25rem;
+}
+
+.membership-plans-pro button {
+  background-color: var(--pure-white);
+}
+
+.membership-plans-basic span,
+.membership-plans-pro span,
+.membership-plans-business span {
+  display: block;
+}
+
+.membership-plans-basic span:first-of-type,
+.membership-plans-pro span:first-of-type,
+.membership-plans-business span:first-of-type {
+  font-size: var(--font-largest);
+  font-weight: 700;
+  line-height: var(--line-height-largest);
+  letter-spacing: var(--letter-spc-largest);
+}
+
+.membership-plans-basic,
+.membership-plans-business {
+  background-color: #f5f5f5;
+}
+
+.membership-plans-pro {
+  background-color: var(--pure-black);
+  color: var(--pure-white);
+}
+
+.membership-plans-pro p,
+.membership-plans-pro span:nth-of-type(2) {
+  opacity: 0.6;
 }
 
 /****** THE-FEATURES SECTION ******/
@@ -628,6 +793,9 @@ img {
   padding-right: var(--padding-hor-mobile-large);
 }
 
+.the-features-section h2 {
+  display: none;
+}
 .features-category {
   padding-top: 1.8rem;
   padding-bottom: 1.8rem;
@@ -645,11 +813,30 @@ img {
   border-bottom: 1px solid var(--pure-black);
 }
 
+.features-headings,
+.features-category-heading {
+  font-size: var(--font-medium);
+  font-weight: 700;
+  /* letter-spacing: var(--letter-spc-smallest); */
+  letter-spacing: var(--letter-spc-small);
+
+  text-transform: uppercase;
+}
+
 .features-category-basic,
 .features-category-pro,
 .features-category-business {
   display: inline-block;
   margin-right: 6rem;
+}
+
+.features-category-basic p,
+.features-category-pro p,
+.features-category-business p {
+  font-size: var(--font-small);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spc-smallest);
+  /* letter-spacing: var(--letter-spc-small); */
 }
 
 .features-category span {
@@ -691,6 +878,24 @@ img {
   color: var(--pure-white);
   /* Hack - bc Chrome had a 1px margin between divs */
   margin-bottom: -1px;
+}
+
+.invite-today-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, black 0%, black 100%);
+  opacity: 0.4;
+}
+
+.invite-today-section h2,
+.invite-today-section .arrow-link,
+.invite-today-section .color-bar-h,
+.invite-today-section .color-bar-v {
+  z-index: 999;
 }
 
 /****** FOOTER ******/
@@ -898,7 +1103,9 @@ footer {
     padding-bottom: 0;
     font-size: var(--font-medium);
     font-weight: 700;
-    letter-spacing: var(--letter-spc-smallest);
+    /* letter-spacing: var(--letter-spc-smallest); */
+    letter-spacing: var(--letter-spc-small);
+
     line-height: normal;
   }
 
@@ -930,7 +1137,8 @@ footer {
     padding-bottom: 1.2rem;
     padding-left: 2.4rem;
     padding-right: 2.4rem;
-    letter-spacing: var(--letter-spc-smallest);
+    /* letter-spacing: var(--letter-spc-smallest); */
+    letter-spacing: var(--letter-spc-small);
   }
 
   /********* PG OVERLAY ************/
