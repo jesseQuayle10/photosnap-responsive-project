@@ -631,20 +631,26 @@ img {
 .membership-plans-select-plan {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 4rem;
   margin-bottom: 4rem;
 }
 
-/* .toggle-switch {
-  display: flex;
-} */
+.membership-plans-select-plan > p {
+  font-size: var(--font-large);
+  line-height: var(--line-height-large);
+}
+
+.active-membership-term {
+  font-weight: 700;
+}
 
 /* The <label> = oval Shaped "switch" */
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
-  border: 1px solid red;
+  width: 64px;
+  height: 32px;
 }
 
 /* css checkbox - hidden */
@@ -662,7 +668,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #dfdfdf;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -671,21 +677,13 @@ img {
 .slider:before {
   position: absolute;
   content: '';
-  height: 26px;
-  width: 26px;
+  width: 24px;
+  height: 24px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: var(--pure-black);
   -webkit-transition: 0.4s;
   transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: #2196f3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider:before {
@@ -724,7 +722,9 @@ input:checked + .slider:before {
   color: var(--pure-white);
 }
 
-.membership-plans-section span:last-of-type {
+.membership-plans-basic span:last-of-type,
+.membership-plans-basic span:last-of-type,
+.membership-plans-basic span:last-of-type {
   margin-bottom: 4rem;
 }
 
