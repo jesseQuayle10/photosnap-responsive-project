@@ -708,6 +708,11 @@ input:checked + .slider:before {
   margin-bottom: 1.5rem;
 }
 
+.membership-plans-basic,
+.membership-plans-pro {
+  margin-bottom: 2.4rem;
+}
+
 .membership-plans-section a {
   font-size: var(--font-medium);
   font-weight: 700;
@@ -723,8 +728,8 @@ input:checked + .slider:before {
 }
 
 .membership-plans-basic span:last-of-type,
-.membership-plans-basic span:last-of-type,
-.membership-plans-basic span:last-of-type {
+.membership-plans-pro span:last-of-type,
+.membership-plans-business span:last-of-type {
   margin-bottom: 4rem;
 }
 
