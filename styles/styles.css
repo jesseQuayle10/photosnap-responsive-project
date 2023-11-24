@@ -1171,6 +1171,35 @@ footer {
     min-height: 65rem;
   }
 
+  #stories-page .hero-section {
+    /* turn off grid for this pg's Hero */
+    display: block;
+    position: relative;
+  }
+
+  #stories-page .hero-section__text {
+    padding-left: 0;
+    padding-right: 0;
+    position: absolute;
+    top: 0;
+    left: 3.9rem;
+    right: 44%;
+    background-color: transparent;
+  }
+
+  #stories-page .hero-section__text--heading {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #stories-page .hero-section__text--heading h4 {
+    margin-bottom: 2.2rem;
+  }
+
+  #stories-page .color-bar-v {
+    display: none;
+  }
+
   .hero-section__image {
     /**** COULDNT USE GRID-COL - BC YOU CANT CHANGE THE SOURCE ORDER W/ IT - USED "ORDER" INSTEAD
     /* grid-column: 2 / span 1; */
@@ -1260,12 +1289,12 @@ footer {
     transition: all 0.2s;
   }
 
-  .photo-categories__mountains:hover,
+  /* .photo-categories__mountains:hover,
   .photo-categories__cities:hover,
   .photo-categories__voyage:hover,
   .photo-categories__architecturals:hover {
     transform: translateY(-30px);
-  }
+  } */
 
   /****** BENEFITS SECTION ******/
   .benefits {
@@ -1450,6 +1479,21 @@ footer {
     height: 72px;
     background-position: 50% 2rem;
   }
+
+  .photo-categories-image {
+    transition: all 0.2s;
+  }
+
+  .photo-categories-image:hover {
+    transform: translateY(-30px);
+  }
+
+  /* .photo-categories__mountains:hover,
+  .photo-categories__cities:hover,
+  .photo-categories__voyage:hover,
+  .photo-categories__architecturals:hover {
+    transform: translateY(-30px);
+  } */
 }
 
 /* 1440px (= the MAX-W of the Site) */
@@ -1474,7 +1518,7 @@ footer {
   }
 
   .socials-and-logo-and-nav {
-    width: 50%;
+    width: 35%;
     height: 12.2rem;
     position: relative;
   }
