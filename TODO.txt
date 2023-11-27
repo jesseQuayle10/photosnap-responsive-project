@@ -1,12 +1,32 @@
 
+
+//////////////////// FIX GAPS IN CHROME /////////
+*maybe how to target just chrome for styleing
+
+//////////////////// FIX COLOR BAR HEIGHTS /////////
+*FIX - color-bars - should only be as High as the Text in Hero sections
+- maybe they are BG-IMGs of the Hero-text DIVs??
+
 ////////// STORIES PG /////////////
 *Fix Gap between Stories PG Hero & the next section (only happens in CHr- NOT in F/Fx - )
+
+////////// FEATURES PG BETA IMG /////////////
+*Copy their Large img & resize it in P/shop 
+-may have to create 2 imgs (for 1. Tablet 2. D/top) - OR 1 img & use bg-position
+
+////////// FEATURES PG/PRICING PG BETA SECTION  /////////////
+*Fix arrow-link alignment w/ h2 (V) - I think its fixed in Tblet - need to fix it in other M/Qs
+- not sure if the actual arrow is even aligned w/ its "get an invite" text??
+
+/////////// CREATE NEW VARS FOR UNITS THAT HAVE BEEN ADDED LATELY //////////////////
+eg. new Padding VALs
+
+////////// HERO TEXT GAP BETWEEN h2 & p - make same as Design /////////////
+
 
 /////////////////////////////////////////////
 
 *maybe write M/Q to change Hero Img (to D/Top Img) from when Mobile Img starts to look bad until Tablet M/Q
-
-*Write JS Funct. for Monthly / Yearly Toggle btn (need to calc & render the Yearly Prices = monthly * 10 - for all plans) - also make Bold Monthly OR Yearly - depends on what is selected
 
 *Toggle (H) of page-header-container so that it is as Tall when Mob Nav is Closed??
 ////////////////////////////////////////////

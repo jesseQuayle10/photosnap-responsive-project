@@ -47,7 +47,7 @@
   --padding-hor-mobile-largest: 3.6rem;
   --padding-hor-mobile-large: 3.3rem;
 
-  --padding-ver-tablet-largest: 12rem;
+  --padding-ver-tablet-largest: 11.2rem;
   --padding-hor-tablet-small: 3.9rem;
   --padding-hor-tablet-medium: 4.3rem;
   --padding-hor-tablet-large: 5.4rem;
@@ -832,7 +832,11 @@ input:checked + .slider:before {
 .features-category-pro,
 .features-category-business {
   display: inline-block;
-  margin-right: 6rem;
+  margin-right: 7rem;
+}
+
+.features-category-business {
+  margin-right: 0;
 }
 
 .features-category-basic p,
@@ -896,8 +900,13 @@ input:checked + .slider:before {
   opacity: 0.4;
 }
 
-.invite-today-section h2,
-.invite-today-section .arrow-link,
+.invite-today-section__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.invite-today-section__text,
 .invite-today-section .color-bar-h,
 .invite-today-section .color-bar-v {
   z-index: 999;
@@ -1215,14 +1224,11 @@ footer {
     padding-right: var(--padding-hor-tablet-large);
     order: 1;
     height: 100%;
-    /* align-self: center; */
   }
 
   .hero-section__text--heading {
     padding-top: 0;
     padding-bottom: 0;
-    /* justify-content: center; */
-    /* align-items: center; */
   }
 
   .hero-section__text--heading > div:hover a {
@@ -1232,6 +1238,10 @@ footer {
     font-size: var(--font-largest);
     line-height: var(--line-height-largest);
     letter-spacing: var(--letter-spc-largest);
+  }
+
+  #features-page .hero-section {
+    min-height: 49rem;
   }
 
   /********* STORIES SECTION ************/
@@ -1304,6 +1314,24 @@ footer {
     padding-right: var(--padding-hor-tablet-largest);
   }
 
+  #features-page .benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 7.2rem;
+    padding-left: 3.8rem;
+    padding-right: 3.8rem;
+  }
+
+  #features-page .benefits-text p {
+    padding-bottom: 0;
+  }
+
+  #features-page .benefits-image-limit {
+    height: 7.2rem;
+    background-position: center 50%;
+  }
+
   /****** THE-FEATURES SECTION ******/
   .features-headings,
   .features-category {
@@ -1333,11 +1361,30 @@ footer {
     display: none;
   }
 
-  /* .features-headings-plans { */
-  /* display: flex;
-    gap: 10rem; */
-  /* display: block; */
-  /* } */
+  /****** INVITE TODAY SECTION ******/
+  .invite-today-section {
+    padding-top: 6.8rem;
+    padding-bottom: 6.8rem;
+    padding-left: 3.9rem;
+    padding-right: 3.9rem;
+  }
+
+  .invite-today-section__text {
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: space-between;
+    /* gap: 2.4rem; */
+  }
+
+  .invite-today-section__text .arrow-link {
+    margin-top: -5px;
+  }
+
+  .invite-today-section h2 {
+    font-size: var(--font-largest);
+    line-height: var(--line-height-largest);
+    letter-spacing: var(--letter-spc-largest);
+  }
 
   /****** FOOTER ******/
   footer {
