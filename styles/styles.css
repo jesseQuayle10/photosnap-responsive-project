@@ -1240,7 +1240,8 @@ footer {
     letter-spacing: var(--letter-spc-largest);
   }
 
-  #features-page .hero-section {
+  #features-page .hero-section,
+  #pricing-page .hero-section {
     min-height: 49rem;
   }
 
