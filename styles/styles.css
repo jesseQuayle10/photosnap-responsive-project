@@ -725,6 +725,14 @@ input:checked + .slider:before {
   margin-bottom: 2.4rem;
 }
 
+.membership-plans-pro {
+  position: relative;
+}
+
+.pro-color-bar-v {
+  display: none;
+}
+
 .membership-plans-section a {
   font-size: var(--font-medium);
   font-weight: 700;
@@ -921,8 +929,6 @@ input:checked + .slider:before {
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--pure-white);
-  /* Hack - bc Chrome had a 1px margin between divs */
-  margin-bottom: -1px;
 }
 
 .invite-today-section::after {
@@ -1193,17 +1199,17 @@ footer {
   }
 
   /********* HERO SECTION ************/
-  .color-bar-h {
+  /* .color-bar-h {
     display: none;
   }
 
-  .color-bar-v {
-    display: inline;
+  */
+
+  /* .color-bar-v {
     position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-  }
+    height: 100%;
+    overflow: hidden;
+  } */
 
   .hero-section {
     display: grid;
@@ -1455,19 +1461,31 @@ footer {
     display: none;
   }
 
+  .pro-color-bar-v {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    overflow: hidden;
+  }
+
   /****** INVITE TODAY SECTION ******/
   .invite-today-section {
-    padding-top: 6.8rem;
-    padding-bottom: 6.8rem;
-    padding-left: 3.9rem;
-    padding-right: 3.9rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .invite-today-section__text {
-    /* display: flex; */
     flex-direction: row;
     justify-content: space-between;
-    /* gap: 2.4rem; */
+    padding-left: 3.9rem;
+    padding-right: 3.9rem;
+    padding-top: 6.8rem;
+    padding-bottom: 6.8rem;
+    background: url(../assets/icons/color-bar-v.png) no-repeat;
+    background-position: 0 100%;
   }
 
   .invite-today-section__text .arrow-link {
