@@ -152,36 +152,38 @@ img {
   justify-content: center;
 }
 
-.btn-mobile-nav-large button {
+/* .btn-mobile-nav-large button { */
+.btn-mobile-nav-large {
   border: none;
   outline: none;
-  background-color: var(--pure-black);
-  width: 83%;
+  /* width: 83%; */
 }
 
-.btn-mobile-nav-large button a:link,
-.btn-mobile-nav-large button a:visited {
+.btn-mobile-nav-large div {
+  width: 82%;
+  padding-top: 1.15rem;
+  padding-bottom: 1.15rem;
+  background-color: var(--pure-black);
+  text-align: center;
+  /* border: 1px solid red; */
+}
+
+/************ links/nav ************/
+/* .btn-mobile-nav-large button { */
+/* .btn-mobile-nav-large button a { */
+.btn-mobile-nav-large {
   color: var(--pure-white);
   text-transform: uppercase;
-  padding-top: 1.4rem;
-  padding-bottom: 1.4rem;
   font-size: var(--font-mobile-nav);
+  font-weight: 700;
   letter-spacing: var(--letter-spc-mobile-nav);
 }
-/************ links/nav ************/
-.btn-mobile-nav-large button a:active,
-.btn-mobile-nav-large button a:hover {
-  color: var(--pure-black);
-  background-color: #dfdfdf;
-  border: 1px solid #979797;
-}
+/* } */
 
 .link-normal {
   font-weight: bold;
   font-size: 1.2rem;
-  /* letter-spacing: var(--letter-spc-smallest); */
   letter-spacing: var(--letter-spc-small);
-
   text-transform: uppercase;
 }
 
@@ -336,6 +338,7 @@ img {
 }
 
 .page-header-container {
+  /* background-color: var(--pure-white); */
   height: 32.5rem;
   display: flex;
   flex-direction: column;
@@ -777,6 +780,15 @@ input:checked + .slider:before {
   letter-spacing: var(--letter-spc-largest);
 }
 
+/* .membership-plans-basic {
+  display: flex;
+  flex-direction: column;
+}
+
+.membership-plans-basic {
+
+} */
+
 .membership-plans-basic,
 .membership-plans-business {
   background-color: #f5f5f5;
@@ -801,6 +813,7 @@ input:checked + .slider:before {
 .the-features-section h2 {
   display: none;
 }
+
 .features-category {
   padding-top: 1.8rem;
   padding-bottom: 1.8rem;
@@ -1139,20 +1152,16 @@ footer {
     transform: translateX(0);
     z-index: 9999;
     transition: none;
-  }
-
-  .btn-mobile-nav-large button {
-    width: auto;
-  }
-
-  .btn-mobile-nav-large button a {
     font-size: var(--font-medium);
-    padding-top: 1.2rem;
-    padding-bottom: 1.2rem;
-    padding-left: 2.4rem;
-    padding-right: 2.4rem;
-    /* letter-spacing: var(--letter-spc-smallest); */
     letter-spacing: var(--letter-spc-small);
+  }
+
+  .btn-mobile-nav-large div {
+    width: 100%;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 2.55rem;
+    padding-right: 2.55rem;
   }
 
   /********* PG OVERLAY ************/
@@ -1300,13 +1309,6 @@ footer {
     transition: all 0.2s;
   }
 
-  /* .photo-categories__mountains:hover,
-  .photo-categories__cities:hover,
-  .photo-categories__voyage:hover,
-  .photo-categories__architecturals:hover {
-    transform: translateY(-30px);
-  } */
-
   /****** BENEFITS SECTION ******/
   .benefits {
     padding-top: var(--padding-ver-tablet-largest);
@@ -1333,11 +1335,63 @@ footer {
     background-position: center 50%;
   }
 
+  /****** MEMBERSHIP PLANS SECTION ******/
+  .membership-plans-section {
+    padding-top: 11.5rem;
+    padding-bottom: 0;
+    padding-left: var(--padding-hor-tablet-small);
+    padding-right: var(--padding-hor-tablet-small);
+  }
+
+  .membership-plans-basic,
+  .membership-plans-pro,
+  .membership-plans-business {
+    position: relative;
+    padding: 4rem;
+  }
+
+  .membership-plans-basic p,
+  .membership-plans-pro p,
+  .membership-plans-business p {
+    margin-bottom: 3.2rem;
+  }
+
+  .plan-info {
+    width: 44.25%;
+  }
+
+  .plan-info h3,
+  .plan-info p {
+    text-align: left;
+  }
+
+  .plan-price {
+    position: absolute;
+    top: 3.6rem;
+    right: 3.6rem;
+  }
+
   /****** THE-FEATURES SECTION ******/
+  .the-features-section {
+    padding-top: var(--padding-ver-tablet-largest);
+    padding-bottom: var(--padding-ver-tablet-largest);
+    padding-left: var(--padding-hor-tablet-small);
+    padding-right: var(--padding-hor-tablet-small);
+  }
+
   .features-headings,
   .features-category {
     display: grid;
     grid-template-columns: 40% 20% 20% 20%;
+  }
+
+  .the-features-section h2 {
+    display: block;
+    text-align: center;
+    font-size: var(--font-largest);
+    letter-spacing: var(--letter-spc-largest);
+    line-height: var(--line-height-largest);
+    margin-bottom: 6.2rem;
   }
 
   .basic-plan,
@@ -1460,6 +1514,11 @@ footer {
 
 /* @1370px - so Hero Img DIV = 57.75% of PG (W) */
 @media screen and (min-width: 85.6em) {
+  .btn-mobile-nav-large:hover {
+    color: var(--pure-black);
+    background-color: #dfdfdf;
+    border: 1px solid #979797;
+  }
   .hero-section {
     grid-template-columns: 1fr 57.75%;
   }

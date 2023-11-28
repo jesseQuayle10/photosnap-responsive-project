@@ -51,6 +51,8 @@
 *"The Features" on "pricing PG" - has a diff L/out from Mob to Tabl. 
 - on Tabl. I could just put GTCs * 4 on Parent DIV - BUT in Mob. View the 1st Child of the 4 Cols (= the Heading) - had to sit ABOVE the rest of the Childs (which sit in a Row of 3 under it) - I couldnt use F/Bx in Mob & switch to Grid in Tabl. - bc I needed to have the SAME MarkUP - so in Mob. I let the Heading sit ABove the 3 Childs (just w/ Normal Flow) & used Dsiplay: Inline-block on the 3 Childs (so they sat in a Row Under the Heading)
 
+*S/times the Source Order or the html will prevent you from using F/bx etc - bc the El's may need to be positioned diff between Mob & Tabl. Views - I thought about using F/bx (w/ Order prop) or even Grid Cells for the "basic, pro, business" Plans - but I had to use abs-pos instead & give the parent div (w) = 50%
+
 *bc <main-nav> & <lg-btn> were in <PGHeader-container> - which was Inside <PGHeader> - I needed <PGHeader> to be 72px (H) (w/ Overflow: Visible) & <PGHeader-container> to be 325 (H) - ELSE the rest of the PG Content would get pushed Down the PG
 
 *IF cant find the reason why s/th isnt rendering properly - check Dev T's for the El's affected - IF cant see why in there - check the Indiv. El - eg.  <span>'s in General may have had an earlier Rule applied to them (in my case it was ... span:last of type: margin-bottom)
