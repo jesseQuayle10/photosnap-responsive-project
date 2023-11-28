@@ -403,7 +403,16 @@ img {
   opacity: 0.6;
 }
 
-.color-bar-h {
+/**** CLR BAR ****/
+#home-page .hero-section__text--heading,
+#features-page .hero-section__text--heading,
+#pricing-page .hero-section__text--heading {
+  /* padding-left: var(--padding-hor-tablet-large); */
+  /* padding-right: var(--padding-hor-tablet-large); */
+  background: url(../assets/icons/color-bar-h.png) no-repeat;
+}
+
+/* .color-bar-h {
   position: absolute;
   top: 0;
   left: 3.3rem;
@@ -411,7 +420,7 @@ img {
 
 .color-bar-v {
   display: none;
-}
+} */
 
 .hero-section__image img {
   width: 100%;
@@ -885,6 +894,17 @@ input:checked + .slider:before {
 
 /****** INVITE-TODAY SECTION ******/
 .invite-today-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.invite-today-section__text {
+  padding-top: 6.4rem;
+  padding-bottom: 6.4rem;
+  background: url(../assets/icons/color-bar-h.png) no-repeat;
+}
+
+.invite-today-section {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -893,6 +913,9 @@ input:checked + .slider:before {
   padding-bottom: var(--padding-ver-mobile-large);
   padding-left: var(--padding-hor-mobile-large);
   padding-right: var(--padding-hor-mobile-large);
+
+  padding-top: 0;
+  padding-bottom: 0;
   background: #000;
   background: url(../assets/features/mobile/beta-invite-mobile.jpg);
   background-repeat: no-repeat;
@@ -1187,6 +1210,17 @@ footer {
     grid-template-columns: 1fr 27.3rem;
     align-items: center;
     min-height: 65rem;
+  }
+
+  #home-page .hero-section__text {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #home-page .hero-section__text--heading {
+    padding-left: var(--padding-hor-tablet-large);
+    padding-right: var(--padding-hor-tablet-large);
+    background: url(../assets/icons/color-bar-v.png) no-repeat;
   }
 
   #stories-page .hero-section {
