@@ -1212,15 +1212,20 @@ footer {
     min-height: 65rem;
   }
 
-  #home-page .hero-section__text {
+  #home-page .hero-section__text,
+  #features-page .hero-section__text,
+  #pricing-page .hero-section__text {
     padding-left: 0;
     padding-right: 0;
   }
 
-  #home-page .hero-section__text--heading {
+  #home-page .hero-section__text--heading,
+  #features-page .hero-section__text--heading,
+  #pricing-page .hero-section__text--heading {
     padding-left: var(--padding-hor-tablet-large);
     padding-right: var(--padding-hor-tablet-large);
     background: url(../assets/icons/color-bar-v.png) no-repeat;
+    background-size: 6px 100%;
   }
 
   #stories-page .hero-section {
