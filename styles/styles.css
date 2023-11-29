@@ -1627,7 +1627,7 @@ footer {
 
   .benefits {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem;
     padding-left: 16.5rem;
     padding-right: 16.5rem;

@@ -27,6 +27,12 @@ eg. new Padding VALs
 
 ////////// ADD V CLR BAR TO PRO DIV /////////////
 
+//////////////////////////////////
+*Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
+    at script.js:54:20        
+        
+*Failed to load resource: net::ERR_FILE_NOT_FOUND assets/favicon-32x32.png:1
+////////////////////////////////    
 
 
 
