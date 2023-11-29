@@ -51,6 +51,7 @@
   --padding-hor-tablet-small: 3.9rem;
   --padding-hor-tablet-medium: 4.3rem;
   --padding-hor-tablet-large: 5.4rem;
+  --padding-hor-tablet-larger: 11.2rem;
   --padding-hor-tablet-largest: 15.5rem;
 
   --padding-hor-desktop-small: 4rem;
@@ -404,23 +405,9 @@ img {
 }
 
 /**** CLR BAR ****/
-#home-page .hero-section__text--heading,
-#features-page .hero-section__text--heading,
-#pricing-page .hero-section__text--heading {
-  /* padding-left: var(--padding-hor-tablet-large); */
-  /* padding-right: var(--padding-hor-tablet-large); */
-  background: url(../assets/icons/color-bar-h.png) no-repeat;
-}
-
-/* .color-bar-h {
-  position: absolute;
-  top: 0;
-  left: 3.3rem;
-}
-
-.color-bar-v {
+.photo-categories-color-bar-h {
   display: none;
-} */
+}
 
 .hero-section__image img {
   width: 100%;
@@ -1633,12 +1620,6 @@ footer {
     display: flex;
   }
 
-  .stories__first-text,
-  .stories__second-text {
-    padding-left: 11.2rem;
-    padding-right: 11.2rem;
-  }
-
   .benefits {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1714,10 +1695,21 @@ footer {
     margin-right: 16.5rem;
   }
 
-  .hero-section__text {
+  #home-page .hero-section__text--heading,
+  #features-page .hero-section__text--heading,
+  #pricing-page .hero-section__text--heading,
+  .stories__first-text,
+  .stories__second-text {
+    padding-left: var(--padding-hor-tablet-larger);
+    padding-right: var(--padding-hor-tablet-larger);
+    /* background: url(../assets/icons/color-bar-v.png) no-repeat; */
+    /* background-size: 6px 100%; */
+  }
+
+  /* .hero-section__text {
     padding-left: 11.2rem;
     padding-right: 11.2rem;
-  }
+  } */
 
   footer {
     height: 25rem;
