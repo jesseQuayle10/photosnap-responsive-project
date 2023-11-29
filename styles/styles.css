@@ -1625,12 +1625,24 @@ footer {
     display: flex;
   }
 
-  .benefits {
+  #home-page .benefits,
+  #features-page .benefits {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem;
     padding-left: 16.5rem;
     padding-right: 16.5rem;
+  }
+
+  #home-page .benefits {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+
+  #features-page .benefits {
+    padding-top: 16rem;
+    padding-bottom: 16rem;
+    row-gap: 10.4rem;
   }
 
   .benefits-text p {
@@ -1696,6 +1708,10 @@ footer {
     /* background-color: transparent; */
   }
 
+  .invite-today-section__text {
+    padding: 6.8rem 17.1rem;
+  }
+
   footer {
     height: 25rem;
     padding-left: 17.1rem;
@@ -1745,61 +1761,3 @@ footer {
     height: 12.2rem;
   }
 }
-
-/*
-.heading-large {
-  font-size: var(--font-larger);
-  line-height: var(--line-height-large);
-}
-
-.heading-medium {
-  /* font-size: 1.8rem; */
-
-/* font-size: var(--font-large);
-
-  line-height: var(--line-height-large);
-} */
-
-/* .heading-small { */
-/* font-size: 1.2rem; */
-/* font-size: var(--font-medium);
-  line-height: var(--line-height-medium);
-  letter-spacing: var(--letter-spc-smallest);
-} */
-
-/************* DESKTOP STYLES ***********/
-/* .btn-full {
-  display: inline-bl--padding-hor-mobile-large
-  width: 15.8rem;
-  height: 4rem;
-  font-size: var(--font-medium);
-  
-
-  text-transform: uppercase;
-}
-
-.btn-black {
-  background-color: var(--pure-black);
-  color: var(--pure-white);
-}
-
-.btn-white {
-  background-color: var(--pure-white);
-  color: var(--pure-black);
-}
-
-.btn-grey {
-  background-color: var(--light-grey);
-  color: var(--pure-black);
-}
-
-.btn-arrow {
-} */
-
-/************ headings ************/
-
-/*************Tablet+ ***********/
-
-/************ PG SECTIONS ************/
-
-/*************Tablet+ ***********/

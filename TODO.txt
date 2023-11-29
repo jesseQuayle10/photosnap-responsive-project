@@ -11,7 +11,7 @@
 *Fix Gap between Stories PG Hero & the next section (only happens in CHr- NOT in F/Fx - )
 
 ////////// FEATURES PG BETA IMG /////////////
-*Copy their Large img & resize it in P/shop 
+*Copy their Large img & resize it in P/shop - serve proper img to B/pt
 -may have to create 2 imgs (for 1. Tablet 2. D/top) - OR 1 img & use bg-position
 
 ////////// FEATURES PG/PRICING PG BETA SECTION  /////////////
