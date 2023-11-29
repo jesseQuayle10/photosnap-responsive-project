@@ -1662,32 +1662,6 @@ footer {
   .photo-categories > div:hover .photo-categories-color-bar-h {
     display: block;
   }
-
-  /**********TRIED THIS FOR CLR BAR ON HOVER ********/
-  /* .photo-categories__mountains {
-    position: relative;
-  }
-
-  .photo-categories__mountains:hover {
-    transform: translateY(-30px);
-  }
-
-  .photo-categories__mountains::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 6px;
-    width: 100%;
-
-    /* display: none; */
-  /* } */
-
-  /* .photo-categories__mountains:hover .photo-categories__mountains::after {
-    background: url(../assets/icons/color-bar-h-long.png);
-  }
-*/
-  /*********************************************/
 }
 
 /* 1440px (= the MAX-W of the Site) */
