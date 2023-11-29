@@ -1564,8 +1564,20 @@ footer {
   - switch to 4 Cols @1000px */
 @media screen and (min-width: 63em) {
   .photo-categories {
-    /* grid-template-rows: 500px; */
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .btn-mobile-nav-large > div {
+    transition: all 0.5s;
+  }
+
+  .btn-mobile-nav-large > div:hover {
+    background-color: #dfdfdf;
+    color: var(--pure-black);
+  }
+
+  .btn-mobile-nav-large > div:hover .link-white {
+    color: #000;
   }
 }
 
@@ -1644,20 +1656,52 @@ footer {
     background-position: 50% 2rem;
   }
 
-  .photo-categories-image {
-    transition: all 0.2s;
+  .photo-categories > div {
+    position: relative;
+    transition: all 0.5s;
   }
 
-  .photo-categories-image:hover {
+  .photo-categories > div:hover {
     transform: translateY(-30px);
   }
 
-  /* .photo-categories__mountains:hover,
-  .photo-categories__cities:hover,
-  .photo-categories__voyage:hover,
-  .photo-categories__architecturals:hover {
+  .photo-categories-color-bar-h {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+  }
+
+  .photo-categories > div:hover .photo-categories-color-bar-h {
+    display: block;
+  }
+
+  /**********TRIED THIS FOR CLR BAR ON HOVER ********/
+  /* .photo-categories__mountains {
+    position: relative;
+  }
+
+  .photo-categories__mountains:hover {
     transform: translateY(-30px);
-  } */
+  }
+
+  .photo-categories__mountains::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 6px;
+    width: 100%;
+
+    /* display: none; */
+  /* } */
+
+  /* .photo-categories__mountains:hover .photo-categories__mountains::after {
+    background: url(../assets/icons/color-bar-h-long.png);
+  }
+*/
+  /*********************************************/
 }
 
 /* 1440px (= the MAX-W of the Site) */
