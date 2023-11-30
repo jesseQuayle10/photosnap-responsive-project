@@ -767,7 +767,8 @@ input:checked + .slider:before {
 }
 
 .membership-plans-pro button {
-  background-color: var(--pure-white);
+  /* background-color: var(--pure-white); */
+  background-color: #dfdfdf;
 }
 
 .membership-plans-basic span,
@@ -1710,6 +1711,112 @@ footer {
 
   .invite-today-section__text {
     padding: 6.8rem 17.1rem;
+  }
+
+  .membership-plans-section {
+    padding-left: 16.5rem;
+    padding-right: 16.5rem;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+
+  .membership-plans-basic,
+  .membership-plans-pro {
+    margin-bottom: 0;
+  }
+
+  .membership-plans-section h3 {
+    margin-bottom: 1.9rem;
+  }
+
+  .membership-plans-basic p,
+  .membership-plans-pro p,
+  .membership-plans-business p {
+    margin-bottom: 4rem;
+  }
+
+  .membership-plans {
+    display: grid;
+    grid-template-columns: repeat(3, 35rem);
+    gap: 3rem;
+  }
+
+  .membership-plans-basic,
+  .membership-plans-pro,
+  .membership-plans-business {
+    /* position: relative; */
+    padding: 5.6rem var(--padding-hor-desktop-small) 4rem;
+  }
+
+  /* .membership-plans-pro {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .membership-plans-pro .plan-info {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  } */
+
+  .plan-info {
+    width: 100%;
+  }
+
+  .plan-info h3,
+  .plan-info p {
+    text-align: center;
+  }
+
+  .membership-plans > div {
+    transition: all 0.5s;
+  }
+
+  .membership-plans > div:hover {
+    transform: scaleY(115%);
+  }
+
+  .membership-plans-basic button,
+  .membership-plans-pro button,
+  .membership-plans-business button {
+    transition: all 0.5s;
+  }
+
+  .membership-plans-basic button:hover,
+  .membership-plans-pro button:hover,
+  .membership-plans-business button:hover {
+    background-color: #dfdfdf;
+    cursor: pointer;
+  }
+
+  .membership-plans-basic button:hover a,
+  .membership-plans-business button:hover a {
+    color: var(--pure-black);
+  }
+
+  .pro-color-bar-v {
+    display: none;
+  }
+
+  .membership-plans-pro {
+    position: relative;
+  }
+
+  .membership-plans-pro .color-bar-h {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    /* margin-bottom: 5.6rem; */
+  }
+
+  .membership-plans-select-plan {
+    margin-bottom: 8rem;
+  }
+
+  .plan-price {
+    position: static;
   }
 
   footer {

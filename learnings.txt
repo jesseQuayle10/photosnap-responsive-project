@@ -55,7 +55,9 @@
 
 *bc <main-nav> & <lg-btn> were in <PGHeader-container> - which was Inside <PGHeader> - I needed <PGHeader> to be 72px (H) (w/ Overflow: Visible) & <PGHeader-container> to be 325 (H) - ELSE the rest of the PG Content would get pushed Down the PG
 
-*IF cant find the reason why s/th isnt rendering properly - check Dev T's for the El's affected - IF cant see why in there - check the Indiv. El - eg.  <span>'s in General may have had an earlier Rule applied to them (in my case it was ... span:last of type: margin-bottom)
+*IF cant find the reason why s/th isnt rendering properly - check Dev T's for the El's affected - IF cant see why in there - check the Indiv. El - eg.  <span>'s in General may have had an earlier Rule applied to them (in my case it was ... span:last of type: margin-bottom).
+
+*position: static - to turn off absolute position
 
 *When a DIV with x-amount of Child El's wont Align-center pefectly bc of Line-height on the Top EL' = Added margin-bottom (that matches the VAL of the L/H at top of Top El') to BtM El
 
