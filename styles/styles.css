@@ -717,6 +717,10 @@ input:checked + .slider:before {
   position: relative;
 }
 
+.membership-plans-pro .color-bar-h {
+  display: none;
+}
+
 .pro-color-bar-v {
   display: none;
 }
