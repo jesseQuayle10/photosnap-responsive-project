@@ -1460,6 +1460,10 @@ footer {
     overflow: hidden;
   }
 
+  .left-space {
+    padding-left: 2.4rem;
+  }
+
   /****** INVITE TODAY SECTION ******/
   .invite-today-section {
     padding-left: 0;
@@ -1717,7 +1721,6 @@ footer {
     padding-left: 16.5rem;
     padding-right: 16.5rem;
     padding-top: 12rem;
-    padding-bottom: 12rem;
   }
 
   .membership-plans-basic,
@@ -1817,6 +1820,17 @@ footer {
 
   .plan-price {
     position: static;
+  }
+
+  .the-features-section {
+    padding-top: 19rem;
+    padding-bottom: 19rem;
+    padding-left: 35.5rem;
+    padding-right: 35.5rem;
+  }
+
+  .the-features-section h2 {
+    margin-bottom: 5.6rem;
   }
 
   footer {
