@@ -366,7 +366,7 @@ img {
 .stories__second-text {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.8rem;
   padding-top: var(--padding-ver-mobile-largest);
   padding-bottom: var(--padding-ver-mobile-largest);
 }
@@ -374,13 +374,12 @@ img {
 #home-page .hero-section__text--heading,
 #features-page .hero-section__text--heading,
 #pricing-page .hero-section__text--heading {
-  gap: 1.8rem;
+  /* gap: 1.8rem; */
 }
 
 #stories-page .hero-section__text--heading {
   padding-top: var(--padding-ver-mobile-medium);
   padding-bottom: var(--padding-ver-mobile-medium);
-  gap: 1.8rem;
 }
 
 .hero-arrow-link,
@@ -475,7 +474,7 @@ img {
 .stories__second-text > div {
   display: flex;
   gap: 2rem;
-  margin-top: 1.3rem;
+  /* margin-top: 1.3rem; */
 }
 
 .stories h2 {
@@ -1279,6 +1278,21 @@ footer {
   #stories-page .hero-section__text--heading {
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  .stories__first-text,
+  .stories__second-text {
+    /* display: flex;
+    flex-direction: column;
+    
+    padding-top: var(--padding-ver-mobile-largest);
+    padding-bottom: var(--padding-ver-mobile-largest); */
+    gap: 2.4rem;
+  }
+
+  .stories__first-text > div,
+  .stories__second-text > div {
+    margin-top: 2.2rem;
   }
 
   #stories-page .color-bar-v {
