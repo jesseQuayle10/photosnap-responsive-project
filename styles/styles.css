@@ -366,16 +366,28 @@ img {
 .stories__second-text {
   display: flex;
   flex-direction: column;
-  gap: 2.6rem;
+  gap: 1.2rem;
   padding-top: var(--padding-ver-mobile-largest);
   padding-bottom: var(--padding-ver-mobile-largest);
+}
+
+#home-page .hero-section__text--heading,
+#features-page .hero-section__text--heading,
+#pricing-page .hero-section__text--heading {
+  gap: 1.8rem;
+}
+
+#stories-page .hero-section__text--heading {
+  padding-top: var(--padding-ver-mobile-medium);
+  padding-bottom: var(--padding-ver-mobile-medium);
+  gap: 1.8rem;
 }
 
 .hero-arrow-link,
 .arrow-link {
   display: flex;
   gap: 2rem;
-  margin-top: 1.3rem;
+  margin-top: 0.9rem;
   line-height: normal;
   align-items: center;
 }
@@ -404,6 +416,10 @@ img {
   opacity: 0.6;
 }
 
+.hero-section__text .color-bar-h {
+  position: absolute;
+}
+
 /**** CLR BAR ****/
 .photo-categories-color-bar-h {
   display: none;
@@ -414,12 +430,6 @@ img {
   height: 100%;
 }
 
-#stories-page .hero-section__text--heading {
-  padding-top: var(--padding-ver-mobile-medium);
-  padding-bottom: var(--padding-ver-mobile-medium);
-  gap: 0;
-}
-
 .hero-section__text--heading h4 {
   font-size: var(--font-medium);
   font-weight: 700;
@@ -428,11 +438,14 @@ img {
 
   text-transform: uppercase;
   color: var(--pure-white);
-  margin-bottom: 1.4rem;
+  /* margin-bottom: 1.4rem; */
 }
 
-.hero-section__text--heading h2 {
-  margin-bottom: 1.4rem;
+#home-page .hero-section__text--heading h2,
+#features-page .hero-section__text--heading h2,
+#pricing-page .hero-section__text--heading h2 {
+  /* margin-bottom: 1.4rem; */
+  margin-bottom: 0;
 }
 
 .hero-date-author {
@@ -440,11 +453,11 @@ img {
   align-items: baseline;
   gap: 1.8rem;
   color: var(--pure-white);
-  margin-bottom: 2.2rem;
+  /* margin-bottom: 2.2rem; */
 }
 
 .hero-date-author + p {
-  margin-bottom: 1.4rem;
+  /* margin-bottom: 1.4rem; */
 }
 
 .hero-date-author span.hero-date {
@@ -496,6 +509,10 @@ img {
 /****** PHOTO CATEGORIES ******/
 .photo-categories {
   display: grid;
+  grid-template-columns: 1fr;
+  /* max-width: 375px; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
 }
 .photo-categories-image {
   position: relative;
@@ -764,7 +781,7 @@ input:checked + .slider:before {
 .membership-plans-pro,
 .membership-plans-business {
   padding-top: 5.6rem;
-  padding-bottom: 5.6rem;
+  padding-bottom: 4rem;
   padding-left: var(--padding-hor-mobile-largest);
   padding-right: var(--padding-hor-mobile-largest);
 }
@@ -805,15 +822,6 @@ input:checked + .slider:before {
   letter-spacing: var(--letter-spc-largest);
 }
 
-/* .membership-plans-basic {
-  display: flex;
-  flex-direction: column;
-}
-
-.membership-plans-basic {
-
-} */
-
 .membership-plans-basic,
 .membership-plans-business {
   background-color: #f5f5f5;
@@ -833,6 +841,7 @@ input:checked + .slider:before {
 .the-features-section {
   padding-left: var(--padding-hor-mobile-large);
   padding-right: var(--padding-hor-mobile-large);
+  margin-bottom: 6.4rem;
 }
 
 .the-features-section h2 {
@@ -1097,7 +1106,7 @@ footer {
   .photo-categories__voyage,
   .photo-categories__architecturals {
     /* height: 500px; */
-    height: 50rem;
+    /* height: 50rem; */
   }
 
   /* needed following 3 Class Styles to make <picture> to Fill its Container - via Object-fit */
@@ -1207,11 +1216,9 @@ footer {
   }
 
   /********* HERO SECTION ************/
-  /* .color-bar-h {
+  .color-bar-h {
     display: none;
   }
-
-  */
 
   /* .color-bar-v {
     position: absolute;
@@ -1224,6 +1231,11 @@ footer {
     grid-template-columns: 1fr 27.3rem;
     align-items: center;
     height: 65rem;
+  }
+
+  #home-page .hero-arrow-link,
+  .arrow-link {
+    margin-top: 2.5rem;
   }
 
   #features-page .hero-section,
@@ -1245,6 +1257,7 @@ footer {
     padding-right: var(--padding-hor-tablet-large);
     background: url(../assets/icons/color-bar-v.png) no-repeat;
     background-size: 6px 100%;
+    gap: 2rem;
   }
 
   #stories-page .hero-section {
@@ -1266,10 +1279,6 @@ footer {
   #stories-page .hero-section__text--heading {
     padding-top: 0;
     padding-bottom: 0;
-  }
-
-  #stories-page .hero-section__text--heading h4 {
-    margin-bottom: 2.2rem;
   }
 
   #stories-page .color-bar-v {
@@ -1436,6 +1445,7 @@ footer {
     padding-bottom: var(--padding-ver-tablet-largest);
     padding-left: var(--padding-hor-tablet-small);
     padding-right: var(--padding-hor-tablet-small);
+    margin-bottom: 0;
   }
 
   .features-headings,
