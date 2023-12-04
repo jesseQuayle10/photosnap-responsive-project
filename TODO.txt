@@ -1,37 +1,7 @@
 
-//////////////////// PGHeader, HERO, BETA FOOTER, ETC - EXTEND TO WIDTH OF SCREEN - BC SHEETS IMG = 2250 (W) /////////
-*May have to put eg. max-w on eg. footer nav parent - so always a M-L/R of 17.1rem AND on HERO (= Hero__text = 1fr, Hero__img = at its Fixed-w of 831px)
-*max-w may have to be 2100px - bc sheets img = left -150px (of 2250px)
-
-
-//////////////////// FIX GAPS IN CHROME /////////
-*maybe how to target just chrome for styleing
-
-//////////////////// FIX COLOR BAR HEIGHTS /////////
-*FIX - color-bars - should only be as High as the Text in Hero sections
-- maybe they are BG-IMGs of the Hero-text DIVs??
-
-////////// STORIES PG /////////////
-*Fix Gap between Stories PG Hero & the next section (only happens in CHr- NOT in F/Fx - )
-
-////////// FEATURES PG BETA IMG /////////////
-*Copy their Large img & resize it in P/shop - serve proper img to B/pt
--may have to create 2 imgs (for 1. Tablet 2. D/top) - OR 1 img & use bg-position
-
-////////// FEATURES PG/PRICING PG BETA SECTION  /////////////
-*Fix arrow-link alignment w/ h2 (V) - I think its fixed in Tblet - need to fix it in other M/Qs
-- not sure if the actual arrow is even aligned w/ its "get an invite" text??
 
 /////////// CREATE NEW VARS FOR UNITS THAT HAVE BEEN ADDED LATELY //////////////////
 eg. new Padding VALs
-
-////////// HERO TEXT GAP BETWEEN h2 & p - make same as Design /////////////
-
-////////// FIX GAP IN BETWEEN MOBILE HEADER & NAV - ALSO BRDR-BTM = TOO WIDE /////////////
-
-////////// ADD V CLR BAR TO PRO DIV /////////////
-
-////////// CHECL=K ALL LINKS - CURSOR = POINTER /////////////
 
 
 //////////////////////////////////
@@ -51,12 +21,9 @@ eg. new Padding VALs
 ////////////////////////////////////////////
 *Refactor so all relevant padding/margin VALs are stored in VARs & make them more reusable by using keyword "space-v/w" - instead of "padding/margin"
 
-*Refactor so all EL's w/ eg. same Font sz, ltr-spc & L/H are put into a Class??
-
 *Remove "height" Props from El's (so fully responsive) - EXCEPT From PGHeader bc need it for main-nav to render properly??
 
 *add an animation on main-nav O/Lay - (I tried transition options - been thru the wringer w/ it - SO ONLY TRY ANIMATION CSS)
 
-*What to do about the BG CLR of the DIVs on Dvc's that are wider than 1440
 
 *Do i need to remove .main-nav-open Class via JS RESIZE Evt (bc Overlay stays when rsize to Tablet+)??

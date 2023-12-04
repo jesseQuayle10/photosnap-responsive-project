@@ -224,7 +224,7 @@ img {
 
 .main-nav {
   width: 100%;
-  border-bottom: 1px solid #000;
+  /* border-bottom: 1px solid #000; */
   background-color: var(--pure-white);
 
   /* Hide navigation */
@@ -245,6 +245,10 @@ img {
   transition: all 0.3s ease-in;
 
   z-index: 9999;
+}
+
+.main-nav__links {
+  border-bottom: 1px solid #000;
 }
 
 /* ".main-nav-open" is Toggled via JS - has to be on the Parent of the Nav BTN - so can use "~" or DESC. Sel' */
@@ -648,6 +652,8 @@ img {
   padding-bottom: var(--padding-ver-mobile-large);
   text-align: center;
   max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .membership-plans-select-plan {
@@ -978,6 +984,14 @@ input:checked + .slider:before {
   z-index: 999;
 }
 
+.invite-today-section .fix-height {
+  height: 16px;
+}
+
+.invite-today-section__text .arrow-link .fix-height {
+  margin-top: 2px;
+}
+
 /****** FOOTER ******/
 footer {
   display: flex;
@@ -1240,8 +1254,12 @@ footer {
     height: 65rem;
   }
 
-  #home-page .hero-arrow-link,
+  /* #home-page .hero-arrow-link,
   .arrow-link {
+    margin-top: 2.5rem;
+  } */
+
+  #home-page .hero-arrow-link {
     margin-top: 2.5rem;
   }
 
@@ -1549,6 +1567,21 @@ footer {
     line-height: var(--line-height-largest);
     letter-spacing: var(--letter-spc-largest);
   }
+
+  .invite-today-section .fix-height:hover a {
+    text-decoration: underline;
+  }
+
+  /* .invite-today-section .arrow-link:hover a {
+    text-decoration: underline;
+  } */
+  /* .invite-today-section .arrow-link a:hover {
+    text-decoration: underline;
+  } */
+
+  /* .invite-today-section .link-arrow:hover .invite-today-section .arrow-link a {
+    text-decoration: underline;
+  } */
 
   /****** FOOTER ******/
   footer {

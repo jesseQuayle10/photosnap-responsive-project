@@ -57,6 +57,8 @@
 
 *IF cant find the reason why s/th isnt rendering properly - check Dev T's for the El's affected - IF cant see why in there - check the Indiv. El - eg.  <span>'s in General may have had an earlier Rule applied to them (in my case it was ... span:last of type: margin-bottom).
 
+*Think about how your Design will look on > 1440px Screens - eg. PgHeader, Hero, Invite-section & Footer extended to 2100px 
+
 *position: static - to turn off absolute position
 
 *When a DIV with x-amount of Child El's wont Align-center pefectly bc of Line-height on the Top EL' = Added margin-bottom (that matches the VAL of the L/H at top of Top El') to BtM El
