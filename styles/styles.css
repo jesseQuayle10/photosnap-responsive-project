@@ -30,7 +30,6 @@
   /********** LTR SPACING **********/
   --letter-spc-largest: 4.17px;
   --letter-spc-large: 3.33px;
-  /* --letter-spc-smallest: 2px; */
   --letter-spc-small: 2px;
 
   --letter-spc-smallest: 1.67px;
@@ -76,6 +75,7 @@ html {
 
   /* = 10px so any REMs = x10px */
   font-size: 62.5%;
+  /* background-color: #dfdfdf; */
 }
 /* @media only screen and (max-width: 68.75em) {
   html {
@@ -90,7 +90,9 @@ body {
 }
 
 .container {
-  max-width: 144rem;
+  /* max-width: 144rem; */
+  max-width: 210rem;
+
   position: relative;
   margin: var(--centre-hor);
   overflow: hidden;
@@ -509,9 +511,9 @@ img {
 .photo-categories {
   display: grid;
   grid-template-columns: 1fr;
-  /* max-width: 375px; */
-  /* margin-left: auto; */
-  /* margin-right: auto; */
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .photo-categories-image {
   position: relative;
@@ -584,6 +586,9 @@ img {
   padding-left: var(--padding-hor-mobile-large);
   padding-right: var(--padding-hor-mobile-large);
   text-align: center;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .benefits p {
@@ -642,6 +647,7 @@ img {
   padding-top: var(--padding-ver-mobile-large);
   padding-bottom: var(--padding-ver-mobile-large);
   text-align: center;
+  max-width: 1440px;
 }
 
 .membership-plans-select-plan {
@@ -841,6 +847,9 @@ input:checked + .slider:before {
   padding-left: var(--padding-hor-mobile-large);
   padding-right: var(--padding-hor-mobile-large);
   margin-bottom: 6.4rem;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .the-features-section h2 {
@@ -937,7 +946,6 @@ input:checked + .slider:before {
   padding-bottom: var(--padding-ver-mobile-large);
   padding-left: var(--padding-hor-mobile-large);
   padding-right: var(--padding-hor-mobile-large);
-
   padding-top: 0;
   padding-bottom: 0;
   background: #000;
@@ -1517,6 +1525,8 @@ footer {
   .invite-today-section {
     padding-left: 0;
     padding-right: 0;
+    background: url(../assets/features/tablet/beta-invite-tablet.png);
+    background-position: left -600px top 82%;
   }
 
   .invite-today-section__text {
@@ -1736,7 +1746,7 @@ footer {
     border: 1px solid #979797;
   }
   .hero-section {
-    grid-template-columns: 1fr 57.75%;
+    grid-template-columns: 1fr 830px;
   }
 
   #stories-page .hero-section {
@@ -1860,10 +1870,23 @@ footer {
     padding-right: var(--padding-hor-tablet-larger);
   }
 
+  #home-page .stories__first {
+    grid-template-columns: 830px 1fr;
+  }
+
+  #home-page .stories__second {
+    grid-template-columns: 1fr 830px;
+  }
+
   #stories-page .hero-section__text {
     left: 11.2rem;
     width: 38.7rem;
   }
+
+  /* #home-page .stories__first-image,
+  #home-page .stories__second-image {
+    max-width: 830px;
+  } */
 
   .invite-today-section__text {
     padding: 6.8rem 17.1rem;
@@ -1894,6 +1917,10 @@ footer {
     padding-bottom: 19rem;
     padding-left: 35.5rem;
     padding-right: 35.5rem;
+  }
+
+  .invite-today-section {
+    background-position: left -150px top 83%;
   }
 
   footer {

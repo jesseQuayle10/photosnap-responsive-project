@@ -1,4 +1,8 @@
 
+//////////////////// PGHeader, HERO, BETA FOOTER, ETC - EXTEND TO WIDTH OF SCREEN - BC SHEETS IMG = 2250 (W) /////////
+*May have to put eg. max-w on eg. footer nav parent - so always a M-L/R of 17.1rem AND on HERO (= Hero__text = 1fr, Hero__img = at its Fixed-w of 831px)
+*max-w may have to be 2100px - bc sheets img = left -150px (of 2250px)
+
 
 //////////////////// FIX GAPS IN CHROME /////////
 *maybe how to target just chrome for styleing
