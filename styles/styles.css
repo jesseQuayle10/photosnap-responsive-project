@@ -248,7 +248,7 @@ img {
 }
 
 .main-nav__links {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--pure-black);
 }
 
 /* ".main-nav-open" is Toggled via JS - has to be on the Parent of the Nav BTN - so can use "~" or DESC. Sel' */
@@ -353,6 +353,10 @@ img {
   width: 100%;
   padding-top: 2.8rem;
   z-index: 9999;
+}
+
+.height-small {
+  height: 72px;
 }
 
 .logo {
@@ -1117,17 +1121,12 @@ footer {
 /* https://stackoverflow.com/questions/47888165/make-image-in-picture-element-fit-its-container */
 @media screen and (min-width: 35em) {
   /********* PHOTO CAT'S SECTION ************/
+  .main-nav__links {
+    border-bottom: none;
+  }
 
   .photo-categories {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .photo-categories__mountains,
-  .photo-categories__cities,
-  .photo-categories__voyage,
-  .photo-categories__architecturals {
-    /* height: 500px; */
-    /* height: 50rem; */
   }
 
   /* needed following 3 Class Styles to make <picture> to Fill its Container - via Object-fit */

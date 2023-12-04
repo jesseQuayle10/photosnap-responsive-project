@@ -1,29 +1,13 @@
-
+///////////// FAVICON NOT FOUND //////////////////
 
 /////////// CREATE NEW VARS FOR UNITS THAT HAVE BEEN ADDED LATELY //////////////////
 eg. new Padding VALs
 
-
-//////////////////////////////////
-*Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
-    at script.js:54:20        
-        
-*Failed to load resource: net::ERR_FILE_NOT_FOUND assets/favicon-32x32.png:1
-////////////////////////////////    
-
-
-
 /////////////////////////////////////////////
+SPlit css into 2 files - 2nd = "queries.css" - load it after main.css
 
-*maybe write M/Q to change Hero Img (to D/Top Img) from when Mobile Img starts to look bad until Tablet M/Q
-
-*Toggle (H) of page-header-container so that it is as Tall when Mob Nav is Closed??
 ////////////////////////////////////////////
 *Refactor so all relevant padding/margin VALs are stored in VARs & make them more reusable by using keyword "space-v/w" - instead of "padding/margin"
 
-*Remove "height" Props from El's (so fully responsive) - EXCEPT From PGHeader bc need it for main-nav to render properly??
-
-*add an animation on main-nav O/Lay - (I tried transition options - been thru the wringer w/ it - SO ONLY TRY ANIMATION CSS)
 
 
-*Do i need to remove .main-nav-open Class via JS RESIZE Evt (bc Overlay stays when rsize to Tablet+)??

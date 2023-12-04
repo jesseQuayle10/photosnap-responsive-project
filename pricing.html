@@ -8,7 +8,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicon-32x32.png"
+      href="./assets/icons/favicon-32x32.png"
     />
 
     <link
@@ -16,7 +16,9 @@
       rel="stylesheet"
     />
 
-    <script defer src="./scripts/script.js"></script>
+    <script defer src="./scripts/mobile-nav.js"></script>
+
+    <script defer src="./scripts/membership-switch.js"></script>
 
     <link rel="stylesheet" href="./styles/styles.css" />
 
@@ -25,7 +27,7 @@
   <body id="pricing-page">
     <div class="container">
       <header class="page-header">
-        <div class="page-header-container">
+        <div class="page-header-container height-small">
           <div class="logo">
             <div class="company-logo">
               <h1>PHOTOSNAP</h1>
@@ -103,7 +105,11 @@
         <div class="membership-plans-select-plan">
           <p class="monthly active-membership-term">Monthly</p>
           <label class="switch">
-            <input type="checkbox" class="membership-checkbox" />
+            <input
+              type="checkbox"
+              class="membership-checkbox"
+              id="membership-checkbox"
+            />
             <span class="slider round"></span>
           </label>
           <p class="yearly">Yearly</p>
