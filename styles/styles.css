@@ -2,9 +2,8 @@
   /********* CLRs **********/
   --pure-black: #000;
   --dark-grey: #979797;
-
   --light-grey: #dfdfdf;
-
+  --off-white: #f5f5f5;
   --pure-white: #fff;
 
   /********** FONT SIZE **********/
@@ -15,11 +14,7 @@
   --font-medium-2: 1.3rem;
   --font-medium: 1.2rem;
   --font-small: 1rem;
-  --font-mobile-nav: 1.5rem;
   --font-largest-mobile: 3.2rem;
-
-  /********** LAYOUT **********/
-  --gid: grid;
 
   /********** LINE HEIGHT **********/
   --line-height-largest: 4.8rem;
@@ -31,29 +26,48 @@
   --letter-spc-largest: 4.17px;
   --letter-spc-large: 3.33px;
   --letter-spc-small: 2px;
-
   --letter-spc-smallest: 1.67px;
-
   --letter-spc-largest-mobile: 3.3px;
   --letter-spc-mobile-nav: 2.5px;
 
   /********** WHT/SPC **************/
   --centre-hor: 0 auto;
+
   --padding-ver-mobile-largest: 7.2rem;
+  --space-y-mobile-largest: 7.2rem;
+
   --padding-ver-mobile-large: 6.4rem;
+  --space-y-mobile-large: 6.4rem;
+
   --padding-ver-mobile-medium: 4.8rem;
+  --space-y-mobile-medium: 4.8rem;
 
   --padding-hor-mobile-largest: 3.6rem;
+  --space-x-mobile-largest: 3.6rem;
+
   --padding-hor-mobile-large: 3.3rem;
+  --space-x-mobile-large: 3.3rem;
 
   --padding-ver-tablet-largest: 11.2rem;
+  --space-y-tablet-largest: 11.2rem;
+
   --padding-hor-tablet-small: 3.9rem;
+  --space-x-tablet-small: 3.9rem;
+
   --padding-hor-tablet-medium: 4.3rem;
+  --space-x-tablet-medium: 4.3rem;
+
   --padding-hor-tablet-large: 5.4rem;
+  --space-x-tablet-large: 5.4rem;
+
   --padding-hor-tablet-larger: 11.2rem;
+  --space-x-tablet-larger: 11.2rem;
+
   --padding-hor-tablet-largest: 15.5rem;
+  --space-x-tablet-largest: 15.5rem;
 
   --padding-hor-desktop-small: 4rem;
+  --space-x-desktop-small: 4rem;
 }
 
 /********** CSS RESET **************/
@@ -72,27 +86,17 @@
 
 html {
   box-sizing: border-box;
-
   /* = 10px so any REMs = x10px */
   font-size: 62.5%;
-  /* background-color: #dfdfdf; */
 }
-/* @media only screen and (max-width: 68.75em) {
-  html {
-    font-size: 50%;
-  }
-} */
 
 body {
-  /* remove L/H on Body ?? */
   font: 1.5rem/2.5rem 'DM Sans', sans-serif;
-  /* font-family: 'DM Sans', sans-serif; */
 }
 
+/********** BASE STYLES **************/
 .container {
-  /* max-width: 144rem; */
   max-width: 210rem;
-
   position: relative;
   margin: var(--centre-hor);
   overflow: hidden;
@@ -135,7 +139,7 @@ img {
 
 /************* MOBILE STYLES ***********/
 
-/************ buttons ************/
+/************ LINKS/NAV ************/
 .btn-mobile-open {
   background-image: url(../assets/icons/open-icon.svg);
   background-repeat: no-repeat;
@@ -146,46 +150,31 @@ img {
   background-repeat: no-repeat;
 }
 
-.btn-mobile-nav-large {
+.btn-nav-large {
   background-color: var(--pure-white);
   width: 100%;
   height: 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--pure-white);
+  text-transform: uppercase;
+  font-size: var(--font-regular);
+  font-weight: 700;
+  letter-spacing: var(--letter-spc-mobile-nav);
 }
 
-/* .btn-mobile-nav-large button { */
-.btn-mobile-nav-large {
-  border: none;
-  outline: none;
-  /* width: 83%; */
-}
-
-.btn-mobile-nav-large div {
+.btn-nav-large div {
   width: 82%;
   padding-top: 1.15rem;
   padding-bottom: 1.15rem;
   background-color: var(--pure-black);
   text-align: center;
-  /* border: 1px solid red; */
 }
-
-/************ links/nav ************/
-/* .btn-mobile-nav-large button { */
-/* .btn-mobile-nav-large button a { */
-.btn-mobile-nav-large {
-  color: var(--pure-white);
-  text-transform: uppercase;
-  font-size: var(--font-mobile-nav);
-  font-weight: 700;
-  letter-spacing: var(--letter-spc-mobile-nav);
-}
-/* } */
 
 .link-normal {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: var(--font-medium);
   letter-spacing: var(--letter-spc-small);
   text-transform: uppercase;
 }
@@ -224,7 +213,6 @@ img {
 
 .main-nav {
   width: 100%;
-  /* border-bottom: 1px solid #000; */
   background-color: var(--pure-white);
 
   /* Hide navigation */
@@ -260,7 +248,7 @@ img {
   z-index: 9999;
 }
 
-.btn-mobile-nav-large {
+.btn-nav-large {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -269,7 +257,7 @@ img {
   z-index: 9999;
 }
 
-.main-nav-open .btn-mobile-nav-large {
+.main-nav-open .btn-nav-large {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
@@ -300,10 +288,10 @@ img {
   padding-top: 2.5rem;
   padding-bottom: 1.5rem;
   text-transform: uppercase;
-  font-size: var(--font-mobile-nav);
+  font-size: var(--font-regular);
   font-weight: 700;
   letter-spacing: var(--letter-spc-mobile-nav);
-  line-height: 2.5rem;
+  line-height: var(--line-height-large);
 }
 
 .main-nav__links ul {
@@ -332,7 +320,7 @@ img {
   justify-content: center;
 }
 
-/************ sections ************/
+/************ SECTIONS ************/
 
 /****** HEADER ******/
 .page-header {
@@ -345,7 +333,6 @@ img {
 }
 
 .page-header-container {
-  /* background-color: var(--pure-white); */
   height: 32.5rem;
   display: flex;
   flex-direction: column;
@@ -379,12 +366,6 @@ img {
   gap: 1.8rem;
   padding-top: var(--padding-ver-mobile-largest);
   padding-bottom: var(--padding-ver-mobile-largest);
-}
-
-#home-page .hero-section__text--heading,
-#features-page .hero-section__text--heading,
-#pricing-page .hero-section__text--heading {
-  /* gap: 1.8rem; */
 }
 
 #stories-page .hero-section__text--heading {
@@ -442,18 +423,14 @@ img {
 .hero-section__text--heading h4 {
   font-size: var(--font-medium);
   font-weight: 700;
-  /* letter-spacing: var(--letter-spc-smallest); */
   letter-spacing: var(--letter-spc-small);
-
   text-transform: uppercase;
   color: var(--pure-white);
-  /* margin-bottom: 1.4rem; */
 }
 
 #home-page .hero-section__text--heading h2,
 #features-page .hero-section__text--heading h2,
 #pricing-page .hero-section__text--heading h2 {
-  /* margin-bottom: 1.4rem; */
   margin-bottom: 0;
 }
 
@@ -462,11 +439,6 @@ img {
   align-items: baseline;
   gap: 1.8rem;
   color: var(--pure-white);
-  /* margin-bottom: 2.2rem; */
-}
-
-.hero-date-author + p {
-  /* margin-bottom: 1.4rem; */
 }
 
 .hero-date-author span.hero-date {
@@ -484,7 +456,6 @@ img {
 .stories__second-text > div {
   display: flex;
   gap: 2rem;
-  /* margin-top: 1.3rem; */
 }
 
 .stories h2 {
@@ -606,7 +577,7 @@ img {
 .benefits-image {
   height: 7.2rem;
   width: 7.2rem;
-  margin: 0 auto 4.8rem;
+  margin: var(--centre-hor) 4.8rem;
 }
 
 .benefits-image-responsive {
@@ -677,6 +648,7 @@ img {
   font-weight: 700;
 }
 
+/********* Toggle Switch - the Label is actually the Trigger (NOT the Checkbox *********/
 /* The <label> = oval Shaped "switch" */
 .switch {
   position: relative;
@@ -700,7 +672,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #dfdfdf;
+  background-color: var(--light-grey);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -734,8 +706,8 @@ input:checked + .slider:before {
 }
 
 .membership-plans-section h3 {
-  font-size: 2.4rem;
-  line-height: 2.5rem;
+  font-size: var(--font-larger);
+  line-height: var(--line-height-large);
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
@@ -775,9 +747,7 @@ input:checked + .slider:before {
 .membership-plans-section a {
   font-size: var(--font-medium);
   font-weight: 700;
-  /* letter-spacing: var(--letter-spc-smallest); */
   letter-spacing: var(--letter-spc-small);
-
   text-transform: uppercase;
 }
 
@@ -818,8 +788,7 @@ input:checked + .slider:before {
 }
 
 .membership-plans-pro button {
-  /* background-color: var(--pure-white); */
-  background-color: #dfdfdf;
+  background-color: var(--light-grey);
 }
 
 .membership-plans-basic span,
@@ -839,7 +808,7 @@ input:checked + .slider:before {
 
 .membership-plans-basic,
 .membership-plans-business {
-  background-color: #f5f5f5;
+  background-color: var(--off-white);
 }
 
 .membership-plans-pro {
@@ -887,9 +856,7 @@ input:checked + .slider:before {
 .features-category-heading {
   font-size: var(--font-medium);
   font-weight: 700;
-  /* letter-spacing: var(--letter-spc-smallest); */
   letter-spacing: var(--letter-spc-small);
-
   text-transform: uppercase;
 }
 
@@ -910,7 +877,6 @@ input:checked + .slider:before {
   font-size: var(--font-small);
   text-transform: uppercase;
   letter-spacing: var(--letter-spc-smallest);
-  /* letter-spacing: var(--letter-spc-small); */
 }
 
 .features-category span {
@@ -958,7 +924,6 @@ input:checked + .slider:before {
   padding-right: var(--padding-hor-mobile-large);
   padding-top: 0;
   padding-bottom: 0;
-  background: #000;
   background: url(../assets/features/mobile/beta-invite-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -1003,7 +968,6 @@ footer {
   align-items: center;
   justify-content: space-between;
   gap: 10rem;
-  /* height: 54rem; */
   background-color: var(--pure-black);
   padding-left: var(--padding-hor-mobile-large);
   padding-right: var(--padding-hor-mobile-large);
@@ -1091,10 +1055,6 @@ footer {
   opacity: 0.3;
 }
 
-.arrow-link {
-  display: flex;
-}
-
 .footer-nav ul {
   display: flex;
   flex-direction: column;
@@ -1114,893 +1074,4 @@ footer {
 
 .bottom-link-and-copyright .arrow-link .link-arrow {
   transform: translateY(3px);
-}
-
-/* for .photo-categories section img l/out
-  - switch to 2 Cols @550px */
-/* https://stackoverflow.com/questions/47888165/make-image-in-picture-element-fit-its-container */
-@media screen and (min-width: 35em) {
-  /********* PHOTO CAT'S SECTION ************/
-  .main-nav__links {
-    border-bottom: none;
-  }
-
-  .photo-categories {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  /* needed following 3 Class Styles to make <picture> to Fill its Container - via Object-fit */
-  .photo-categories-image {
-    width: 100%;
-    height: 100%;
-  }
-
-  .photo-categories-image picture {
-    width: 100%;
-    height: 100%;
-    display: flex;
-  }
-
-  .photo-categories-image img {
-    object-fit: cover;
-    height: auto;
-    width: 100%;
-  }
-}
-
-/************* TABLET STYLES - 768px+ ***********/
-@media screen and (min-width: 48em) {
-  /********* PG HEADER ************/
-  .btn-mobile-nav {
-    display: none;
-  }
-
-  .page-header {
-    display: flex;
-    align-items: center;
-  }
-
-  .page-header-container {
-    height: auto;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 0;
-  }
-
-  .logo {
-    align-self: center;
-    margin-left: 3.9rem;
-    margin-bottom: 0;
-  }
-
-  .main-nav {
-    width: auto;
-    border-bottom: none;
-    margin-bottom: 0;
-
-    /* only at Tablet+ */
-    opacity: 1;
-    pointer-events: auto;
-    visibility: visible;
-    transform: translateX(0);
-    z-index: 9999;
-    transition: none;
-  }
-
-  .main-nav__links {
-    width: auto;
-    margin-left: 0;
-    margin-right: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    font-size: var(--font-medium);
-    font-weight: 700;
-    /* letter-spacing: var(--letter-spc-smallest); */
-    letter-spacing: var(--letter-spc-small);
-
-    line-height: normal;
-  }
-
-  .main-nav__links ul {
-    flex-direction: row;
-    gap: 3.7rem;
-  }
-
-  .btn-mobile-nav-large {
-    display: block;
-    width: auto;
-    height: auto;
-    margin-right: 3.9rem;
-    opacity: 1;
-    pointer-events: auto;
-    visibility: visible;
-    transform: translateX(0);
-    z-index: 9999;
-    transition: none;
-    font-size: var(--font-medium);
-    letter-spacing: var(--letter-spc-small);
-  }
-
-  .btn-mobile-nav-large div {
-    width: 100%;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    padding-left: 2.55rem;
-    padding-right: 2.55rem;
-  }
-
-  /********* PG OVERLAY ************/
-  .overlay-container {
-    display: none;
-  }
-
-  /********* HERO SECTION ************/
-  .color-bar-h {
-    display: none;
-  }
-
-  /* .color-bar-v {
-    position: absolute;
-    height: 100%;
-    overflow: hidden;
-  } */
-
-  .hero-section {
-    display: grid;
-    grid-template-columns: 1fr 27.3rem;
-    align-items: center;
-    height: 65rem;
-  }
-
-  /* #home-page .hero-arrow-link,
-  .arrow-link {
-    margin-top: 2.5rem;
-  } */
-
-  #home-page .hero-arrow-link {
-    margin-top: 2.5rem;
-  }
-
-  #features-page .hero-section,
-  #pricing-page .hero-section {
-    height: 49rem;
-  }
-
-  #home-page .hero-section__text,
-  #features-page .hero-section__text,
-  #pricing-page .hero-section__text {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  #home-page .hero-section__text--heading,
-  #features-page .hero-section__text--heading,
-  #pricing-page .hero-section__text--heading {
-    padding-left: var(--padding-hor-tablet-large);
-    padding-right: var(--padding-hor-tablet-large);
-    background: url(../assets/icons/color-bar-v.png) no-repeat;
-    background-size: 6px 100%;
-    gap: 2rem;
-  }
-
-  #stories-page .hero-section {
-    /* turn off grid for this pg's Hero */
-    display: block;
-    position: relative;
-  }
-
-  #stories-page .hero-section__text {
-    padding-left: 0;
-    padding-right: 0;
-    position: absolute;
-    top: 0;
-    left: 3.9rem;
-    right: 44%;
-    background-color: transparent;
-  }
-
-  #stories-page .hero-section__text--heading {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .stories__first-text,
-  .stories__second-text {
-    /* display: flex;
-    flex-direction: column;
-    
-    padding-top: var(--padding-ver-mobile-largest);
-    padding-bottom: var(--padding-ver-mobile-largest); */
-    gap: 2.4rem;
-  }
-
-  .stories__first-text > div,
-  .stories__second-text > div {
-    margin-top: 2.2rem;
-  }
-
-  #stories-page .color-bar-v {
-    display: none;
-  }
-
-  .hero-section__image {
-    /**** COULDNT USE GRID-COL - BC YOU CANT CHANGE THE SOURCE ORDER W/ IT - USED "ORDER" INSTEAD
-    /* grid-column: 2 / span 1; */
-    order: 2;
-    height: 100%;
-  }
-
-  .hero-section__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: var(--padding-hor-tablet-large);
-    padding-right: var(--padding-hor-tablet-large);
-    order: 1;
-    height: 100%;
-  }
-
-  .hero-section__text--heading {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .hero-section__text--heading > div:hover a {
-    text-decoration: underline;
-  }
-  .heading-largest {
-    font-size: var(--font-largest);
-    line-height: var(--line-height-largest);
-    letter-spacing: var(--letter-spc-largest);
-  }
-
-  /********* STORIES SECTION ************/
-  .stories__first,
-  .stories__second {
-    display: grid;
-    grid-template-columns: 27.3rem 1fr;
-    min-height: 60rem;
-  }
-
-  .stories__second {
-    grid-template-columns: 1fr 27.3rem;
-  }
-
-  .stories__second-image {
-    order: 2;
-  }
-
-  .stories__second-text {
-    order: 1;
-  }
-
-  .stories__first-text,
-  .stories__second-text {
-    /* width: 100%; */
-    /* height: 100%; */
-    justify-content: center;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: var(--padding-hor-tablet-large);
-    padding-right: var(--padding-hor-tablet-large);
-  }
-  .stories__first-text > div {
-    margin-bottom: 0.5rem;
-  }
-
-  .stories__first-text > div:hover a {
-    text-decoration: underline;
-  }
-
-  .stories__second-text > div:hover a {
-    text-decoration: underline;
-  }
-
-  /********* PHOTO CAT's SECTION ***********/
-  .photo-categories-text {
-    padding-left: var(--padding-hor-tablet-medium);
-    padding-right: var(--padding-hor-tablet-medium);
-  }
-
-  .photo-categories__mountains,
-  .photo-categories__cities,
-  .photo-categories__voyage,
-  .photo-categories__architecturals {
-    transition: all 0.2s;
-  }
-
-  /****** BENEFITS SECTION ******/
-  .benefits {
-    padding-top: var(--padding-ver-tablet-largest);
-    padding-bottom: var(--padding-ver-tablet-largest);
-    padding-left: var(--padding-hor-tablet-largest);
-    padding-right: var(--padding-hor-tablet-largest);
-  }
-
-  #features-page .benefits {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
-    row-gap: 7.2rem;
-    padding-left: 3.8rem;
-    padding-right: 3.8rem;
-  }
-
-  #features-page .benefits-text p {
-    padding-bottom: 0;
-  }
-
-  #features-page .benefits-image-limit {
-    height: 7.2rem;
-    background-position: center 50%;
-  }
-
-  /****** MEMBERSHIP PLANS SECTION ******/
-  .membership-plans-section {
-    padding-top: 11.5rem;
-    padding-bottom: 0;
-    padding-left: var(--padding-hor-tablet-small);
-    padding-right: var(--padding-hor-tablet-small);
-  }
-
-  .membership-plans-basic,
-  .membership-plans-pro,
-  .membership-plans-business {
-    position: relative;
-    /* width: 100%; */
-    max-width: 1083px;
-    padding: 4rem;
-  }
-
-  .membership-plans-basic p,
-  .membership-plans-pro p,
-  .membership-plans-business p {
-    margin-bottom: 3.2rem;
-  }
-
-  .plan-info {
-    width: 44.25%;
-  }
-
-  .plan-info h3,
-  .plan-info p {
-    text-align: left;
-  }
-
-  .plan-price {
-    position: absolute;
-    top: 3.6rem;
-    right: 3.6rem;
-  }
-
-  .membership-plans-pro .color-bar-h {
-    display: none;
-  }
-
-  /****** THE-FEATURES SECTION ******/
-  .the-features-section {
-    padding-top: var(--padding-ver-tablet-largest);
-    padding-bottom: var(--padding-ver-tablet-largest);
-    padding-left: var(--padding-hor-tablet-small);
-    padding-right: var(--padding-hor-tablet-small);
-    margin-bottom: 0;
-  }
-
-  .features-headings,
-  .features-category {
-    display: grid;
-    grid-template-columns: 40% 20% 20% 20%;
-  }
-
-  .the-features-section h2 {
-    display: block;
-    text-align: center;
-    font-size: var(--font-largest);
-    letter-spacing: var(--letter-spc-largest);
-    line-height: var(--line-height-largest);
-    margin-bottom: 6.2rem;
-  }
-
-  .basic-plan,
-  .pro-plan,
-  .business-plan,
-  .features-category-basic,
-  .features-category-pro,
-  .features-category-business {
-    display: block;
-    justify-self: center;
-  }
-
-  .features-category-basic,
-  .features-category-pro,
-  .features-category-business {
-    margin-right: 0;
-  }
-
-  .features-category-basic p,
-  .features-category-pro p,
-  .features-category-business p {
-    display: none;
-  }
-
-  .pro-color-bar-v {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 6px;
-    height: 100%;
-    overflow: hidden;
-  }
-
-  .left-space {
-    padding-left: 2.4rem;
-  }
-
-  /****** INVITE TODAY SECTION ******/
-  .invite-today-section {
-    padding-left: 0;
-    padding-right: 0;
-    background: url(../assets/features/tablet/beta-invite-tablet.png);
-    background-position: left -600px top 82%;
-  }
-
-  .invite-today-section__text {
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 3.9rem;
-    padding-right: 3.9rem;
-    padding-top: 6.8rem;
-    padding-bottom: 6.8rem;
-    background: url(../assets/icons/color-bar-v.png) no-repeat;
-    background-position: 0 100%;
-  }
-
-  .invite-today-section__text .arrow-link {
-    margin-top: -5px;
-  }
-
-  .invite-today-section h2 {
-    font-size: var(--font-largest);
-    line-height: var(--line-height-largest);
-    letter-spacing: var(--letter-spc-largest);
-  }
-
-  .invite-today-section .fix-height:hover a {
-    text-decoration: underline;
-  }
-
-  /* .invite-today-section .arrow-link:hover a {
-    text-decoration: underline;
-  } */
-  /* .invite-today-section .arrow-link a:hover {
-    text-decoration: underline;
-  } */
-
-  /* .invite-today-section .link-arrow:hover .invite-today-section .arrow-link a {
-    text-decoration: underline;
-  } */
-
-  /****** FOOTER ******/
-  footer {
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: space-between;
-    background-color: var(--pure-black);
-    padding-left: var(--padding-hor-tablet-small);
-    padding-right: var(--padding-hor-tablet-small);
-    padding-top: 6.4rem;
-    padding-bottom: 6.4rem;
-  }
-
-  .socials-and-logo-and-nav {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .company-logo-btm {
-    order: 1;
-    margin-bottom: 2.6rem;
-  }
-
-  .footer-nav {
-    order: 2;
-  }
-
-  .socials {
-    order: 3;
-    margin-bottom: 0;
-  }
-
-  .socials ul {
-    justify-content: start;
-  }
-
-  .footer-nav ul {
-    flex-direction: row;
-    gap: 2.5rem;
-    margin-bottom: 6.2rem;
-  }
-
-  .footer-nav ul li a:hover,
-  .footer-nav ul li a:active {
-    color: rgba(255, 255, 255, 0.3);
-  }
-
-  .bottom-link-and-copyright {
-    height: 15.8rem;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: space-between;
-    /* gap: 2rem; */
-    margin-bottom: 0;
-  }
-
-  .bottom-link-and-copyright div.arrow-link:hover a {
-    text-decoration: underline;
-  }
-}
-
-/* for .photo-categories section img l/out
-  - switch to 4 Cols @1000px */
-@media screen and (min-width: 63em) {
-  .photo-categories {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-
-  .btn-mobile-nav-large > div {
-    transition: all 0.5s;
-  }
-
-  .btn-mobile-nav-large > div:hover {
-    background-color: #dfdfdf;
-    color: var(--pure-black);
-  }
-
-  .btn-mobile-nav-large > div:hover .link-white {
-    color: #000;
-  }
-}
-
-/* for pricing plans "cards" - so back to Vert. orientation */
-/* (W) = 1180px */
-@media screen and (min-width: 73.75em) {
-  .membership-plans {
-    display: grid;
-    grid-template-columns: repeat(3, 350px);
-    width: 1090px;
-    gap: 2rem;
-    margin: 0 auto;
-  }
-
-  .membership-plans-select-plan {
-    margin-bottom: 8rem;
-  }
-
-  .membership-plans-basic,
-  .membership-plans-pro {
-    margin-bottom: 0;
-  }
-
-  .membership-plans-section h3 {
-    margin-bottom: 1.9rem;
-  }
-
-  .membership-plans-basic p,
-  .membership-plans-pro p,
-  .membership-plans-business p {
-    margin-bottom: 4rem;
-  }
-
-  .membership-plans-basic,
-  .membership-plans-pro,
-  .membership-plans-business {
-    /* position: relative; */
-    padding: 5.6rem var(--padding-hor-desktop-small) 4rem;
-  }
-
-  .plan-info {
-    width: 100%;
-  }
-
-  .plan-price {
-    position: static;
-  }
-
-  .plan-info h3,
-  .plan-info p {
-    text-align: center;
-  }
-
-  .membership-plans > div {
-    transition: all 0.5s;
-  }
-
-  .membership-plans > div:hover {
-    transform: scaleY(115%);
-  }
-
-  .membership-plans-basic button,
-  .membership-plans-pro button,
-  .membership-plans-business button {
-    transition: all 0.5s;
-  }
-
-  .membership-plans-basic button:hover,
-  .membership-plans-pro button:hover,
-  .membership-plans-business button:hover {
-    background-color: #dfdfdf;
-    cursor: pointer;
-  }
-
-  .membership-plans-basic button:hover a,
-  .membership-plans-business button:hover a {
-    color: var(--pure-black);
-  }
-
-  .pro-color-bar-v {
-    display: none;
-  }
-
-  .membership-plans-pro {
-    position: relative;
-  }
-
-  .membership-plans-pro .color-bar-h {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    overflow: hidden;
-  }
-
-  /*********************************/
-  .the-features-section {
-    padding-left: 21.65rem;
-    padding-right: 21.65rem;
-  }
-
-  .the-features-section h2 {
-    margin-bottom: 5.6rem;
-  }
-}
-
-/* @1370px - so Hero Img DIV = 57.75% of PG (W) */
-@media screen and (min-width: 85.6em) {
-  .btn-mobile-nav-large:hover {
-    color: var(--pure-black);
-    background-color: #dfdfdf;
-    border: 1px solid #979797;
-  }
-  .hero-section {
-    grid-template-columns: 1fr 830px;
-  }
-
-  #stories-page .hero-section {
-    display: block;
-  }
-
-  .hero-section__image {
-    width: 100%;
-    height: 100%;
-  }
-
-  .hero-section__image picture {
-    width: 100%;
-    height: 100%;
-    display: flex;
-  }
-
-  .stories__first {
-    grid-template-columns: 57.75% 1fr;
-  }
-
-  .stories__second {
-    grid-template-columns: 1fr 57.75%;
-  }
-
-  .stories__first-image {
-    width: 100%;
-    height: 100%;
-  }
-
-  .stories__first-image picture {
-    width: 100%;
-    height: 100%;
-    display: flex;
-  }
-
-  .stories__second-image {
-    width: 100%;
-    height: 100%;
-  }
-
-  .stories__second-image picture {
-    width: 100%;
-    height: 100%;
-    display: flex;
-  }
-
-  #home-page .benefits,
-  #features-page .benefits {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 3rem;
-    padding-left: 16.5rem;
-    padding-right: 16.5rem;
-  }
-
-  #home-page .benefits {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
-  }
-
-  #features-page .benefits {
-    padding-top: 16rem;
-    padding-bottom: 16rem;
-    row-gap: 10.4rem;
-  }
-
-  .benefits-text p {
-    padding-bottom: 0;
-  }
-
-  .benefits-image-limit {
-    height: 72px;
-    background-position: 50% 2rem;
-  }
-
-  .photo-categories > div {
-    position: relative;
-    transition: all 0.5s;
-  }
-
-  .photo-categories > div:hover {
-    transform: translateY(-30px);
-  }
-
-  .photo-categories-color-bar-h {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: none;
-  }
-
-  .photo-categories > div:hover .photo-categories-color-bar-h {
-    display: block;
-  }
-
-  .membership-plans-basic,
-  .membership-plans-pro,
-  .membership-plans-business {
-    max-width: 350px;
-  }
-}
-
-/* 1440px (= the MAX-W of the Site) */
-@media screen and (min-width: 90em) {
-  .logo {
-    margin-left: 16.5rem;
-  }
-
-  .btn-mobile-nav-large {
-    margin-right: 16.5rem;
-  }
-
-  #home-page .hero-section__text--heading,
-  #features-page .hero-section__text--heading,
-  #pricing-page .hero-section__text--heading,
-  .stories__first-text,
-  .stories__second-text {
-    padding-left: var(--padding-hor-tablet-larger);
-    padding-right: var(--padding-hor-tablet-larger);
-  }
-
-  #home-page .stories__first {
-    grid-template-columns: 830px 1fr;
-  }
-
-  #home-page .stories__second {
-    grid-template-columns: 1fr 830px;
-  }
-
-  #stories-page .hero-section__text {
-    left: 11.2rem;
-    width: 38.7rem;
-  }
-
-  /* #home-page .stories__first-image,
-  #home-page .stories__second-image {
-    max-width: 830px;
-  } */
-
-  .invite-today-section__text {
-    padding: 6.8rem 17.1rem;
-  }
-
-  .membership-plans-section {
-    padding-left: 16.5rem;
-    padding-right: 16.5rem;
-    padding-top: 12rem;
-  }
-
-  .membership-plans-section h3 {
-    margin-bottom: 1.9rem;
-  }
-
-  .membership-plans-basic p,
-  .membership-plans-pro p,
-  .membership-plans-business p {
-    margin-bottom: 4rem;
-  }
-
-  .membership-plans {
-    gap: 3rem;
-  }
-
-  .the-features-section {
-    padding-top: 19rem;
-    padding-bottom: 19rem;
-    padding-left: 35.5rem;
-    padding-right: 35.5rem;
-  }
-
-  .invite-today-section {
-    background-position: left -150px top 83%;
-  }
-
-  footer {
-    height: 25rem;
-    padding-left: 17.1rem;
-    padding-right: 17.1rem;
-  }
-
-  .socials-and-logo-and-nav {
-    width: 35%;
-    height: 12.2rem;
-    position: relative;
-  }
-
-  .socials {
-    height: 20px;
-    width: 160px;
-    transform: translateY(-42px);
-  }
-
-  .socials ul {
-    gap: 1rem;
-  }
-
-  .socials ul li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .company-logo-btm {
-    margin-bottom: 0;
-  }
-
-  .footer-nav {
-    align-self: end;
-    transform: translateY(-23px);
-  }
-
-  .footer-nav ul {
-    flex-direction: column;
-    width: 10rem;
-    align-items: start;
-    gap: 0.75rem;
-    margin-bottom: 0;
-  }
-
-  .bottom-link-and-copyright {
-    height: 12.2rem;
-  }
 }

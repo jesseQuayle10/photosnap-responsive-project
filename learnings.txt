@@ -48,6 +48,12 @@
             </button>
       </header>
 
+*/* https://stackoverflow.com/questions/47888165/make-image-in-picture-element-fit-its-container */
+
+*   /**** COULDNT USE GRID-COL - BC YOU CANT CHANGE THE SOURCE ORDER W/ IT - USED "ORDER" INSTEAD
+    /* grid-column: 2 / span 1; */
+    order: 2;
+
 *"The Features" on "pricing PG" - has a diff L/out from Mob to Tabl. 
 - on Tabl. I could just put GTCs * 4 on Parent DIV - BUT in Mob. View the 1st Child of the 4 Cols (= the Heading) - had to sit ABOVE the rest of the Childs (which sit in a Row of 3 under it) - I couldnt use F/Bx in Mob & switch to Grid in Tabl. - bc I needed to have the SAME MarkUP - so in Mob. I let the Heading sit ABove the 3 Childs (just w/ Normal Flow) & used Dsiplay: Inline-block on the 3 Childs (so they sat in a Row Under the Heading)
 

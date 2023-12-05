@@ -1,0 +1,864 @@
+/* for .photo-categories section img l/out
+  - switch to 2 Cols @550px */
+@media screen and (min-width: 35em) {
+  .main-nav__links {
+    border-bottom: none;
+  }
+
+  /********* PHOTO CAT'S SECTION ************/
+  .photo-categories {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* needed following 3 Class Styles to make <picture> to Fill its Container - via Object-fit */
+  .photo-categories-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .photo-categories-image picture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  .photo-categories-image img {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+  }
+}
+
+/************* TABLET STYLES - 768px+ ***********/
+@media screen and (min-width: 48em) {
+  /********* PG HEADER & MAIN NAV ************/
+  .btn-mobile-nav {
+    display: none;
+  }
+
+  .page-header {
+    display: flex;
+    align-items: center;
+  }
+
+  .page-header-container {
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .logo {
+    align-self: center;
+    margin-left: 3.9rem;
+    margin-bottom: 0;
+  }
+
+  .main-nav {
+    width: auto;
+    border-bottom: none;
+    margin-bottom: 0;
+
+    /* only at Tablet+ */
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+    z-index: 9999;
+    transition: none;
+  }
+
+  .main-nav__links {
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: var(--font-medium);
+    font-weight: 700;
+    letter-spacing: var(--letter-spc-small);
+    line-height: normal;
+  }
+
+  .main-nav__links ul {
+    flex-direction: row;
+    gap: 3.7rem;
+  }
+
+  .btn-nav-large {
+    display: block;
+    width: auto;
+    height: auto;
+    margin-right: 3.9rem;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+    z-index: 9999;
+    transition: none;
+    font-size: var(--font-medium);
+    letter-spacing: var(--letter-spc-small);
+  }
+
+  .btn-nav-large div {
+    width: 100%;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 2.55rem;
+    padding-right: 2.55rem;
+  }
+
+  /********* PG OVERLAY ************/
+  .overlay-container {
+    display: none;
+  }
+
+  /********* HERO SECTION ************/
+  .color-bar-h {
+    display: none;
+  }
+
+  .hero-section {
+    display: grid;
+    grid-template-columns: 1fr 27.3rem;
+    align-items: center;
+    height: 65rem;
+  }
+
+  #home-page .hero-arrow-link {
+    margin-top: 2.5rem;
+  }
+
+  #features-page .hero-section,
+  #pricing-page .hero-section {
+    height: 49rem;
+  }
+
+  #home-page .hero-section__text,
+  #features-page .hero-section__text,
+  #pricing-page .hero-section__text {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #home-page .hero-section__text--heading,
+  #features-page .hero-section__text--heading,
+  #pricing-page .hero-section__text--heading {
+    padding-left: var(--padding-hor-tablet-large);
+    padding-right: var(--padding-hor-tablet-large);
+    background: url(../assets/icons/color-bar-v.png) no-repeat;
+    background-size: 6px 100%;
+    gap: 2rem;
+  }
+
+  #stories-page .hero-section {
+    /* turn off grid for this pg's Hero */
+    display: block;
+    position: relative;
+  }
+
+  #stories-page .hero-section__text {
+    padding-left: 0;
+    padding-right: 0;
+    position: absolute;
+    top: 0;
+    left: 3.9rem;
+    right: 44%;
+    background-color: transparent;
+  }
+
+  .hero-section__image {
+    /**** COULDNT USE GRID-COL - BC YOU CANT CHANGE THE SOURCE ORDER W/ IT - USED "ORDER" INSTEAD
+    /* grid-column: 2 / span 1; */
+    order: 2;
+    height: 100%;
+  }
+
+  .hero-section__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: var(--padding-hor-tablet-large);
+    padding-right: var(--padding-hor-tablet-large);
+    order: 1;
+    height: 100%;
+  }
+
+  .hero-section__text--heading {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #stories-page .hero-section__text--heading {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .hero-section__text--heading > div:hover a {
+    text-decoration: underline;
+  }
+  .heading-largest {
+    font-size: var(--font-largest);
+    line-height: var(--line-height-largest);
+    letter-spacing: var(--letter-spc-largest);
+  }
+
+  #stories-page .color-bar-v {
+    display: none;
+  }
+
+  /********* STORIES SECTION ************/
+  .stories__first,
+  .stories__second {
+    display: grid;
+    grid-template-columns: 27.3rem 1fr;
+    min-height: 60rem;
+  }
+
+  .stories__second {
+    grid-template-columns: 1fr 27.3rem;
+  }
+
+  .stories__first-text,
+  .stories__second-text {
+    gap: 2.4rem;
+  }
+
+  .stories__first-text > div,
+  .stories__second-text > div {
+    margin-top: 2.2rem;
+  }
+
+  .stories__second-image {
+    order: 2;
+  }
+
+  .stories__second-text {
+    order: 1;
+  }
+
+  .stories__first-text,
+  .stories__second-text {
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: var(--padding-hor-tablet-large);
+    padding-right: var(--padding-hor-tablet-large);
+  }
+  .stories__first-text > div {
+    margin-bottom: 0.5rem;
+  }
+
+  .stories__first-text > div:hover a {
+    text-decoration: underline;
+  }
+
+  .stories__second-text > div:hover a {
+    text-decoration: underline;
+  }
+
+  /********* PHOTO CAT's SECTION ***********/
+  .photo-categories-text {
+    padding-left: var(--padding-hor-tablet-medium);
+    padding-right: var(--padding-hor-tablet-medium);
+  }
+
+  .photo-categories__mountains,
+  .photo-categories__cities,
+  .photo-categories__voyage,
+  .photo-categories__architecturals {
+    transition: all 0.2s;
+  }
+
+  /****** BENEFITS SECTION ******/
+  .benefits {
+    padding-top: var(--padding-ver-tablet-largest);
+    padding-bottom: var(--padding-ver-tablet-largest);
+    padding-left: var(--padding-hor-tablet-largest);
+    padding-right: var(--padding-hor-tablet-largest);
+  }
+
+  #features-page .benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 7.2rem;
+    padding-left: 3.8rem;
+    padding-right: 3.8rem;
+  }
+
+  #features-page .benefits-text p {
+    padding-bottom: 0;
+  }
+
+  #features-page .benefits-image-limit {
+    height: 7.2rem;
+    background-position: center 50%;
+  }
+
+  /****** MEMBERSHIP PLANS SECTION ******/
+  .membership-plans-section {
+    padding-top: 11.5rem;
+    padding-bottom: 0;
+    padding-left: var(--padding-hor-tablet-small);
+    padding-right: var(--padding-hor-tablet-small);
+  }
+
+  .membership-plans-basic,
+  .membership-plans-pro,
+  .membership-plans-business {
+    position: relative;
+    max-width: 1083px;
+    padding: 4rem;
+  }
+
+  .membership-plans-basic p,
+  .membership-plans-pro p,
+  .membership-plans-business p {
+    margin-bottom: 3.2rem;
+  }
+
+  .plan-info {
+    width: 44.25%;
+  }
+
+  .plan-info h3,
+  .plan-info p {
+    text-align: left;
+  }
+
+  .plan-price {
+    position: absolute;
+    top: 3.6rem;
+    right: 3.6rem;
+  }
+
+  .membership-plans-pro .color-bar-h {
+    display: none;
+  }
+
+  /****** THE-FEATURES SECTION ******/
+  .the-features-section {
+    padding-top: var(--padding-ver-tablet-largest);
+    padding-bottom: var(--padding-ver-tablet-largest);
+    padding-left: var(--padding-hor-tablet-small);
+    padding-right: var(--padding-hor-tablet-small);
+    margin-bottom: 0;
+  }
+
+  .features-headings,
+  .features-category {
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+  }
+
+  .the-features-section h2 {
+    display: block;
+    text-align: center;
+    font-size: var(--font-largest);
+    letter-spacing: var(--letter-spc-largest);
+    line-height: var(--line-height-largest);
+    margin-bottom: 6.2rem;
+  }
+
+  .basic-plan,
+  .pro-plan,
+  .business-plan,
+  .features-category-basic,
+  .features-category-pro,
+  .features-category-business {
+    display: block;
+    justify-self: center;
+  }
+
+  .features-category-basic,
+  .features-category-pro,
+  .features-category-business {
+    margin-right: 0;
+  }
+
+  .features-category-basic p,
+  .features-category-pro p,
+  .features-category-business p {
+    display: none;
+  }
+
+  .pro-color-bar-v {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .left-space {
+    padding-left: 2.4rem;
+  }
+
+  /****** INVITE TODAY SECTION ******/
+  .invite-today-section {
+    padding-left: 0;
+    padding-right: 0;
+    background: url(../assets/features/tablet/beta-invite-tablet.png);
+    background-position: left -600px top 82%;
+  }
+
+  .invite-today-section__text {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 3.9rem;
+    padding-right: 3.9rem;
+    padding-top: 6.8rem;
+    padding-bottom: 6.8rem;
+    background: url(../assets/icons/color-bar-v.png) no-repeat;
+    background-position: 0 100%;
+  }
+
+  .invite-today-section__text .arrow-link {
+    margin-top: -5px;
+  }
+
+  .invite-today-section h2 {
+    font-size: var(--font-largest);
+    line-height: var(--line-height-largest);
+    letter-spacing: var(--letter-spc-largest);
+  }
+
+  .invite-today-section .fix-height:hover a {
+    text-decoration: underline;
+  }
+
+  /****** FOOTER ******/
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    background-color: var(--pure-black);
+    padding-left: var(--padding-hor-tablet-small);
+    padding-right: var(--padding-hor-tablet-small);
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+  }
+
+  .socials-and-logo-and-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .company-logo-btm {
+    order: 1;
+    margin-bottom: 2.6rem;
+  }
+
+  .footer-nav {
+    order: 2;
+  }
+
+  .socials {
+    order: 3;
+    margin-bottom: 0;
+  }
+
+  .socials ul {
+    justify-content: start;
+  }
+
+  .footer-nav ul {
+    flex-direction: row;
+    gap: 2.5rem;
+    margin-bottom: 6.2rem;
+  }
+
+  .footer-nav ul li a:hover,
+  .footer-nav ul li a:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .bottom-link-and-copyright {
+    height: 15.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    /* gap: 2rem; */
+    margin-bottom: 0;
+  }
+
+  .bottom-link-and-copyright div.arrow-link:hover a {
+    text-decoration: underline;
+  }
+}
+
+/* for .photo-categories section img l/out
+  - switch to 4 Cols @1000px */
+@media screen and (min-width: 63em) {
+  /********* PHOTO CAT'S SECTION ************/
+  .photo-categories {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  /********* MAIN NAV ************/
+  .btn-nav-large > div {
+    transition: all 0.5s;
+  }
+
+  .btn-nav-large > div:hover {
+    background-color: var(--light-grey);
+    color: var(--pure-black);
+  }
+
+  .btn-nav-large > div:hover .link-white {
+    color: var(--pure-black);
+  }
+}
+
+/* for pricing plans "cards" - so back to Vert. orientation */
+/* (W) = 1180px */
+@media screen and (min-width: 73.75em) {
+  /****** MEMBERSHIP PLANS SECTION ******/
+  .membership-plans {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    width: 1090px;
+    gap: 2rem;
+    margin: var(--centre-hor);
+  }
+
+  .membership-plans-select-plan {
+    margin-bottom: 8rem;
+  }
+
+  .membership-plans-basic,
+  .membership-plans-pro {
+    margin-bottom: 0;
+  }
+
+  .membership-plans-section h3 {
+    margin-bottom: 1.9rem;
+  }
+
+  .membership-plans-basic p,
+  .membership-plans-pro p,
+  .membership-plans-business p {
+    margin-bottom: 4rem;
+  }
+
+  .membership-plans-basic,
+  .membership-plans-pro,
+  .membership-plans-business {
+    padding: 5.6rem var(--padding-hor-desktop-small) 4rem;
+  }
+
+  .plan-info {
+    width: 100%;
+  }
+
+  .plan-price {
+    position: static;
+  }
+
+  .plan-info h3,
+  .plan-info p {
+    text-align: center;
+  }
+
+  .membership-plans > div {
+    transition: all 0.5s;
+  }
+
+  .membership-plans > div:hover {
+    transform: scaleY(115%);
+  }
+
+  .membership-plans-basic button,
+  .membership-plans-pro button,
+  .membership-plans-business button {
+    transition: all 0.5s;
+  }
+
+  .membership-plans-basic button:hover,
+  .membership-plans-pro button:hover,
+  .membership-plans-business button:hover {
+    background-color: var(--light-grey);
+    cursor: pointer;
+  }
+
+  .membership-plans-basic button:hover a,
+  .membership-plans-business button:hover a {
+    color: var(--pure-black);
+  }
+
+  .pro-color-bar-v {
+    display: none;
+  }
+
+  .membership-plans-pro {
+    position: relative;
+  }
+
+  .membership-plans-pro .color-bar-h {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    overflow: hidden;
+  }
+
+  /****** THE-FEATURES SECTION ******/
+  .the-features-section {
+    padding-left: 21.65rem;
+    padding-right: 21.65rem;
+  }
+
+  .the-features-section h2 {
+    margin-bottom: 5.6rem;
+  }
+}
+
+/* @1370px - so Hero Img DIV = 57.75% of PG (W) */
+@media screen and (min-width: 85.6em) {
+  /****** MAIN NAV ******/
+  .btn-nav-large:hover {
+    color: var(--pure-black);
+    background-color: var(--light-grey);
+  }
+
+  /********* HERO SECTION ************/
+  .hero-section {
+    grid-template-columns: 1fr 830px;
+  }
+
+  #stories-page .hero-section {
+    display: block;
+  }
+
+  .hero-section__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-section__image picture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  /********* STORIES SECTION ************/
+  .stories__first {
+    grid-template-columns: 57.75% 1fr;
+  }
+
+  .stories__second {
+    grid-template-columns: 1fr 57.75%;
+  }
+
+  .stories__first-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .stories__first-image picture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  .stories__second-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .stories__second-image picture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  /****** BENEFITS SECTION ******/
+  #home-page .benefits,
+  #features-page .benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    padding-left: 16.5rem;
+    padding-right: 16.5rem;
+  }
+
+  #home-page .benefits {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+
+  #features-page .benefits {
+    padding-top: 16rem;
+    padding-bottom: 16rem;
+    row-gap: 10.4rem;
+  }
+
+  .benefits-text p {
+    padding-bottom: 0;
+  }
+
+  .benefits-image-limit {
+    height: 72px;
+    background-position: 50% 2rem;
+  }
+
+  /********* PHOTO CAT'S SECTION ************/
+  .photo-categories > div {
+    position: relative;
+    transition: all 0.5s;
+  }
+
+  .photo-categories > div:hover {
+    transform: translateY(-30px);
+  }
+
+  .photo-categories-color-bar-h {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+  }
+
+  .photo-categories > div:hover .photo-categories-color-bar-h {
+    display: block;
+  }
+
+  /****** MEMBERSHIP PLANS SECTION ******/
+  .membership-plans-basic,
+  .membership-plans-pro,
+  .membership-plans-business {
+    max-width: 350px;
+  }
+}
+
+/* 1440px (= the MAX-W of the Site) */
+@media screen and (min-width: 90em) {
+  /****** MAIN NAV ******/
+  .logo {
+    margin-left: 16.5rem;
+  }
+
+  .btn-nav-large {
+    margin-right: 16.5rem;
+  }
+
+  /********* HERO SECTION ************/
+  #home-page .hero-section__text--heading,
+  #features-page .hero-section__text--heading,
+  #pricing-page .hero-section__text--heading,
+  .stories__first-text,
+  .stories__second-text {
+    padding-left: var(--padding-hor-tablet-larger);
+    padding-right: var(--padding-hor-tablet-larger);
+  }
+
+  #stories-page .hero-section__text {
+    left: 11.2rem;
+    width: 38.7rem;
+  }
+
+  /********* STORIES SECTION ************/
+  #home-page .stories__first {
+    grid-template-columns: 830px 1fr;
+  }
+
+  #home-page .stories__second {
+    grid-template-columns: 1fr 830px;
+  }
+
+  /****** MEMBERSHIP PLANS SECTION ******/
+  .membership-plans-section {
+    padding-left: 16.5rem;
+    padding-right: 16.5rem;
+    padding-top: 12rem;
+  }
+
+  .membership-plans-section h3 {
+    margin-bottom: 1.9rem;
+  }
+
+  .membership-plans-basic p,
+  .membership-plans-pro p,
+  .membership-plans-business p {
+    margin-bottom: 4rem;
+  }
+
+  .membership-plans {
+    gap: 3rem;
+  }
+
+  .the-features-section {
+    padding-top: 19rem;
+    padding-bottom: 19rem;
+    padding-left: 35.5rem;
+    padding-right: 35.5rem;
+  }
+
+  /****** INVITE TODAY SECTION ******/
+  .invite-today-section {
+    background-position: left -150px top 83%;
+  }
+
+  .invite-today-section__text {
+    padding: 6.8rem 17.1rem;
+  }
+
+  /****** FOOTER ******/
+  footer {
+    height: 25rem;
+    padding-left: 17.1rem;
+    padding-right: 17.1rem;
+  }
+
+  .socials-and-logo-and-nav {
+    width: 35%;
+    height: 12.2rem;
+    position: relative;
+  }
+
+  .socials {
+    height: 20px;
+    width: 160px;
+    transform: translateY(-42px);
+  }
+
+  .socials ul {
+    gap: 1rem;
+  }
+
+  .socials ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .company-logo-btm {
+    margin-bottom: 0;
+  }
+
+  .footer-nav {
+    align-self: end;
+    transform: translateY(-23px);
+  }
+
+  .footer-nav ul {
+    flex-direction: column;
+    width: 10rem;
+    align-items: start;
+    gap: 0.75rem;
+    margin-bottom: 0;
+  }
+
+  .bottom-link-and-copyright {
+    height: 12.2rem;
+  }
+}
