@@ -571,24 +571,24 @@
   }
 
   .membership-plans > div:hover {
-    transform: scaleY(115%);
+    transform: scaleY(1.15);
   }
 
-  .membership-plans-basic button,
-  .membership-plans-pro button,
-  .membership-plans-business button {
+  .membership-plans-basic .btn-plan-large,
+  .membership-plans-pro .btn-plan-large,
+  .membership-plans-business .btn-plan-large {
     transition: all 0.5s;
   }
 
-  .membership-plans-basic button:hover,
-  .membership-plans-pro button:hover,
-  .membership-plans-business button:hover {
+  .membership-plans-basic .btn-plan-large:hover,
+  .membership-plans-pro .btn-plan-large:hover,
+  .membership-plans-business .btn-plan-large:hover {
     background-color: var(--light-grey);
     cursor: pointer;
   }
 
-  .membership-plans-basic button:hover a,
-  .membership-plans-business button:hover a {
+  .membership-plans-basic .btn-plan-large:hover a,
+  .membership-plans-business .btn-plan-large:hover a {
     color: var(--pure-black);
   }
 

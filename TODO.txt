@@ -1,7 +1,10 @@
 
 
 ////////////////////////////////////////////
-Validate html & css
+Validate html & css & js
+@supports & caniuse
+test in B's - Locally & Remotely
+Deploy
 
 ////////////////////////////////////////////
 Test & Deploy

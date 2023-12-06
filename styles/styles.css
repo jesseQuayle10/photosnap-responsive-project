@@ -736,6 +736,10 @@ input:checked + .slider:before {
   color: var(--pure-white);
 }
 
+.membership-plans-pro a {
+  color: var(--pure-black);
+}
+
 .membership-plans-basic span:last-of-type,
 .membership-plans-pro span:last-of-type,
 .membership-plans-business span:last-of-type {
@@ -757,9 +761,9 @@ input:checked + .slider:before {
   margin-bottom: var(--space-sm);
 }
 
-.membership-plans-basic button,
-.membership-plans-pro button,
-.membership-plans-business button {
+.membership-plans-basic .btn-plan-large,
+.membership-plans-pro .btn-plan-large,
+.membership-plans-business .btn-plan-large {
   border: none;
   outline: none;
   background-color: var(--pure-black);
@@ -767,7 +771,7 @@ input:checked + .slider:before {
   padding: 1.25rem;
 }
 
-.membership-plans-pro button {
+.membership-plans-pro .btn-plan-large {
   background-color: var(--light-grey);
 }
 
