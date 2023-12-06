@@ -33,41 +33,21 @@
   /********** WHT/SPC **************/
   --centre-hor: 0 auto;
 
+  --space-sm: 4rem;
+  --space-md: 6.4rem;
+  --space-xxl: 16.5rem;
+
   --padding-ver-mobile-largest: 7.2rem;
-  --space-y-mobile-largest: 7.2rem;
-
   --padding-ver-mobile-large: 6.4rem;
-  --space-y-mobile-large: 6.4rem;
-
   --padding-ver-mobile-medium: 4.8rem;
-  --space-y-mobile-medium: 4.8rem;
-
   --padding-hor-mobile-largest: 3.6rem;
-  --space-x-mobile-largest: 3.6rem;
-
   --padding-hor-mobile-large: 3.3rem;
-  --space-x-mobile-large: 3.3rem;
-
   --padding-ver-tablet-largest: 11.2rem;
-  --space-y-tablet-largest: 11.2rem;
-
-  --padding-hor-tablet-small: 3.9rem;
-  --space-x-tablet-small: 3.9rem;
-
-  --padding-hor-tablet-medium: 4.3rem;
-  --space-x-tablet-medium: 4.3rem;
-
-  --padding-hor-tablet-large: 5.4rem;
-  --space-x-tablet-large: 5.4rem;
-
-  --padding-hor-tablet-larger: 11.2rem;
-  --space-x-tablet-larger: 11.2rem;
-
   --padding-hor-tablet-largest: 15.5rem;
-  --space-x-tablet-largest: 15.5rem;
-
-  --padding-hor-desktop-small: 4rem;
-  --space-x-desktop-small: 4rem;
+  --padding-hor-tablet-larger: 11.2rem;
+  --padding-hor-tablet-large: 5.4rem;
+  --padding-hor-tablet-medium: 4.3rem;
+  --padding-hor-tablet-small: 3.9rem;
 }
 
 /********** CSS RESET **************/
@@ -635,8 +615,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
-  margin-bottom: 4rem;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
 }
 
 .membership-plans-select-plan > p {
@@ -759,14 +739,14 @@ input:checked + .slider:before {
 .membership-plans-basic span:last-of-type,
 .membership-plans-pro span:last-of-type,
 .membership-plans-business span:last-of-type {
-  margin-bottom: 4rem;
+  margin-bottom: var(--space-sm);
 }
 
 .membership-plans-basic,
 .membership-plans-pro,
 .membership-plans-business {
   padding-top: 5.6rem;
-  padding-bottom: 4rem;
+  padding-bottom: var(--space-sm);
   padding-left: var(--padding-hor-mobile-largest);
   padding-right: var(--padding-hor-mobile-largest);
 }
@@ -774,7 +754,7 @@ input:checked + .slider:before {
 .membership-plans-basic p,
 .membership-plans-pro p,
 .membership-plans-business p {
-  margin-bottom: 4rem;
+  margin-bottom: var(--space-sm);
 }
 
 .membership-plans-basic button,
@@ -825,7 +805,7 @@ input:checked + .slider:before {
 .the-features-section {
   padding-left: var(--padding-hor-mobile-large);
   padding-right: var(--padding-hor-mobile-large);
-  margin-bottom: 6.4rem;
+  margin-bottom: var(--space-md);
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
@@ -908,8 +888,8 @@ input:checked + .slider:before {
 }
 
 .invite-today-section__text {
-  padding-top: 6.4rem;
-  padding-bottom: 6.4rem;
+  padding-top: var(--space-md);
+  padding-bottom: var(--space-md);
   background: url(../assets/icons/color-bar-h.png) no-repeat;
 }
 
@@ -976,11 +956,11 @@ footer {
 }
 
 .company-logo-btm {
-  margin-bottom: 4rem;
+  margin-bottom: var(--space-sm);
 }
 
 .socials {
-  margin-bottom: 4rem;
+  margin-bottom: var(--space-sm);
 }
 
 .socials ul {

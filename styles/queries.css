@@ -310,7 +310,7 @@
   .membership-plans-business {
     position: relative;
     max-width: 1083px;
-    padding: 4rem;
+    padding: var(--space-sm);
   }
 
   .membership-plans-basic p,
@@ -409,8 +409,8 @@
   .invite-today-section__text {
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 3.9rem;
-    padding-right: 3.9rem;
+    padding-left: var(--padding-hor-tablet-small);
+    padding-right: var(--padding-hor-tablet-small);
     padding-top: 6.8rem;
     padding-bottom: 6.8rem;
     background: url(../assets/icons/color-bar-v.png) no-repeat;
@@ -440,8 +440,8 @@
     background-color: var(--pure-black);
     padding-left: var(--padding-hor-tablet-small);
     padding-right: var(--padding-hor-tablet-small);
-    padding-top: 6.4rem;
-    padding-bottom: 6.4rem;
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-md);
   }
 
   .socials-and-logo-and-nav {
@@ -544,13 +544,13 @@
   .membership-plans-basic p,
   .membership-plans-pro p,
   .membership-plans-business p {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-sm);
   }
 
   .membership-plans-basic,
   .membership-plans-pro,
   .membership-plans-business {
-    padding: 5.6rem var(--padding-hor-desktop-small) 4rem;
+    padding: 5.6rem var(--space-sm) var(--space-sm);
   }
 
   .plan-info {
@@ -686,8 +686,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem;
-    padding-left: 16.5rem;
-    padding-right: 16.5rem;
+    padding-left: var(--space-xxl);
+    padding-right: var(--space-xxl);
   }
 
   #home-page .benefits {
@@ -744,11 +744,11 @@
 @media screen and (min-width: 90em) {
   /****** MAIN NAV ******/
   .logo {
-    margin-left: 16.5rem;
+    margin-left: var(--space-xxl);
   }
 
   .btn-nav-large {
-    margin-right: 16.5rem;
+    margin-right: var(--space-xxl);
   }
 
   /********* HERO SECTION ************/
@@ -777,19 +777,13 @@
 
   /****** MEMBERSHIP PLANS SECTION ******/
   .membership-plans-section {
-    padding-left: 16.5rem;
-    padding-right: 16.5rem;
+    padding-left: var(--space-xxl);
+    padding-right: var(--space-xxl);
     padding-top: 12rem;
   }
 
   .membership-plans-section h3 {
     margin-bottom: 1.9rem;
-  }
-
-  .membership-plans-basic p,
-  .membership-plans-pro p,
-  .membership-plans-business p {
-    margin-bottom: 4rem;
   }
 
   .membership-plans {

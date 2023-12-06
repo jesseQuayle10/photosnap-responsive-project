@@ -1,13 +1,7 @@
 
-/////////// CREATE NEW VARS FOR UNITS THAT HAVE BEEN ADDED LATELY //////////////////
-eg. new Padding VALs
-
-/////////////////////////////////////////////
-SPlit css into 2 files - 2nd = "queries.css" - load it after main.css
-
-////////////////////////////////////////////
-*Refactor so all relevant padding/margin VALs are stored in VARs & make them more reusable by using keyword "space-v/w" - instead of "padding/margin"
 
 ////////////////////////////////////////////
 Validate html & css
 
+////////////////////////////////////////////
+Test & Deploy

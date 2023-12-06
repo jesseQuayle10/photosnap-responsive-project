@@ -1,11 +1,10 @@
 'use strict';
-
 ///////////// MAIN NAV FUNCTIONALITY /////////////
 //////////////////////////////////////////////////
 // *.main-nav = initially = Hidden
 // - on CLK Need to add "main-nav-open" - TO PARENT of Nav BTN - so can Target .main-nav - when "main-nav-open" has been added to its Parent - eg:
 // .main-nav-open ~ .main-nav {...css}
-//...NEED "~"  - else Selector wont work
+//...May NEED "~"  - else Selector wont work / OR Juse Desc. Selector may work
 
 //// grab el's
 // Mobile Nv BTN - for CLK EVT & to Change this btn's Icon

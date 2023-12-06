@@ -4,7 +4,7 @@
 // C/Box (inside Toggle Switch)
 const membershipCheckbox = document.querySelector('.membership-checkbox');
 
-// the 2 <p>s next to toggle switch
+// the 2 <p>s next to toggle switch - for BOLD Styling
 const paraMonthly = document.querySelector('.monthly');
 const paraYearly = document.querySelector('.yearly');
 
@@ -22,7 +22,6 @@ membershipCheckbox.addEventListener('change', toggleMembershipTerm);
 function toggleMembershipTerm() {
   // Toggle font = BOLD
   paraMonthly.classList.toggle('active-membership-term');
-
   paraYearly.classList.toggle('active-membership-term');
 
   // Render Diff Prices & membership Term
