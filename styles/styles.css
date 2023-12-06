@@ -653,7 +653,6 @@ img {
   right: 0;
   bottom: 0;
   background-color: var(--light-grey);
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -666,7 +665,6 @@ img {
   left: 4px;
   bottom: 4px;
   background-color: var(--pure-black);
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 

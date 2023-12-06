@@ -1,10 +1,13 @@
 
 
 ////////////////////////////////////////////
-Validate html & css & js
 @supports & caniuse
-test in B's - Locally & Remotely
+test in B's 
+- Locally 
+  - All D/Top Local B's have been tested
+  - TODO: Lighthouse (in Chrome)
+  - After Deploy = Test on DIff Mobile B's & 
+- Remotely (Browser Shots.org - for Safari), 
+minify
 Deploy
 
-////////////////////////////////////////////
-Test & Deploy
